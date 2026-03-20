@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, ChevronRight, Grid as GridIcon, List as SliderIcon } from 'lucide-react';
+import { ArrowRight, Grid as GridIcon, List as SliderIcon } from 'lucide-react';
 
 const heroImages = [
   'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80',
@@ -152,7 +152,6 @@ export default function Home() {
             </div>
             
             <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              {/* Toggle Controls */}
               <div style={{ display: 'flex', gap: '0.5rem', backgroundColor: 'var(--color-grey-dark)', padding: '0.25rem', borderRadius: '4px' }}>
                 <button 
                   onClick={() => setArtView('grid')}
@@ -186,7 +185,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* VIEW: GRID OR SLIDER */}
           {artView === 'grid' ? (
             <motion.div 
               initial={{ opacity: 0 }} animate={{ opacity: 1 }}
@@ -228,8 +226,8 @@ export default function Home() {
                 overflowX: 'auto',
                 paddingBottom: '2rem',
                 scrollSnapType: 'x mandatory',
-                scrollbarWidth: 'none', // Firefox
-                msOverflowStyle: 'none',  // IE and Edge
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
               }}
               className="slider-hide-scroll"
             >
@@ -264,50 +262,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. ARTISTS (Black Background) */}
-      <section style={{ padding: '0 0 var(--spacing-xl)', backgroundColor: 'var(--color-black)' }}>
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '4rem' }}>
-            <div>
-              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>03 / The Creators</span>
-              <h2 className="text-title" style={{ marginTop: '1rem', color: 'var(--color-white)' }}>Gallery Artists</h2>
-            </div>
-            <Link href="/artists" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: '0.875rem', color: 'var(--color-white)' }}>
-              View All Artists <ArrowRight size={16} />
-            </Link>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
-            {[
-              { id: 'elena', name: 'Elena Rostova', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80' },
-              { id: 'markus', name: 'Markus Weber', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80' },
-              { id: 'sarah', name: 'Sarah Chen', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80' },
-              { id: 'david', name: 'David Zimmer', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80' },
-            ].map((artist) => (
-              <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
-                <div style={{ 
-                  aspectRatio: '1/1', 
-                  borderRadius: '50%', 
-                  overflow: 'hidden', 
-                  marginBottom: '1.5rem',
-                  width: '80%',
-                  margin: '0 auto 1.5rem',
-                }}>
-                  <img 
-                    src={artist.img} 
-                    alt={artist.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%)', transition: 'filter var(--transition-slow)' }}
-                    onMouseOver={(e) => (e.currentTarget.style.filter = 'grayscale(0%)')}
-                    onMouseOut={(e) => (e.currentTarget.style.filter = 'grayscale(100%)')}
-                  />
-                </div>
-                <h3 style={{ fontSize: '1.125rem', color: 'var(--color-white)' }}>{artist.name}</h3>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 5. ABOUT SONJ (White Background / Dark Text) */}
+      {/* 4. ABOUT SONJ (White Background) */}
       <section className="bg-light" style={{ padding: 'var(--spacing-xl) 0', borderTop: '1px solid var(--color-border-light)' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '6rem', alignItems: 'center' }}>
@@ -346,6 +301,78 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* 5. ARTISTS (Black Background) */}
+      <section style={{ padding: 'var(--spacing-xl) 0', backgroundColor: 'var(--color-black)' }}>
+        <div className="container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '4rem' }}>
+            <div>
+              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>04 / The Creators</span>
+              <h2 className="text-title" style={{ marginTop: '1rem', color: 'var(--color-white)' }}>Gallery Artists</h2>
+            </div>
+            <Link href="/artists" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: '0.875rem', color: 'var(--color-white)' }}>
+              View All Artists <ArrowRight size={16} />
+            </Link>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
+            {[
+              { id: 'elena', name: 'Elena Rostova', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80' },
+              { id: 'markus', name: 'Markus Weber', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80' },
+              { id: 'sarah', name: 'Sarah Chen', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80' },
+              { id: 'david', name: 'David Zimmer', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80' },
+            ].map((artist) => (
+              <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
+                <div style={{ 
+                  aspectRatio: '1/1', 
+                  borderRadius: '50%', 
+                  overflow: 'hidden', 
+                  marginBottom: '1.5rem',
+                  width: '80%',
+                  margin: '0 auto 1.5rem',
+                }}>
+                  <img 
+                    src={artist.img} 
+                    alt={artist.name}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%)', transition: 'filter var(--transition-slow)' }}
+                    onMouseOver={(e) => (e.currentTarget.style.filter = 'grayscale(0%)')}
+                    onMouseOut={(e) => (e.currentTarget.style.filter = 'grayscale(100%)')}
+                  />
+                </div>
+                <h3 style={{ fontSize: '1.125rem', color: 'var(--color-white)' }}>{artist.name}</h3>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. CALL TO ACTION (Elegant Overlay) */}
+      <section style={{ 
+        height: '80vh', 
+        position: 'relative', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        overflow: 'hidden' 
+      }}>
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'url(https://images.unsplash.com/photo-1544413660-299165566b6c?auto=format&fit=crop&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'brightness(0.3)',
+          zIndex: 1
+        }} />
+        <div className="container" style={{ position: 'relative', zIndex: 10, textAlign: 'center', maxWidth: '800px' }}>
+          <h2 className="text-title" style={{ marginBottom: '1.5rem' }}>Acquire a Masterpiece</h2>
+          <p style={{ fontSize: '1.25rem', lineHeight: 1.8, color: 'var(--color-grey-light)', opacity: 0.9, marginBottom: '3rem' }}>
+            Every collection tells a personal story. Speak with our curation team to acquire new fine art and begin your journey into contemporary excellence.
+          </p>
+          <Link href="/contact" className="btn-primary" style={{ padding: '1.25rem 3rem', fontSize: '1rem' }}>
+            Approach for Curation
+          </Link>
         </div>
       </section>
 
