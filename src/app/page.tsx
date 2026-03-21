@@ -272,9 +272,9 @@ export default function Home() {
 
             <div style={{ order: 1, position: 'relative', aspectRatio: '3/4', overflow: 'hidden' }}>
               <img 
-                src="/assets/sonja2.jpeg"
+                src="/assets/sonja.jpeg"
                 alt="Portrait of Sonja, the gallery owner"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
               />
               <div style={{ position: 'absolute', bottom: '1.5rem', left: '1.5rem', backgroundColor: 'var(--color-black)', color: 'var(--color-white)', padding: '0.5rem 1rem', fontSize: '0.875rem' }}>
                 Sonja Schlagel
