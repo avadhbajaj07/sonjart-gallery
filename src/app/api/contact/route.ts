@@ -15,12 +15,12 @@ export async function POST(req: Request) {
       port: 465,
       secure: true, // SSL
       auth: {
-        user: process.env.SMTP_EMAIL,     // e.g., info@sonjart.ch / info@shalonasart.ch
-        pass: process.env.SMTP_PASSWORD,  // Email password
+        user: process.env.SMTP_EMAIL || '',
+        pass: process.env.SMTP_PASSWORD || '',
       },
     });
 
-    const destinationEmail = process.env.RECEIVER_EMAIL || process.env.SMTP_EMAIL;
+    const destinationEmail = process.env.RECEIVER_EMAIL || process.env.SMTP_EMAIL || '';
 
     // Email Subject based on whether it's an artwork inquiry or a general contact form
     const subject = artwork 
