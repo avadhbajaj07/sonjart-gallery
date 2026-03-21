@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Grid as GridIcon, List as SliderIcon } from 'lucide-react';
+import { ArrowRight, Grid as GridIcon } from 'lucide-react';
 
 const heroImages = [
   'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80',
@@ -11,17 +11,50 @@ const heroImages = [
   'https://images.unsplash.com/photo-1518998053401-b41398282367?auto=format&fit=crop&q=80'
 ];
 
-const featuredArtworks = [
-  { id: 1, img: 'https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?w=800&q=80', title: 'The Silence', artist: 'Elena Rostova', year: '2025' },
-  { id: 2, img: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=800&q=80', title: 'Urban Geometry', artist: 'Markus Weber', year: '2024' },
-  { id: 3, img: 'https://images.unsplash.com/photo-1561214115-f2f11462ce40?w=800&q=80', title: 'Fluid Forms', artist: 'Sarah Chen', year: '2026' },
-  { id: 4, img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80', title: 'Absence of Color', artist: 'David Zimmer', year: '2023' },
+// Replaced the horizontal scroll with a Fade Slider as requested
+// Default images look for slider1/2/3 but use Unsplash fallbacks nicely so it doesn't appear broken
+const fadeSliderArts = [
+  { 
+    id: 1, 
+    img: '/slider1.jpg', 
+    fallback: 'https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?w=1600&q=80',
+    title: 'The Resonance', 
+    artist: 'Elena Rostova', 
+    year: '2026' 
+  },
+  { 
+    id: 2, 
+    img: '/slider2.jpg', 
+    fallback: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=1600&q=80',
+    title: 'Void and Structure', 
+    artist: 'Markus Weber', 
+    year: '2025' 
+  },
+  { 
+    id: 3, 
+    img: '/slider3.jpg', 
+    fallback: 'https://images.unsplash.com/photo-1561214115-f2f11462ce40?w=1600&q=80',
+    title: 'Fluidity in Motion', 
+    artist: 'Sarah Chen', 
+    year: '2026' 
+  }
+];
+
+// Added more demo arts to display in grid format
+const featuredArtworksGrid = [
+  { id: 1, img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80', title: 'Absence of Color', artist: 'David Zimmer', year: '2023' },
+  { id: 2, img: 'https://images.unsplash.com/photo-1549490349-8643362247b5?w=800&q=80', title: 'Monochrome Dream', artist: 'Lena Klein', year: '2024' },
+  { id: 3, img: 'https://images.unsplash.com/photo-1560662211-1da01df825b2?w=800&q=80', title: 'Abstract Reality', artist: 'Piotr K.', year: '2025' },
+  { id: 4, img: 'https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=800&q=80', title: 'Visions of Light', artist: 'S. Nakamura', year: '2023' },
+  { id: 5, img: 'https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?w=800&q=80', title: 'Echoes I', artist: 'David Zimmer', year: '2026' },
+  { id: 6, img: 'https://images.unsplash.com/photo-1554188248-986dfbabfac4?w=800&q=80', title: 'Echoes II', artist: 'David Zimmer', year: '2026' },
 ];
 
 export default function Home() {
   const [currentHero, setCurrentHero] = useState(0);
-  const [artView, setArtView] = useState<'grid' | 'slider'>('grid');
+  const [currentSliderArt, setCurrentSliderArt] = useState(0);
 
+  // Hero Image Fader
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentHero((prev) => (prev + 1) % heroImages.length);
@@ -29,10 +62,19 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  // Fade Slider Auto-Play
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSliderArt((prev) => (prev + 1) % fadeSliderArts.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <main style={{ minHeight: '100vh' }}>
-      {/* 1. HERO SECTION (Black) */}
-      <section style={{ height: '100vh', position: 'relative', overflow: 'hidden' }}>
+    <main style={{ minHeight: '100vh', position: 'relative' }}>
+      
+      {/* 1. HERO SECTION (Pinned Layer 1) */}
+      <section style={{ height: '100vh', position: 'sticky', top: 0, overflow: 'hidden', zIndex: 1, backgroundColor: 'var(--color-black)' }}>
         <AnimatePresence mode="popLayout">
           <motion.div
             key={currentHero}
@@ -76,23 +118,100 @@ export default function Home() {
               Contemporary Art Gallery
             </p>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-              <Link href="#events" className="btn-primary">
-                View Upcoming Event
-              </Link>
-              <Link href="/artworks" className="btn-secondary">
-                Explore Collection
+              <Link href="#preview" className="btn-primary">
+                View Exclusive Collection
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 2. UPCOMING EVENTS (White Background / Dark Text) */}
-      <section id="events" className="bg-light" style={{ padding: 'var(--spacing-xl) 0' }}>
+      {/* 2. EXCLUSIVE FADE SLIDER (Pinned Layer 2 - Rolls over Hero) */}
+      <section id="preview" style={{ height: '100vh', position: 'sticky', top: 0, overflow: 'hidden', zIndex: 2, backgroundColor: 'var(--color-black)' }}>
+        <AnimatePresence mode="sync">
+          {fadeSliderArts.map((art, index) => {
+            if (index !== currentSliderArt) return null;
+            return (
+              <motion.div
+                key={art.id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.5, ease: 'easeInOut' }}
+                style={{ position: 'absolute', inset: 0, zIndex: 0 }}
+              >
+                <img 
+                  src={art.img} 
+                  onError={(e) => { e.currentTarget.src = art.fallback }}
+                  alt={art.title}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </motion.div>
+            )
+          })}
+        </AnimatePresence>
+        
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)',
+          zIndex: 1,
+        }} />
+
+        <div className="container" style={{
+          position: 'relative',
+          zIndex: 10,
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-end',
+          paddingBottom: '10vh',
+        }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '2rem' }}>
+            <motion.div
+              key={`text-${currentSliderArt}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <span className="text-caption" style={{ color: 'var(--color-grey-medium)', display: 'block', marginBottom: '1rem' }}>
+                01 / Preview Slider
+              </span>
+              <h2 className="text-title" style={{ color: 'var(--color-white)', marginBottom: '0.5rem' }}>
+                {fadeSliderArts[currentSliderArt].title}
+              </h2>
+              <p style={{ fontSize: '1.25rem', color: 'var(--color-grey-medium)' }}>
+                {fadeSliderArts[currentSliderArt].artist}, {fadeSliderArts[currentSliderArt].year}
+              </p>
+            </motion.div>
+
+            {/* Pagination Controls */}
+            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+               {fadeSliderArts.map((_, idx) => (
+                 <button
+                   key={idx}
+                   onClick={() => setCurrentSliderArt(idx)}
+                   style={{
+                     width: '40px',
+                     height: '4px',
+                     backgroundColor: idx === currentSliderArt ? 'var(--color-white)' : 'rgba(255,255,255,0.3)',
+                     border: 'none',
+                     cursor: 'pointer',
+                     transition: 'background-color 0.3s'
+                   }}
+                 />
+               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. UPCOMING EVENTS (Normal Scroll - Covers Slider like a layer) */}
+      <section id="events" className="bg-light" style={{ position: 'relative', zIndex: 3, padding: 'var(--spacing-xl) 0', backgroundColor: 'var(--color-white)' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
             <div>
-               <span className="text-caption">01 / Next Exhibition</span>
+               <span className="text-caption">02 / Next Exhibition</span>
                <h2 className="text-title" style={{ marginTop: '1rem', marginBottom: '2rem' }}>Kunstraum 15</h2>
                <div style={{ marginBottom: '3rem', color: 'var(--color-grey-dark)', fontSize: '1.125rem', lineHeight: 1.8 }}>
                  <p style={{ fontWeight: 600, fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--color-black)' }}>An Exploration of Contemporary Silence</p>
@@ -142,133 +261,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. FEATURED COLLECTION (Black Background) */}
-      <section style={{ padding: 'var(--spacing-xl) 0', backgroundColor: 'var(--color-black)' }}>
+      {/* 4. FEATURED COLLECTION (Normal scroll - Added demo arts) */}
+      <section style={{ position: 'relative', zIndex: 3, padding: 'var(--spacing-xl) 0', backgroundColor: 'var(--color-black)' }}>
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '4rem', flexWrap: 'wrap', gap: '2rem' }}>
             <div>
-              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>02 / Curated</span>
-              <h2 className="text-title" style={{ marginTop: '1rem', color: 'var(--color-white)' }}>Featured Art</h2>
+              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>03 / Curated Grid</span>
+              <h2 className="text-title" style={{ marginTop: '1rem', color: 'var(--color-white)' }}>Grid Collection</h2>
             </div>
             
             <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              <div style={{ display: 'flex', gap: '0.5rem', backgroundColor: 'var(--color-grey-dark)', padding: '0.25rem', borderRadius: '4px' }}>
-                <button 
-                  onClick={() => setArtView('grid')}
-                  style={{ 
-                    padding: '0.5rem', 
-                    backgroundColor: artView === 'grid' ? 'var(--color-white)' : 'transparent', 
-                    color: artView === 'grid' ? 'var(--color-black)' : 'var(--color-white)',
-                    border: 'none', borderRadius: '2px', cursor: 'pointer', display: 'flex', alignItems: 'center'
-                  }}
-                  title="Grid View"
-                >
-                  <GridIcon size={18} />
-                </button>
-                <button 
-                  onClick={() => setArtView('slider')}
-                  style={{ 
-                    padding: '0.5rem', 
-                    backgroundColor: artView === 'slider' ? 'var(--color-white)' : 'transparent', 
-                    color: artView === 'slider' ? 'var(--color-black)' : 'var(--color-white)',
-                    border: 'none', borderRadius: '2px', cursor: 'pointer', display: 'flex', alignItems: 'center'
-                  }}
-                  title="Slider View"
-                >
-                  <SliderIcon size={18} />
-                </button>
-              </div>
-
               <Link href="/artworks" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: '0.875rem', color: 'var(--color-white)' }}>
                 View All <ArrowRight size={16} />
               </Link>
             </div>
           </div>
 
-          {artView === 'grid' ? (
-            <motion.div 
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                gap: '2rem',
-              }}
-            >
-              {featuredArtworks.map((art) => (
-                <Link key={art.id} href={`/artworks/${art.id}`} style={{ display: 'block' }}>
-                  <div style={{ overflow: 'hidden', aspectRatio: '4/5', marginBottom: '1.5rem', position: 'relative' }}>
-                    <img 
-                      src={art.img} 
-                      alt={art.title}
-                      style={{
-                        width: '100%', height: '100%', objectFit: 'cover', transition: 'transform var(--transition-slow)',
-                      }}
-                      onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-                      onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-                    />
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '2rem',
+          }}>
+            {featuredArtworksGrid.map((art) => (
+              <Link key={art.id} href={`/artworks/${art.id}`} style={{ display: 'block' }}>
+                <div style={{ overflow: 'hidden', aspectRatio: '4/5', marginBottom: '1.5rem', position: 'relative' }}>
+                  <img 
+                    src={art.img} 
+                    alt={art.title}
+                    style={{
+                      width: '100%', height: '100%', objectFit: 'cover', transition: 'transform var(--transition-slow)',
+                    }}
+                    onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+                    onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+                  />
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', color: 'var(--color-white)' }}>
+                  <div>
+                    <h3 style={{ fontSize: '1.25rem', marginBottom: '0.25rem' }}>{art.title}</h3>
+                    <p style={{ color: 'var(--color-grey-medium)', fontSize: '0.875rem' }}>{art.artist}</p>
                   </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', color: 'var(--color-white)' }}>
-                    <div>
-                      <h3 style={{ fontSize: '1.25rem', marginBottom: '0.25rem' }}>{art.title}</h3>
-                      <p style={{ color: 'var(--color-grey-medium)', fontSize: '0.875rem' }}>{art.artist}</p>
-                    </div>
-                    <span style={{ color: 'var(--color-grey-medium)', fontSize: '0.875rem' }}>{art.year}</span>
-                  </div>
-                </Link>
-              ))}
-            </motion.div>
-          ) : (
-            <motion.div 
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-              style={{
-                display: 'flex',
-                gap: '2rem',
-                overflowX: 'auto',
-                paddingBottom: '2rem',
-                scrollSnapType: 'x mandatory',
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none',
-              }}
-              className="slider-hide-scroll"
-            >
-              <style dangerouslySetInnerHTML={{__html: `
-                .slider-hide-scroll::-webkit-scrollbar { display: none; }
-              `}} />
-              
-              {featuredArtworks.map((art) => (
-                <Link key={art.id} href={`/artworks/${art.id}`} style={{ display: 'block', minWidth: '400px', scrollSnapAlign: 'start' }}>
-                  <div style={{ overflow: 'hidden', aspectRatio: '4/5', marginBottom: '1.5rem', position: 'relative', width: '400px' }}>
-                    <img 
-                      src={art.img} 
-                      alt={art.title}
-                      style={{
-                        width: '100%', height: '100%', objectFit: 'cover', transition: 'transform var(--transition-slow)',
-                      }}
-                      onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-                      onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-                    />
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', color: 'var(--color-white)' }}>
-                    <div>
-                      <h3 style={{ fontSize: '1.25rem', marginBottom: '0.25rem' }}>{art.title}</h3>
-                      <p style={{ color: 'var(--color-grey-medium)', fontSize: '0.875rem' }}>{art.artist}</p>
-                    </div>
-                    <span style={{ color: 'var(--color-grey-medium)', fontSize: '0.875rem' }}>{art.year}</span>
-                  </div>
-                </Link>
-              ))}
-            </motion.div>
-          )}
+                  <span style={{ color: 'var(--color-grey-medium)', fontSize: '0.875rem' }}>{art.year}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 4. ABOUT SONJ (White Background) */}
-      <section className="bg-light" style={{ padding: 'var(--spacing-xl) 0', borderTop: '1px solid var(--color-border-light)' }}>
+      {/* 5. ABOUT SONJ */}
+      <section className="bg-light" style={{ position: 'relative', zIndex: 3, padding: 'var(--spacing-xl) 0', borderTop: '1px solid var(--color-border-light)' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '6rem', alignItems: 'center' }}>
             
             <div style={{ order: 2 }}>
-              <span className="text-caption" style={{ marginBottom: '2rem', display: 'block' }}>03 / The Visionary</span>
+              <span className="text-caption" style={{ marginBottom: '2rem', display: 'block' }}>04 / The Visionary</span>
               <h2 className="text-title" style={{ marginBottom: '2rem', color: 'var(--color-black)' }}>About Sonja</h2>
               
               <div style={{ fontSize: '1.125rem', color: 'var(--color-grey-dark)', marginBottom: '3rem', lineHeight: 1.8 }}>
@@ -304,12 +350,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. ARTISTS (Black Background) */}
-      <section style={{ padding: 'var(--spacing-xl) 0', backgroundColor: 'var(--color-black)' }}>
+      {/* 6. ARTISTS */}
+      <section style={{ position: 'relative', zIndex: 3, padding: 'var(--spacing-xl) 0', backgroundColor: 'var(--color-black)' }}>
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '4rem' }}>
             <div>
-              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>04 / The Creators</span>
+              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>05 / The Creators</span>
               <h2 className="text-title" style={{ marginTop: '1rem', color: 'var(--color-white)' }}>Gallery Artists</h2>
             </div>
             <Link href="/artists" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: '0.875rem', color: 'var(--color-white)' }}>
@@ -347,14 +393,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. CALL TO ACTION (Elegant Overlay) */}
+      {/* 7. CALL TO ACTION */}
       <section style={{ 
-        height: '80vh', 
         position: 'relative', 
+        zIndex: 3,
+        height: '80vh', 
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'center', 
-        overflow: 'hidden' 
+        overflow: 'hidden',
+        backgroundColor: 'var(--color-black)'
       }}>
         <div style={{
           position: 'absolute',
