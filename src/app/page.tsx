@@ -260,7 +260,7 @@ export default function Home() {
                   Today, feeling restored, inspired, and full of energy, she is reconnecting with her passion for both art and sales. She delights in helping people find the perfect artwork for their homes—pieces that bring beauty, individuality, and character.
                 </p>
                 <p>
-                  "The gallery is not just a room with white walls; it is a canvas in its own right—a sanctuary designed to protect the integrity of the narratives our artists share with the world." 
+                  &quot;The gallery is not just a room with white walls; it is a canvas in its own right—a sanctuary designed to protect the integrity of the narratives our artists share with the world.&quot; 
                   <br /><span style={{ fontStyle: 'italic', marginTop: '1rem', display: 'inline-block' }}>— Sonja Schlagel</span>
                 </p>
               </div>

@@ -60,7 +60,7 @@ export default function ArtworkDetail() {
 
               <div style={{ fontSize: '1.125rem', lineHeight: 1.8, color: 'var(--color-grey-light)', fontWeight: 300, maxWidth: '650px' }}>
                 <p>
-                  "Wut" (Anger) explores the profound intensity and raw energy of unrestrained emotion. The layered acrylic application invites viewers to embrace the chaos and find an internal focus.
+                  &quot;Wut&quot; (Anger) explores the profound intensity and raw energy of unrestrained emotion. The layered acrylic application invites viewers to embrace the chaos and find an internal focus.
                 </p>
               </div>
 
