@@ -15,7 +15,7 @@ export default function ArtworkDetail() {
         </Link>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem' }}>
           <div style={{ aspectRatio: '4/5', width: '100%', maxWidth: '800px', margin: '0 auto', overflow: 'hidden' }}>
-             <img src="/assets/art1.jpg" alt="Wut" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+             <img src="/assets/art%20gallery1.jpg" alt="Wut" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ maxWidth: '800px', margin: '4rem auto 0', textAlign: 'left' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
