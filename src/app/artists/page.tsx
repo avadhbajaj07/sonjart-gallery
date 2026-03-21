@@ -8,8 +8,8 @@ export default function Artists() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem' }}>
         {artistsData.map(artist => (
           <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
-            <div style={{ aspectRatio: '1/1', borderRadius: '50%', overflow: 'hidden', marginBottom: '1.5rem', margin: '0 auto 1.5rem', width: '80%' }}>
-               <img src={artist.img} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%)', transition: 'filter var(--transition-slow)' }} onMouseOver={(e) => (e.currentTarget.style.filter = 'grayscale(0%)')} onMouseOut={(e) => (e.currentTarget.style.filter = 'grayscale(100%)')} alt={artist.name} />
+            <div style={{ aspectRatio: '1/1', borderRadius: '50%', overflow: 'hidden', marginBottom: '1.5rem', margin: '0 auto 1.5rem', width: '80%', backgroundColor: 'var(--color-grey-dark)' }}>
+               <img src={artist.img} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, transition: 'opacity var(--transition-slow)' }} alt={artist.name} />
             </div>
             <h3 style={{ fontSize: '1.5rem' }}>{artist.name}</h3>
           </Link>
