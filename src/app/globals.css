@@ -93,12 +93,13 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2.5rem; /* Increased from 2rem for extra side padding on mobile */
+  padding: 0 6vw; /* Safe responsive padding for mobile devices */
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding: 0 var(--spacing-lg);
+    padding: 0 4rem;
   }
 }
 

@@ -272,8 +272,7 @@ export default function Home() {
 
             <div style={{ order: 1, position: 'relative', aspectRatio: '3/4', overflow: 'hidden' }}>
               <img 
-                src="/assets/sonja2.jpeg" 
-                onError={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80' }}
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
                 alt="Portrait of Sonja, the gallery owner"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -300,12 +299,12 @@ export default function Home() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
             {[
-              { id: 'beatrice', name: 'Beatrice Jud', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80' },
-              { id: 'escobar', name: 'Escobar', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80' },
-              { id: 'henk', name: 'Henk Vierveijzer', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80' },
-              { id: 'nicole-l', name: 'Nicole Laceur', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80' },
-              { id: 'elso', name: 'Elso Schiavo', img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80' },
-              { id: 'nicole-j', name: 'Nicole Janssen', img: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80' },
+              { id: 'elso-schiavo', name: 'Elso Schiavo', img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80' },
+              { id: 'beatrice-jud', name: 'Beatrice Jud', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80' },
+              { id: 'nicole-laceur', name: 'Nicole Laceur', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80' },
+              { id: 'nicole-janssen', name: 'Nicole Janssen', img: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80' },
+              { id: 'escobar', name: 'F. Escobar', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80' },
+              { id: 'henk-vierveijzer', name: 'Henk Vierveijzer', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80' }
             ].map((artist) => (
               <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
                 <div style={{ 
