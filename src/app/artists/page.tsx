@@ -1,15 +1,18 @@
+import Link from 'next/link';
+import { artistsData } from './data';
+
 export default function Artists() {
   return (
     <main style={{ padding: '8rem 0 var(--spacing-xl)' }} className="container fade-in">
-      <h1 className="text-title" style={{ marginBottom: '4rem' }}>Artists</h1>
+      <h1 className="text-title" style={{ marginBottom: '4rem' }}>Gallery Artists</h1>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem' }}>
-        {[1, 2, 3, 4].map(i => (
-          <a key={i} href={`/artists/elena`} style={{ display: 'block', textAlign: 'center' }}>
+        {artistsData.map(artist => (
+          <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
             <div style={{ aspectRatio: '1/1', borderRadius: '50%', overflow: 'hidden', marginBottom: '1.5rem', margin: '0 auto 1.5rem', width: '80%' }}>
-               <img src={`https://images.unsplash.com/photo-${1544005313 + i}-94ddf0286df2?w=800&q=80`} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%)' }} />
+               <img src={artist.img} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%)', transition: 'filter var(--transition-slow)' }} onMouseOver={(e) => (e.currentTarget.style.filter = 'grayscale(0%)')} onMouseOut={(e) => (e.currentTarget.style.filter = 'grayscale(100%)')} alt={artist.name} />
             </div>
-            <h3 style={{ fontSize: '1.5rem' }}>Elena Rostova</h3>
-          </a>
+            <h3 style={{ fontSize: '1.5rem' }}>{artist.name}</h3>
+          </Link>
         ))}
       </div>
     </main>
