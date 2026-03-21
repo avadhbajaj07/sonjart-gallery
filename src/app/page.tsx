@@ -254,10 +254,10 @@ export default function Home() {
               
               <div style={{ fontSize: '1.125rem', color: 'var(--color-grey-dark)', marginBottom: '3rem', lineHeight: 1.8 }}>
                 <p style={{ marginBottom: '1.5rem' }}>
-                  Sonja Schlagel, founder and owner of SONJ ART Galerie, was born in Alkmaar, the Netherlands, in 1966. She moved to Switzerland in 1990, where she began her professional career in pharmaceutical sales, working with major corporations like Dow Chemical, Glaxo, and Merck Sharp & Dohme.
+                  Sonja Schlagel, founder and owner of SonjART Galerie, was born in Alkmaar, the Netherlands, in 1966. She moved to Switzerland in 1990, where she began her professional career in pharmaceutical sales, later choosing to follow a new professional path—one that united her lifelong passion for art with her strong background in management.
                 </p>
                 <p style={{ marginBottom: '1.5rem' }}>
-                  Later, Sonja chose to follow a new path—one that unites her lifelong passion for contemporary art with a sanctuary designed to protect the integrity of artists' narratives. She is accompanied by her two Shih Tzus, Charlie and The Dogs, and creatively explores her vision through photography.
+                  Today, feeling restored, inspired, and full of energy, she is reconnecting with her passion for both art and sales. She delights in helping people find the perfect artwork for their homes—pieces that bring beauty, individuality, and character.
                 </p>
                 <p>
                   "The gallery is not just a room with white walls; it is a canvas in its own right—a sanctuary designed to protect the integrity of the narratives our artists share with the world." 
