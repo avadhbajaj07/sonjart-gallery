@@ -12,42 +12,42 @@ const heroImages = [
 ];
 
 // Replaced the horizontal scroll with a Fade Slider as requested
-// Default images look for slider1/2/3 but use Unsplash fallbacks nicely so it doesn't appear broken
+// Using the 2 provided arts + 1 dummy art
 const fadeSliderArts = [
   { 
     id: 1, 
-    img: '/slider1.jpg', 
+    img: '/assets/slider1.jpg', 
     fallback: 'https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?w=1600&q=80',
-    title: 'The Resonance', 
-    artist: 'Elena Rostova', 
+    title: 'Featured Canvas', 
+    artist: 'Selected Artist', 
     year: '2026' 
   },
   { 
     id: 2, 
-    img: '/slider2.jpg', 
+    img: '/assets/slider2.jpg', 
     fallback: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=1600&q=80',
-    title: 'Void and Structure', 
-    artist: 'Markus Weber', 
-    year: '2025' 
+    title: 'Visionary Space', 
+    artist: 'Selected Artist', 
+    year: '2026' 
   },
   { 
     id: 3, 
-    img: '/slider3.jpg', 
+    img: 'https://images.unsplash.com/photo-1561214115-f2f11462ce40?w=1600&q=80',
     fallback: 'https://images.unsplash.com/photo-1561214115-f2f11462ce40?w=1600&q=80',
     title: 'Fluidity in Motion', 
-    artist: 'Sarah Chen', 
+    artist: 'Dummy Profile', 
     year: '2026' 
   }
 ];
 
 // Added more demo arts to display in grid format
 const featuredArtworksGrid = [
-  { id: 1, img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80', title: 'Absence of Color', artist: 'David Zimmer', year: '2023' },
-  { id: 2, img: 'https://images.unsplash.com/photo-1549490349-8643362247b5?w=800&q=80', title: 'Monochrome Dream', artist: 'Lena Klein', year: '2024' },
-  { id: 3, img: 'https://images.unsplash.com/photo-1560662211-1da01df825b2?w=800&q=80', title: 'Abstract Reality', artist: 'Piotr K.', year: '2025' },
-  { id: 4, img: 'https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=800&q=80', title: 'Visions of Light', artist: 'S. Nakamura', year: '2023' },
-  { id: 5, img: 'https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?w=800&q=80', title: 'Echoes I', artist: 'David Zimmer', year: '2026' },
-  { id: 6, img: 'https://images.unsplash.com/photo-1554188248-986dfbabfac4?w=800&q=80', title: 'Echoes II', artist: 'David Zimmer', year: '2026' },
+  { id: 1, img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80', title: 'Absence of Color', artist: 'Henk Vierveijzer', year: '2023' },
+  { id: 2, img: 'https://images.unsplash.com/photo-1549490349-8643362247b5?w=800&q=80', title: 'Monochrome Dream', artist: 'Beatrice Jud', year: '2024' },
+  { id: 3, img: 'https://images.unsplash.com/photo-1560662211-1da01df825b2?w=800&q=80', title: 'Abstract Reality', artist: 'Escobar', year: '2025' },
+  { id: 4, img: 'https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=800&q=80', title: 'Visions of Light', artist: 'Nicole Laceur', year: '2023' },
+  { id: 5, img: 'https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?w=800&q=80', title: 'Echoes I', artist: 'Elso Schiavo', year: '2026' },
+  { id: 6, img: 'https://images.unsplash.com/photo-1554188248-986dfbabfac4?w=800&q=80', title: 'Echoes II', artist: 'Nicole Janssen', year: '2026' },
 ];
 
 export default function Home() {
@@ -319,10 +319,10 @@ export default function Home() {
               
               <div style={{ fontSize: '1.125rem', color: 'var(--color-grey-dark)', marginBottom: '3rem', lineHeight: 1.8 }}>
                 <p style={{ marginBottom: '1.5rem' }}>
-                  Sonj is the driving force and creative visionary behind SONJ ART gallery. With over a decade of experience navigating the European contemporary art scenes in Paris, Berlin, and now Zürich, she established this space to break away from sterile, traditional exhibition environments.
+                  Sonja Schlagel, founder and owner of SONJ ART Galerie, was born in Alkmaar, the Netherlands, in 1966. She moved to Switzerland in 1990, where she began her professional career in pharmaceutical sales, working with major corporations like Dow Chemical, Glaxo, and Merck Sharp & Dohme.
                 </p>
                 <p style={{ marginBottom: '1.5rem' }}>
-                  Her philosophy is profoundly simple: art must be felt before it is understood. By carefully curating every exhibition from the lighting design down to the thematic narrative, she ensures that collectors and casual visitors alike experience an emotional connection with the pieces on display.
+                  Later, Sonja chose to follow a new path—one that unites her lifelong passion for contemporary art with a sanctuary designed to protect the integrity of artists' narratives. She is accompanied by her two Shih Tzus, Charlie and The Dogs, and creatively explores her vision through photography.
                 </p>
                 <p>
                   "The gallery is not just a room with white walls; it is a canvas in its own right—a sanctuary designed to protect the integrity of the narratives our artists share with the world." 
@@ -337,7 +337,8 @@ export default function Home() {
 
             <div style={{ order: 1, position: 'relative', aspectRatio: '3/4', overflow: 'hidden' }}>
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" 
+                src="/assets/sonja1.jpeg" 
+                onError={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80' }}
                 alt="Portrait of Sonja, the gallery owner"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -364,10 +365,12 @@ export default function Home() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
             {[
-              { id: 'elena', name: 'Elena Rostova', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80' },
-              { id: 'markus', name: 'Markus Weber', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80' },
-              { id: 'sarah', name: 'Sarah Chen', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80' },
-              { id: 'david', name: 'David Zimmer', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80' },
+              { id: 'beatrice', name: 'Beatrice Jud', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80' },
+              { id: 'escobar', name: 'Escobar', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80' },
+              { id: 'henk', name: 'Henk Vierveijzer', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80' },
+              { id: 'nicole-l', name: 'Nicole Laceur', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80' },
+              { id: 'elso', name: 'Elso Schiavo', img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80' },
+              { id: 'nicole-j', name: 'Nicole Janssen', img: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80' },
             ].map((artist) => (
               <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
                 <div style={{ 
