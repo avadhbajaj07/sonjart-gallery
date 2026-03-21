@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Grid as GridIcon } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 // Using the 2 provided arts + 1 dummy art for the Hero Slider
 const fadeSliderArts = [
