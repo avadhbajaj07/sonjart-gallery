@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import type { Metadata } from 'next';
 import './globals.css';
 import Link from 'next/link';
@@ -7,7 +8,36 @@ import CookieBanner from '@/components/CookieBanner';
 
 export const metadata: Metadata = {
   title: 'SONJ ART | Contemporary Art Gallery Zürich',
-  description: 'Ultra-luxury contemporary art gallery based in Zürich, Switzerland. Explore exclusive artworks and upcoming exhibitions.',
+  description: 'Ultra-luxury contemporary art gallery based in Zürich, Switzerland. Explore exclusive abstract works, modern paintings, and upcoming fine art exhibitions.',
+  keywords: ['contemporary art', 'zurich art gallery', 'modern art', 'fine art', 'swiss gallery', 'Sonja Schlagel', 'luxury art', 'abstract paintings'],
+  authors: [{ name: 'Sonja Schlagel' }],
+  creator: 'SONJ ART',
+  openGraph: {
+    title: 'SONJ ART | Contemporary Art Gallery',
+    description: 'Ultra-luxury contemporary art gallery based in Zürich, Switzerland.',
+    url: 'https://sonjart.ch',
+    siteName: 'SONJ ART Gallery',
+    images: [
+      {
+        url: 'https://sonjart.ch/assets/art1.jpg', // Placeholder for OG image
+        width: 1200,
+        height: 630,
+        alt: 'SONJ ART Gallery Preview',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SONJ ART | Contemporary Art Gallery Zürich',
+    description: 'Explore exclusive abstract works and conceptual fine art in Zürich.',
+    images: ['https://sonjart.ch/assets/art1.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -18,6 +48,22 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
         <Navigation />
         <CookieBanner />
         {children}
