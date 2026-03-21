@@ -10,6 +10,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  serverExternalPackages: ['nodemailer'],
 };
 
 export default nextConfig;
