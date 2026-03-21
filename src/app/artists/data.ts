@@ -2,37 +2,37 @@ export const artistsData = [
   {
     id: 'elso-schiavo',
     name: 'Elso Schiavo',
-    img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80',
+    img: '/assets/artist1.jpg',
     bio: `Born on August 10, 1934, Elso Schiavo lives and works in Baar, Zug. He is an accomplished painter and designer whose artistic journey has unfolded over decades with remarkable consistency and joy. Since 1970, his work has been exhibited regularly both in Switzerland and internationally, including shows in the United States, Russia, Hungary, Germany, and Finland. Alongside his exhibitions, Schiavo has taken part in numerous competitions and has been actively involved in social and cultural projects, particularly within schools and public institutions. In recognition of his artistic contribution, he was awarded the Cultural Prize of the City of Zug in September 2003. His creative output extends beyond the canvas and includes several publications, among them an art book and children’s books. Notable highlights of his career include the artistic design of the Zurich tram “Schlaraffenland” and receiving an award in the international postage stamp competition organized by the Japanese State Post. Imaginative, humorous, and infused with a deep love of life, Elso Schiavo’s figurative-abstract works are distinguished by a strong and unmistakable visual identity. The creatures that emerge on his canvases are imbued with human expressions—playful, tender, and often gently ironic—inviting the viewer to smile. His art is experienced as fresh and spontaneous, yet at the same time emotionally resonant, engaging the viewer on both a visual and human level.`
   },
   {
     id: 'beatrice-jud',
     name: 'Beatrice Jud',
-    img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80',
+    img: '/assets/artist2.jpg',
     bio: `Beatrice Jud ist Sängerin, Schauspielerin und Malerin – ein künstlerisches Multitalent aus Zumikon. Aufgewachsen in einer Familie mit tiefen künstlerischen Wurzeln, begleitete sie die Kunst von klein auf, zunächst durch die Musik, später durch die Malerei. Heute widmet sie sich mit grosser Leidenschaft der abstrakten Kunst. Ihre Werke leben von kräftigen Primärfarben, dynamischen Flächen und einer intensiven Bildsprache, die den Betrachter unmittelbar berührt. „Ich bin hungrig nach Farben“, sagt sie, „denn eine Welt ohne Farben ist trostlos.“ Beatrice Jud hatte zahlreiche Einzel- und Gruppenausstellungen, unter anderem an der Art Zurich. Für sie steht weniger der Erfolg im Vordergrund als der Austausch, das Gespräch und die gemeinsame Leidenschaft für Kunst.`
   },
   {
     id: 'nicole-laceur',
     name: 'Nicole Laceur',
-    img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    img: '/assets/artist3.jpg',
     bio: `Ein freundlicher Nachmittag im Frühling. Nach der langen und Winterzeit spriesst die Natur in all ihrer Fülle und Buntheit hervor und lockt die Menschen ins Freie. Glücklich, wer sich die Zeit nehmen kann, dieses Aufkeimen von Leben im eigenen Garten oder auf einer Terrasse geniessen zu können. Und glücklich auch all jene, die sich mit einem Gemälde von Nicole Laceur diese Eindrücke nach Hause holen werden. Die 1969 in einer Künstlerfamilie in Arnhem/ Holland aufgewachsene Künstlerin studierte bereits in relativ jungen Jahren in Frankreich. In dieser Zeit beeindruckten sie die Werke der französischen Impressionisten ganz besonders. Ihr Stilgefühl ist stark geprägt von den Künstlern jener Epoche Diese Ästhetik zieht sich denn auch als Grundthema durch ihr gesamtes Schaffen. Nach ihrer Rückkehr aus Frankreich hatte Laceur erfolgreiche Ausstellungen in Holland, Deutschland und in den USA. Laceurs Arbeiten zeichnen sich insbesondere auch durch ein sehr feines Gespür für Farben aus. Sie beherrscht das Spektrum der Nuancen, wie sie in der Natur vorkommen, auf eine äusserst lebendige und feinfühlige Art und Weise.`
   },
   {
     id: 'nicole-janssen',
     name: 'Nicole Janssen',
-    img: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80',
+    img: '/assets/artist4.jpg',
     bio: `Dutch artist Nicole Janssen was born in 1967 into a family of artists and grew up surrounded by paintings, sculptures and other forms of visual expression. This inspiring environment shaped her from an early age. After completing her studies in fashion design, she lived for a while in Paris, where the vibrant artistic atmosphere prompted her to shift her creative focus From fashion to painting. Janssen works with a distinctive blend of oil and acrylic paints, a technique that infuses her pieces with remarkable depth and expressive intensity. In Addition to her figurative works, Janssen is equally captive by the natural world. Her landscapes reveal a Deep sensitivity to admosphere, light and mood. Whether depicting serene horizons, misty forests of vast open fields, She paints nature with the same expressive Intuition that characterizes her portraits.Her landscapes invite viewers into spaces of calm and introspection- places where color, texture, and light blend into an harmonious, almost poetic experience. Through these works, she explores not only the beauty of the world around her but also the emotional landscapes within.`
   },
   {
     id: 'escobar',
     name: 'F. Escobar',
-    img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80',
+    img: '/assets/artist5.jpg',
     bio: `1944–2016, Costa Rica. Born in Costa Rica in 1944, Francesco Escobar initially studied sociology, yet his true calling emerged far from academic halls—within the vibrant backstreets of San José. The city’s rich cultural diversity, shaped by both local talent and a strong international artistic presence, became a living classroom for Escobar. Surrounded by artists from around the world, he absorbed new ideas and developed a distinctive visual language rooted in Neo-Expressionism, infused with a contemporary, modern edge. Wandering through downtown San José, Escobar found inspiration in the layered urban landscape: street art spread across façades ranging from colonial architecture to modern structures. These encounters opened his eyes to the expressive power of the city itself, where history and modernity coexist in bold, spontaneous dialogue. His artistic journey was further shaped by travels through Spain, where new perspectives deepened both his thought and his work. Escobar’s paintings reflect this synthesis of place and experience—raw yet thoughtful, expressive yet grounded—capturing the pulse of urban life and the emotional complexity of the human condition.`
   },
   {
     id: 'henk-vierveijzer',
     name: 'Henk Vierveijzer',
-    img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80',
+    img: '/assets/artist6.jpg',
     bio: `Henk Vierveijzer (1950-2022) was born in 1950 in Tilburg, the Netherlands. He spent his early years in Zaandam, near Amsterdam, and in Bergen op Zoom, before later studying at the Academy of Fine Arts in Tilburg. A formative chapter of his career unfolded under the BKR program—a Dutch government initiative that allowed artists to work in exchange for a stipend. “It gave me the freedom to devote myself entirely to my art,” Vierveijzer once reflected. After several years within this supportive framework, he began exhibiting his work publicly. During this period, his artistic language bore similarities to the German movement Neue Wilde, characterized by expressive intensity and raw energy. Over time, however, his work evolved—becoming less severe and increasingly infused with irony and playful wit. Vierveijzer’s use of color often resonates with the spirit of COBRA and Nieuwe Figuratie. Anchored by a strong sense of symbolism, his work feels deeply at home within these movements while maintaining a voice distinctly his own. His art has been shown in numerous renowned galleries across the Netherlands, as well as in Athens, Brussels, Copenhagen, and Madrid. Vierveijzer  presented his work in Switzerland for the first time at sonjART Galerie. In 2003, he received national recognition when his series “Hurray for 4” won both the Dutch Olympic Sports and Arts Contest and the Ernst & Young Graphic Prize.`
   }
 ];
