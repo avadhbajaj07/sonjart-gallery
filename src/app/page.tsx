@@ -143,7 +143,7 @@ export default function Home() {
       {/* 3. UPCOMING EVENTS (Normal Scroll - Covers Slider like a layer) */}
       <section id="events" className="bg-light" style={{ position: 'relative', zIndex: 3, padding: 'var(--spacing-xl) 0', backgroundColor: 'var(--color-white)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem' }}>
             <div>
                <span className="text-caption">02 / Next Exhibition</span>
                <h2 className="text-title" style={{ marginTop: '1rem', marginBottom: '2rem' }}>Kunstraum 15</h2>
@@ -214,7 +214,7 @@ export default function Home() {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
             gap: '2rem',
           }}>
             {featuredArtworksGrid.map((art) => (
@@ -246,7 +246,7 @@ export default function Home() {
       {/* 5. ABOUT SONJ */}
       <section className="bg-light" style={{ position: 'relative', zIndex: 3, padding: 'var(--spacing-xl) 0', borderTop: '1px solid var(--color-border-light)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '6rem', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '6rem', alignItems: 'center' }}>
             
             <div style={{ order: 2 }}>
               <span className="text-caption" style={{ marginBottom: '2rem', display: 'block' }}>04 / The Visionary</span>
@@ -297,7 +297,7 @@ export default function Home() {
               View All Artists <ArrowRight size={16} />
             </Link>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '2rem' }}>
             {[
               { id: 'elso-schiavo', name: 'Elso Schiavo', img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80' },
               { id: 'beatrice-jud', name: 'Beatrice Jud', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80' },

@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 6vw; /* Safe responsive padding for mobile devices */
+  padding: 0 1.5rem; /* Better fixed responsive padding for mobile */
   box-sizing: border-box;
 }
 

@@ -28,7 +28,7 @@ export default async function ArtistDetail({ params }: { params: Promise<{ id: s
           </div>
         </div>
         <h2 className="text-title" style={{ fontSize: '2rem', marginBottom: '2rem', textAlign: 'center' }}>Artworks by {artist.name}</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem' }}>
            <a href={`/artworks/1`} style={{ display: 'block' }}>
             <div style={{ aspectRatio: '4/5', backgroundColor: 'var(--color-grey-dark)', marginBottom: '1rem', overflow: 'hidden' }}>
                <img src={artist.img} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />

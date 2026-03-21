@@ -16,16 +16,37 @@ export default function InterestFormModal({
 }) {
   const [status, setStatus] = useState('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('submitting');
-    setTimeout(() => {
+    
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+      artwork: `${artworkTitle} by ${artistName}`
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      
+      if (!response.ok) throw new Error('Failed to send message');
+      
       setStatus('success');
       setTimeout(() => {
         onClose();
         setStatus('idle');
-      }, 2000);
-    }, 1500);
+      }, 3000);
+    } catch (error) {
+      console.error(error);
+      setStatus('error');
+      alert('There was a problem sending your inquiry. Please try again later.');
+    }
   };
 
   return (
@@ -93,16 +114,17 @@ export default function InterestFormModal({
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '0.875rem', marginBottom: '0.5rem', color: 'var(--color-grey-medium)' }}>Name</label>
-                  <input required type="text" style={{ width: '100%', padding: '0.75rem', backgroundColor: 'transparent', border: '1px solid var(--color-border)', color: 'white', outline: 'none' }} />
+                  <input required name="name" type="text" style={{ width: '100%', padding: '0.75rem', backgroundColor: 'transparent', border: '1px solid var(--color-border)', color: 'white', outline: 'none' }} />
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: '0.875rem', marginBottom: '0.5rem', color: 'var(--color-grey-medium)' }}>Email</label>
-                  <input required type="email" style={{ width: '100%', padding: '0.75rem', backgroundColor: 'transparent', border: '1px solid var(--color-border)', color: 'white', outline: 'none' }} />
+                  <input required name="email" type="email" style={{ width: '100%', padding: '0.75rem', backgroundColor: 'transparent', border: '1px solid var(--color-border)', color: 'white', outline: 'none' }} />
                 </div>
                 <div>
                   <label style={{ display: 'block', fontSize: '0.875rem', marginBottom: '0.5rem', color: 'var(--color-grey-medium)' }}>Message</label>
                   <textarea 
                     required 
+                    name="message"
                     rows={4} 
                     defaultValue={`I am interested in acquiring "${artworkTitle}" by ${artistName}. Please send me more information regarding pricing and availability.`}
                     style={{ width: '100%', padding: '0.75rem', backgroundColor: 'transparent', border: '1px solid var(--color-border)', color: 'white', outline: 'none', resize: 'vertical' }} 

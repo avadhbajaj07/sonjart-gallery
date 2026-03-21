@@ -2,7 +2,7 @@ export default function Artworks() {
   return (
     <main style={{ padding: '8rem 0 var(--spacing-xl)' }} className="container fade-in">
       <h1 className="text-title" style={{ marginBottom: '2rem' }}>Art Collection</h1>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem' }}>
         {[1, 2, 3, 4, 5, 6].map(i => (
           <a key={i} href={`/artworks/${i}`} style={{ display: 'block' }}>
             <div style={{ aspectRatio: '4/5', backgroundColor: 'var(--color-grey-dark)', marginBottom: '1rem', overflow: 'hidden' }}>

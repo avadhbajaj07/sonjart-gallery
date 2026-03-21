@@ -23,7 +23,7 @@ export default function AdminDashboard() {
       <main style={{ flex: 1, padding: '4rem' }}>
         <h1 className="text-title" style={{ fontSize: '2.5rem', marginBottom: '2rem' }}>Dashboard Overview</h1>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '2rem', marginBottom: '4rem' }}>
           {[
             { label: 'Total Artworks', value: '124' },
             { label: 'Featured Artists', value: '18' },
