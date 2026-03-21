@@ -6,8 +6,9 @@ export function generateStaticParams() {
    return artistsData.map((a) => ({ id: a.id }));
 }
 
-export default function ArtistDetail({ params }: { params: { id: string } }) {
-  const artist = artistsData.find(a => a.id === params.id) || artistsData[0];
+export default async function ArtistDetail({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const artist = artistsData.find(a => a.id === resolvedParams.id) || artistsData[0];
 
   return (
     <main style={{ padding: '8rem 0 var(--spacing-xl)', minHeight: '100vh' }} className="fade-in">
