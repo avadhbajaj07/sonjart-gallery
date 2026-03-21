@@ -5,14 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Grid as GridIcon } from 'lucide-react';
 
-const heroImages = [
-  'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1577083165039-3d12ebd8ff46?auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1518998053401-b41398282367?auto=format&fit=crop&q=80'
-];
-
-// Replaced the horizontal scroll with a Fade Slider as requested
-// Using the 2 provided arts + 1 dummy art
+// Using the 2 provided arts + 1 dummy art for the Hero Slider
 const fadeSliderArts = [
   { 
     id: 1, 
@@ -51,18 +44,9 @@ const featuredArtworksGrid = [
 ];
 
 export default function Home() {
-  const [currentHero, setCurrentHero] = useState(0);
   const [currentSliderArt, setCurrentSliderArt] = useState(0);
 
-  // Hero Image Fader
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentHero((prev) => (prev + 1) % heroImages.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Fade Slider Auto-Play
+  // Fade Slider Auto-Play acts as the Hero
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSliderArt((prev) => (prev + 1) % fadeSliderArts.length);
@@ -73,61 +57,8 @@ export default function Home() {
   return (
     <main style={{ minHeight: '100vh', position: 'relative' }}>
       
-      {/* 1. HERO SECTION (Pinned Layer 1) */}
-      <section style={{ height: '100vh', position: 'sticky', top: 0, overflow: 'hidden', zIndex: 1, backgroundColor: 'var(--color-black)' }}>
-        <AnimatePresence mode="popLayout">
-          <motion.div
-            key={currentHero}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.8, ease: 'easeInOut' }}
-            style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundImage: `url(${heroImages[currentHero]})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-        </AnimatePresence>
-        
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)',
-          zIndex: 10,
-        }} />
-
-        <div className="container" style={{
-          position: 'relative',
-          zIndex: 20,
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-end',
-          paddingBottom: '10vh',
-        }}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            <h1 className="text-title-huge" style={{ marginBottom: '1rem' }}>SONJ ART</h1>
-            <p style={{ fontSize: '1.25rem', fontWeight: 300, letterSpacing: '0.05em', marginBottom: '3rem', opacity: 0.9 }}>
-              Contemporary Art Gallery
-            </p>
-            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-              <Link href="#preview" className="btn-primary">
-                View Exclusive Collection
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* 2. EXCLUSIVE FADE SLIDER (Pinned Layer 2 - Rolls over Hero) */}
-      <section id="preview" style={{ height: '100vh', position: 'sticky', top: 0, overflow: 'hidden', zIndex: 2, backgroundColor: 'var(--color-black)' }}>
+      {/* 1. HERO FADE SLIDER (Pinned Layer 1) */}
+      <section id="hero-slider" style={{ height: '100vh', position: 'sticky', top: 0, overflow: 'hidden', zIndex: 1, backgroundColor: 'var(--color-black)' }}>
         <AnimatePresence mode="sync">
           {fadeSliderArts.map((art, index) => {
             if (index !== currentSliderArt) return null;
@@ -154,7 +85,7 @@ export default function Home() {
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)',
+          background: 'linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0) 100%)',
           zIndex: 1,
         }} />
 
@@ -165,7 +96,7 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flex-end',
-          paddingBottom: '10vh',
+          paddingBottom: '12vh',
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '2rem' }}>
             <motion.div
@@ -174,25 +105,28 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="text-caption" style={{ color: 'var(--color-grey-medium)', display: 'block', marginBottom: '1rem' }}>
-                01 / Preview Slider
+              <h1 className="text-title-huge" style={{ color: 'var(--color-white)', marginBottom: '1rem', letterSpacing: '-0.02em' }}>
+                SONJ ART
+              </h1>
+              <span className="text-caption" style={{ color: 'var(--color-grey-medium)', display: 'block', marginBottom: '1.5rem', fontSize: '1rem' }}>
+                Contemporary Art Gallery &middot; Exclusive Collection
               </span>
-              <h2 className="text-title" style={{ color: 'var(--color-white)', marginBottom: '0.5rem' }}>
+              <h2 className="text-title" style={{ color: 'var(--color-white)', marginBottom: '0.5rem', fontSize: '2rem' }}>
                 {fadeSliderArts[currentSliderArt].title}
               </h2>
-              <p style={{ fontSize: '1.25rem', color: 'var(--color-grey-medium)' }}>
+              <p style={{ fontSize: '1.25rem', color: 'var(--color-grey-light)' }}>
                 {fadeSliderArts[currentSliderArt].artist}, {fadeSliderArts[currentSliderArt].year}
               </p>
             </motion.div>
 
             {/* Pagination Controls */}
-            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginBottom: '1rem' }}>
                {fadeSliderArts.map((_, idx) => (
                  <button
                    key={idx}
                    onClick={() => setCurrentSliderArt(idx)}
                    style={{
-                     width: '40px',
+                     width: '50px',
                      height: '4px',
                      backgroundColor: idx === currentSliderArt ? 'var(--color-white)' : 'rgba(255,255,255,0.3)',
                      border: 'none',
