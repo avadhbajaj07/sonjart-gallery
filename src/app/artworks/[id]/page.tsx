@@ -15,7 +15,7 @@ export default function ArtworkDetail() {
         </Link>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem' }}>
           <div style={{ aspectRatio: '4/5', width: '100%', maxWidth: '800px', margin: '0 auto', overflow: 'hidden' }}>
-             <img src="https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?w=1600&q=80" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+             <img src="/assets/art1.jpg" alt="Wut" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ maxWidth: '800px', margin: '4rem auto 0', textAlign: 'left' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
@@ -97,10 +97,10 @@ export default function ArtworkDetail() {
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '2rem' }}>
           {[
-            { img: 'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&q=80', label: 'Corporate Atrium' },
-            { img: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=800&q=80', label: 'Private Residence' },
-            { img: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80', label: 'Boutique Hotel Lobby' },
-            { img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80', label: 'Minimalist Studio' }
+            { img: '/assets/art%20gallery2.jpg', label: 'Corporate Atrium' },
+            { img: '/assets/art%20gallery3.jpg', label: 'Private Residence' },
+            { img: '/assets/art%20gallery4.jpg', label: 'Boutique Hotel Lobby' },
+            { img: '/assets/art%20gallery5.jpg', label: 'Minimalist Studio' }
           ].map((mockup, i) => (
              <div key={i} style={{ width: '100%', overflow: 'hidden', position: 'relative' }}>
                <div style={{ overflow: 'hidden' }}>

@@ -10,7 +10,7 @@ const fadeSliderArts = [
   { 
     id: 1, 
     img: '/assets/slider1.jpg', 
-    fallback: 'https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?w=1600&q=80',
+    fallback: '/assets/slider1.jpg',
     title: 'Featured Canvas', 
     artist: 'Selected Artist', 
     year: '2026' 
@@ -18,17 +18,17 @@ const fadeSliderArts = [
   { 
     id: 2, 
     img: '/assets/slider2.jpg', 
-    fallback: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=1600&q=80',
+    fallback: '/assets/slider2.jpg',
     title: 'Visionary Space', 
     artist: 'Selected Artist', 
     year: '2026' 
   },
   { 
     id: 3, 
-    img: 'https://images.unsplash.com/photo-1561214115-f2f11462ce40?w=1600&q=80',
-    fallback: 'https://images.unsplash.com/photo-1561214115-f2f11462ce40?w=1600&q=80',
+    img: '/assets/slider3.jpg',
+    fallback: '/assets/slider3.jpg',
     title: 'Fluidity in Motion', 
-    artist: 'Dummy Profile', 
+    artist: 'Featured Abstract', 
     year: '2026' 
   }
 ];
@@ -272,7 +272,7 @@ export default function Home() {
 
             <div style={{ order: 1, position: 'relative', aspectRatio: '3/4', overflow: 'hidden' }}>
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80"
+                src="/assets/sonja2.jpeg"
                 alt="Portrait of Sonja, the gallery owner"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -299,12 +299,12 @@ export default function Home() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '2rem' }}>
             {[
-              { id: 'elso-schiavo', name: 'Elso Schiavo', img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80' },
-              { id: 'beatrice-jud', name: 'Beatrice Jud', img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80' },
-              { id: 'nicole-laceur', name: 'Nicole Laceur', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80' },
-              { id: 'nicole-janssen', name: 'Nicole Janssen', img: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80' },
-              { id: 'escobar', name: 'F. Escobar', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80' },
-              { id: 'henk-vierveijzer', name: 'Henk Vierveijzer', img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80' }
+              { id: 'elso-schiavo', name: 'Elso Schiavo', img: '/assets/artist1.jpg' },
+              { id: 'beatrice-jud', name: 'Beatrice Jud', img: '/assets/artist2.jpg' },
+              { id: 'nicole-laceur', name: 'Nicole Laceur', img: '/assets/artist3.jpg' },
+              { id: 'nicole-janssen', name: 'Nicole Janssen', img: '/assets/artist4.jpg' },
+              { id: 'escobar', name: 'F. Escobar', img: '/assets/artist5.jpg' },
+              { id: 'henk-vierveijzer', name: 'Henk Vierveijzer', img: '/assets/artist6.jpg' }
             ].map((artist) => (
               <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
                 <div style={{ 
@@ -344,7 +344,7 @@ export default function Home() {
         <div style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: 'url(https://images.unsplash.com/photo-1544413660-299165566b6c?auto=format&fit=crop&q=80)',
+          backgroundImage: 'url(/assets/art%20gallery1.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.3)',
