@@ -35,12 +35,12 @@ const fadeSliderArts = [
 
 // Added more demo arts to display in grid format
 const featuredArtworksGrid = [
-  { id: 1, img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80', title: 'Absence of Color', artist: 'Henk Vierveijzer', year: '2023' },
-  { id: 2, img: 'https://images.unsplash.com/photo-1549490349-8643362247b5?w=800&q=80', title: 'Monochrome Dream', artist: 'Beatrice Jud', year: '2024' },
-  { id: 3, img: 'https://images.unsplash.com/photo-1560662211-1da01df825b2?w=800&q=80', title: 'Abstract Reality', artist: 'Escobar', year: '2025' },
-  { id: 4, img: 'https://images.unsplash.com/photo-1515405295579-ba7b45403062?w=800&q=80', title: 'Visions of Light', artist: 'Nicole Laceur', year: '2023' },
-  { id: 5, img: 'https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?w=800&q=80', title: 'Echoes I', artist: 'Elso Schiavo', year: '2026' },
-  { id: 6, img: 'https://images.unsplash.com/photo-1554188248-986dfbabfac4?w=800&q=80', title: 'Echoes II', artist: 'Nicole Janssen', year: '2026' },
+  { id: 1, img: '/assets/art1.jpg', title: 'Absence of Color', artist: 'Henk Vierveijzer', year: '2023' },
+  { id: 2, img: '/assets/art2.jpg', title: 'Monochrome Dream', artist: 'Beatrice Jud', year: '2024' },
+  { id: 3, img: '/assets/art3.jpg', title: 'Abstract Reality', artist: 'F. Escobar', year: '2025' },
+  { id: 4, img: '/assets/art4.jpg', title: 'Visions of Light', artist: 'Nicole Laceur', year: '2023' },
+  { id: 5, img: '/assets/art5.jpg', title: 'Echoes I', artist: 'Elso Schiavo', year: '2026' },
+  { id: 6, img: '/assets/art7.jpg', title: 'Echoes II', artist: 'Nicole Janssen', year: '2026' },
 ];
 
 export default function Home() {
