@@ -84,7 +84,50 @@ export default function ArtworkDetail() {
           </div>
         </div>
       </div>
-      <InterestFormModal isOpen={modalOpen} onClose={() => setModalOpen(false)} artworkTitle="The Silence" artistName="Elena Rostova" />
+
+      {/* In-Situ Mockup Gallery */}
+      <div className="container" style={{ marginTop: '8rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '4rem' }}>
+          <span className="text-caption" style={{ color: 'var(--color-grey-medium)', marginBottom: '1rem' }}>In-Situ</span>
+          <h2 className="text-title" style={{ fontSize: '2rem' }}>Spatial Previews</h2>
+          <p style={{ color: 'var(--color-grey-light)', marginTop: '1rem', maxWidth: '600px', fontWeight: 300 }}>
+            Visualize the scale and aesthetic impact of this piece across various architectural environments, from private residences to corporate lobbies.
+          </p>
+        </div>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '2rem' }}>
+          {[
+            { img: 'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=800&q=80', label: 'Corporate Atrium' },
+            { img: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=800&q=80', label: 'Private Residence' },
+            { img: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800&q=80', label: 'Boutique Hotel Lobby' },
+            { img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80', label: 'Minimalist Studio' }
+          ].map((mockup, i) => (
+             <div key={i} style={{ width: '100%', overflow: 'hidden', position: 'relative' }}>
+               <div style={{ overflow: 'hidden' }}>
+                 <img 
+                   src={mockup.img} 
+                   alt={mockup.label} 
+                   style={{ 
+                     width: '100%', 
+                     height: 'auto', 
+                     aspectRatio: '4/3', 
+                     objectFit: 'cover', 
+                     transition: 'transform var(--transition-slow)' 
+                   }} 
+                   onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.03)')} 
+                   onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')} 
+                 />
+               </div>
+               <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid var(--color-border)' }}>
+                 <p className="text-caption" style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)' }}>{mockup.label}</p>
+                 <p className="text-caption" style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)' }}>Visualization</p>
+               </div>
+             </div>
+          ))}
+        </div>
+      </div>
+
+      <InterestFormModal isOpen={modalOpen} onClose={() => setModalOpen(false)} artworkTitle="Wut" artistName="Beatrice Jud" />
     </main>
   );
 }
