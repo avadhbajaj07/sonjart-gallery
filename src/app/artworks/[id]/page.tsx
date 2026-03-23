@@ -85,25 +85,32 @@ export default function ArtworkDetail() {
         </div>
       </div>
 
-      {/* In-Situ Mockup Gallery */}
+      {/* Other Artworks Section */}
       <div className="container" style={{ marginTop: '8rem' }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '4rem' }}>
-          <span className="text-caption" style={{ color: 'var(--color-grey-medium)', marginBottom: '1rem' }}>In-Situ</span>
-          <h2 className="text-title" style={{ fontSize: '2rem' }}>Spatial Previews</h2>
+          <span className="text-caption" style={{ color: 'var(--color-grey-medium)', marginBottom: '1rem' }}>Exhibition</span>
+          <h2 className="text-title" style={{ fontSize: '2rem' }}>Art</h2>
           <p style={{ color: 'var(--color-grey-light)', marginTop: '1rem', maxWidth: '600px', fontWeight: 300 }}>
-            Visualize the scale and aesthetic impact of this piece across various architectural environments, from private residences to corporate lobbies.
+            Explore other exceptional pieces in our contemporary collection.
           </p>
         </div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem' }}>
           {[
-            { img: '/assets/art%20gallery2.jpg', label: 'Corporate Atrium' },
-            { img: '/assets/art%20gallery3.jpg', label: 'Private Residence' },
-            { img: '/assets/art%20gallery4.jpg', label: 'Boutique Hotel Lobby' },
-            { img: '/assets/art%20gallery5.jpg', label: 'Minimalist Studio' }
+            { img: '/assets/art1.jpg', label: 'Absence of Color' },
+            { img: '/assets/art2.jpg', label: 'Monochrome Dream' },
+            { img: '/assets/art3.jpg', label: 'Abstract Reality' },
+            { img: '/assets/art4.jpg', label: 'Visions of Light' },
+            { img: '/assets/art5.jpg', label: 'Echoes I' },
+            { img: '/assets/art6.jpg', label: 'Spatial Void' },
+            { img: '/assets/art7.jpg', label: 'Echoes II' },
+            { img: '/assets/art8.jpg', label: 'Fragmented' },
+            { img: '/assets/art9.jpg', label: 'Spectrum' },
+            { img: '/assets/art10.jpg', label: 'Lost Forms' }
           ].map((mockup, i) => (
              <div key={i} style={{ width: '100%', overflow: 'hidden', position: 'relative' }}>
-               <div style={{ overflow: 'hidden' }}>
+               <Link href={`/artworks/${i + 1}`} style={{ display: 'block' }}>
+                 <div style={{ overflow: 'hidden' }}>
                  <img 
                    src={mockup.img} 
                    alt={mockup.label} 
@@ -120,8 +127,9 @@ export default function ArtworkDetail() {
                </div>
                <div style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem 0', borderBottom: '1px solid var(--color-border)' }}>
                  <p className="text-caption" style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)' }}>{mockup.label}</p>
-                 <p className="text-caption" style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)' }}>Visualization</p>
+                 <p className="text-caption" style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)' }}>Perspective</p>
                </div>
+               </Link>
              </div>
           ))}
         </div>

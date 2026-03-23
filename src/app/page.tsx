@@ -33,14 +33,17 @@ const fadeSliderArts = [
   }
 ];
 
-// Added more demo arts to display in grid format
 const featuredArtworksGrid = [
-  { id: 1, img: '/assets/art%20gallery1.jpg', title: 'Absence of Color', artist: 'Henk Vierveijzer', year: '2023' },
-  { id: 2, img: '/assets/art%20gallery2.jpg', title: 'Monochrome Dream', artist: 'Beatrice Jud', year: '2024' },
-  { id: 3, img: '/assets/art%20gallery3.jpg', title: 'Abstract Reality', artist: 'F. Escobar', year: '2025' },
-  { id: 4, img: '/assets/art%20gallery4.jpg', title: 'Visions of Light', artist: 'Nicole Laceur', year: '2023' },
-  { id: 5, img: '/assets/art%20gallery5.jpg', title: 'Echoes I', artist: 'Elso Schiavo', year: '2026' },
-  { id: 6, img: '/assets/art%20gallery6.jpg', title: 'Echoes II', artist: 'Nicole Janssen', year: '2026' },
+  { id: 1, img: '/assets/art1.jpg', title: 'Absence of Color', artist: 'Henk Vierveijzer', year: '2023' },
+  { id: 2, img: '/assets/art2.jpg', title: 'Monochrome Dream', artist: 'Beatrice Jud', year: '2024' },
+  { id: 3, img: '/assets/art3.jpg', title: 'Abstract Reality', artist: 'F. Escobar', year: '2025' },
+  { id: 4, img: '/assets/art4.jpg', title: 'Visions of Light', artist: 'Nicole Laceur', year: '2023' },
+  { id: 5, img: '/assets/art5.jpg', title: 'Echoes I', artist: 'Elso Schiavo', year: '2026' },
+  { id: 6, img: '/assets/art6.jpg', title: 'Echoes II', artist: 'Nicole Janssen', year: '2026' },
+  { id: 7, img: '/assets/art7.jpg', title: 'Spatial Void', artist: 'Nicole Janssen', year: '2026' },
+  { id: 8, img: '/assets/art8.jpg', title: 'Fragmented', artist: 'F. Escobar', year: '2025' },
+  { id: 9, img: '/assets/art9.jpg', title: 'Spectrum', artist: 'Beatrice Jud', year: '2023' },
+  { id: 10, img: '/assets/art10.jpg', title: 'Lost Forms', artist: 'Elso Schiavo', year: '2022' },
 ];
 
 export default function Home() {
@@ -201,8 +204,8 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '4rem', flexWrap: 'wrap', gap: '2rem' }}>
             <div>
-              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>03 / Curated Grid</span>
-              <h2 className="text-title" style={{ marginTop: '1rem', color: 'var(--color-white)' }}>Grid Collection</h2>
+              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>03 / Curated Art</span>
+              <h2 className="text-title" style={{ marginTop: '1rem', color: 'var(--color-white)' }}>Art Collections</h2>
             </div>
             
             <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>

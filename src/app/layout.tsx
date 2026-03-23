@@ -71,14 +71,16 @@ export default function RootLayout({
           <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
               <div>
-                <h2 style={{ fontSize: '1.5rem', fontWeight: 500, margin: '0 0 1rem' }}>SONJ ART</h2>
+                <Link href="/" style={{ display: 'inline-block', marginBottom: '1rem' }}>
+                  <img src="/assets/logo.png" alt="SONJ ART Logo" style={{ height: '40px', objectFit: 'contain' }} />
+                </Link>
                 <p style={{ color: 'var(--color-grey-medium)', marginBottom: '0.5rem' }}>Contemporary Art Gallery</p>
                 <p style={{ color: 'var(--color-grey-medium)' }}>Zürich, Switzerland</p>
               </div>
               <div style={{ display: 'flex', gap: '4rem', flexWrap: 'wrap' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   <span className="text-caption" style={{ marginBottom: '1rem' }}>Menu</span>
-                  <Link href="/artworks" style={{ color: 'var(--color-grey-medium)' }}>Art Collection</Link>
+                  <Link href="/artworks" style={{ color: 'var(--color-grey-medium)' }}>Art Collections</Link>
                   <Link href="/artists" style={{ color: 'var(--color-grey-medium)' }}>Artists</Link>
                   <Link href="/about" style={{ color: 'var(--color-grey-medium)' }}>About Sonj</Link>
                 </div>

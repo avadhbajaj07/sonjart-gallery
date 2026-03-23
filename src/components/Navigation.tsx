@@ -17,7 +17,7 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { name: 'Art Collection', href: '/artworks' },
+    { name: 'Art Collections', href: '/artworks' },
     { name: 'Artists', href: '/artists' },
     { name: 'About Sonj', href: '/about' },
     { name: 'Events', href: '/events' },
@@ -42,8 +42,8 @@ export default function Navigation() {
         }}
       >
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link href="/" style={{ fontSize: '1.25rem', fontWeight: 500, letterSpacing: '0.1em' }}>
-            SONJ ART
+          <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
+            <img src="/assets/logo.png" alt="SONJ ART Logo" style={{ height: '40px', objectFit: 'contain' }} />
           </Link>
 
           {/* Desktop Nav */}
@@ -109,8 +109,8 @@ export default function Navigation() {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4rem' }}>
-              <Link href="/" style={{ fontSize: '1.25rem', fontWeight: 500, letterSpacing: '0.1em' }} onClick={() => setMobileMenuOpen(false)}>
-                SONJ ART
+              <Link href="/" style={{ display: 'flex', alignItems: 'center' }} onClick={() => setMobileMenuOpen(false)}>
+                <img src="/assets/logo.png" alt="SONJ ART Logo" style={{ height: '40px', objectFit: 'contain' }} />
               </Link>
               <button 
                 onClick={() => setMobileMenuOpen(false)}
