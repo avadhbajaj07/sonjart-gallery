@@ -82,7 +82,7 @@ export default function RootLayout({
                   <span className="text-caption" style={{ marginBottom: '1rem' }}>Menu</span>
                   <Link href="/artworks" style={{ color: 'var(--color-grey-medium)' }}>Art Collections</Link>
                   <Link href="/artists" style={{ color: 'var(--color-grey-medium)' }}>Artists</Link>
-                  <Link href="/about" style={{ color: 'var(--color-grey-medium)' }}>About Sonj</Link>
+                  <Link href="/about" style={{ color: 'var(--color-grey-medium)' }}>About Sonja</Link>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   <span className="text-caption" style={{ marginBottom: '1rem' }}>Connect</span>

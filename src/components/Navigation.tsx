@@ -19,7 +19,7 @@ export default function Navigation() {
   const navLinks = [
     { name: 'Art Collections', href: '/artworks' },
     { name: 'Artists', href: '/artists' },
-    { name: 'About Sonj', href: '/about' },
+    { name: 'About Sonja', href: '/about' },
     { name: 'Events', href: '/events' },
     { name: 'Contact', href: '/contact' }
   ];
