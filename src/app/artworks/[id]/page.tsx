@@ -1,11 +1,25 @@
-'use client';
 import { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import InterestFormModal from '@/components/InterestFormModal';
 
-export default function ArtworkDetail() {
+const allArtworks = [
+  { id: '1', img: '/assets/art1.jpg', title: 'Absence of Color', artist: 'Henk Vierveijzer', year: '2023', material: 'Oil on canvas', dim: '120 x 100 cm', desc: 'A profound exploration of the absence of color.' },
+  { id: '2', img: '/assets/art2.jpg', title: 'Monochrome Dream', artist: 'Beatrice Jud', year: '2024', material: 'Acrylic on canvas', dim: '100 x 100 cm', desc: 'The layered acrylic application invites viewers to embrace the monochrome aesthetic.' },
+  { id: '3', img: '/assets/art3.jpg', title: 'Abstract Reality', artist: 'F. Escobar', year: '2025', material: 'Mixed media', dim: '150 x 120 cm', desc: 'Finding inspiration in layered urban landscapes.' },
+  { id: '4', img: '/assets/art4.jpg', title: 'Visions of Light', artist: 'Nicole Laceur', year: '2023', material: 'Oil on canvas', dim: '90 x 90 cm', desc: 'Impressions of spring and vibrant light.' },
+  { id: '5', img: '/assets/art5.jpg', title: 'Echoes I', artist: 'Elso Schiavo', year: '2026', material: 'Acrylic on canvas', dim: '110 x 90 cm', desc: 'Imaginative and figurative expressions.' },
+  { id: '6', img: '/assets/art6.jpg', title: 'Spatial Void', artist: 'Nicole Janssen', year: '2026', material: 'Oil and acrylic', dim: '140 x 110 cm', desc: 'A spatial reflection of natural moods.' },
+  { id: '7', img: '/assets/art7.jpg', title: 'Echoes II', artist: 'Nicole Janssen', year: '2026', material: 'Oil and acrylic', dim: '140 x 110 cm', desc: 'Deep sensitivity to atmosphere and calm introspection.' },
+  { id: '8', img: '/assets/art8.jpg', title: 'Fragmented', artist: 'F. Escobar', year: '2025', material: 'Mixed media', dim: '130 x 130 cm', desc: 'Capturing the pulse of urban life and human complexity.' },
+  { id: '9', img: '/assets/art9.jpg', title: 'Spectrum', artist: 'Beatrice Jud', year: '2023', material: 'Acrylic on canvas', dim: '100 x 100 cm', desc: 'Living with bold primary colors and intense visual language.' },
+  { id: '10', img: '/assets/art10.jpg', title: 'Lost Forms', artist: 'Elso Schiavo', year: '2022', material: 'Acrylic on canvas', dim: '120 x 120 cm', desc: 'Playful, tender, and gently ironic shapes.' },
+];
+
+export default function ArtworkDetail({ params }: { params: { id: string } }) {
   const [modalOpen, setModalOpen] = useState(false);
+  
+  const currentArt = allArtworks.find(a => a.id === params.id) || allArtworks[0];
   
   return (
     <main style={{ padding: '8rem 0 var(--spacing-xl)', minHeight: '100vh' }} className="fade-in">
@@ -14,64 +28,51 @@ export default function ArtworkDetail() {
           <ArrowLeft size={16} /> Back to Collection
         </Link>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem' }}>
+          
+          {/* Main Selected Artwork Image */}
           <div style={{ aspectRatio: '4/5', width: '100%', maxWidth: '800px', margin: '0 auto', overflow: 'hidden' }}>
-             <img src="/assets/art%20gallery1.jpg" alt="Wut" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+             <img src={currentArt.img} alt={currentArt.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
+          
+          {/* Artwork Data Block */}
           <div style={{ maxWidth: '800px', margin: '4rem auto 0', textAlign: 'left' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
               <div>
-                <h1 className="text-title" style={{ marginBottom: '1rem', letterSpacing: '-0.02em' }}>Wut</h1>
+                <h1 className="text-title" style={{ marginBottom: '1rem', letterSpacing: '-0.02em' }}>{currentArt.title}</h1>
                 <h2 style={{ fontSize: '1.5rem', color: 'var(--color-grey-medium)' }}>
-                  <Link href="/artists/beatrice-jud" style={{ 
-                    borderBottom: '1px solid var(--color-grey-medium)', 
-                    paddingBottom: '0.25rem', 
-                    transition: 'all 0.3s ease' 
-                  }}>
-                    Beatrice Jud
+                  <Link href="/artists" style={{ borderBottom: '1px solid var(--color-grey-medium)', paddingBottom: '0.25rem' }}>
+                    {currentArt.artist}
                   </Link>
                 </h2>
               </div>
               
               <div style={{ 
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', 
-                gap: '3rem',
-                padding: '3rem 0',
-                borderTop: '1px solid var(--color-border)',
-                borderBottom: '1px solid var(--color-border)'
+                display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '3rem',
+                padding: '3rem 0', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)'
               }}>
                 <div>
                   <h3 className="text-caption" style={{ marginBottom: '0.75rem', color: 'var(--color-grey-dark)', letterSpacing: '0.1em' }}>Artist</h3>
-                  <p style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--color-white)' }}>Beatrice Jud</p>
+                  <p style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--color-white)' }}>{currentArt.artist}</p>
                 </div>
                 <div>
                   <h3 className="text-caption" style={{ marginBottom: '0.75rem', color: 'var(--color-grey-dark)', letterSpacing: '0.1em' }}>Material</h3>
-                  <p style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--color-white)' }}>Acrylic on canvas</p>
+                  <p style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--color-white)' }}>{currentArt.material}</p>
                 </div>
                 <div>
                   <h3 className="text-caption" style={{ marginBottom: '0.75rem', color: 'var(--color-grey-dark)', letterSpacing: '0.1em' }}>Dimensions</h3>
-                  <p style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--color-white)' }}>100 x 100 cm</p>
+                  <p style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--color-white)' }}>{currentArt.dim}</p>
                 </div>
                 <div>
                   <h3 className="text-caption" style={{ marginBottom: '0.75rem', color: 'var(--color-grey-dark)', letterSpacing: '0.1em' }}>Year</h3>
-                  <p style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--color-white)' }}>2025</p>
+                  <p style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--color-white)' }}>{currentArt.year}</p>
                 </div>
               </div>
 
               <div style={{ fontSize: '1.125rem', lineHeight: 1.8, color: 'var(--color-grey-light)', fontWeight: 300, maxWidth: '650px' }}>
-                <p>
-                  &quot;Wut&quot; (Anger) explores the profound intensity and raw energy of unrestrained emotion. The layered acrylic application invites viewers to embrace the chaos and find an internal focus.
-                </p>
+                <p>{currentArt.desc}</p>
               </div>
 
-              <div style={{ 
-                display: 'flex', 
-                flexWrap: 'wrap', 
-                gap: '2rem', 
-                alignItems: 'center', 
-                marginTop: '1rem',
-                paddingTop: '2rem'
-              }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center', marginTop: '1rem', paddingTop: '2rem' }}>
                 <button className="btn-primary" onClick={() => setModalOpen(true)} style={{ padding: '1.25rem 3rem' }}>
                   Inquire About This Piece
                 </button>
@@ -85,41 +86,32 @@ export default function ArtworkDetail() {
         </div>
       </div>
 
-      {/* Other Artworks Section */}
+      {/* In-Situ Art Gallery Mockups */}
       <div className="container" style={{ marginTop: '8rem' }}>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '4rem' }}>
           <span className="text-caption" style={{ color: 'var(--color-grey-medium)', marginBottom: '1rem' }}>Exhibition</span>
-          <h2 className="text-title" style={{ fontSize: '2rem' }}>Art</h2>
+          <h2 className="text-title" style={{ fontSize: '2rem' }}>Art Gallery</h2>
           <p style={{ color: 'var(--color-grey-light)', marginTop: '1rem', maxWidth: '600px', fontWeight: 300 }}>
-            Explore other exceptional pieces in our contemporary collection.
+            Immerse yourself in curated perspectives of our contemporary collection.
           </p>
         </div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '2rem' }}>
           {[
-            { img: '/assets/art1.jpg', label: 'Absence of Color' },
-            { img: '/assets/art2.jpg', label: 'Monochrome Dream' },
-            { img: '/assets/art3.jpg', label: 'Abstract Reality' },
-            { img: '/assets/art4.jpg', label: 'Visions of Light' },
-            { img: '/assets/art5.jpg', label: 'Echoes I' },
-            { img: '/assets/art6.jpg', label: 'Spatial Void' },
-            { img: '/assets/art7.jpg', label: 'Echoes II' },
-            { img: '/assets/art8.jpg', label: 'Fragmented' },
-            { img: '/assets/art9.jpg', label: 'Spectrum' },
-            { img: '/assets/art10.jpg', label: 'Lost Forms' }
+            { img: '/assets/art%20gallery1.jpg', label: 'Gallery Vision I' },
+            { img: '/assets/art%20gallery2.jpg', label: 'Gallery Vision II' },
+            { img: '/assets/art%20gallery3.jpg', label: 'Gallery Vision III' },
+            { img: '/assets/art%20gallery4.jpg', label: 'Gallery Vision IV' },
+            { img: '/assets/art%20gallery5.jpg', label: 'Gallery Vision V' },
+            { img: '/assets/art%20gallery6.jpg', label: 'Gallery Vision VI' }
           ].map((mockup, i) => (
              <div key={i} style={{ width: '100%', overflow: 'hidden', position: 'relative' }}>
-               <Link href={`/artworks/${i + 1}`} style={{ display: 'block' }}>
-                 <div style={{ overflow: 'hidden' }}>
+               <div style={{ overflow: 'hidden' }}>
                  <img 
                    src={mockup.img} 
                    alt={mockup.label} 
                    style={{ 
-                     width: '100%', 
-                     height: 'auto', 
-                     aspectRatio: '4/3', 
-                     objectFit: 'cover', 
-                     transition: 'transform var(--transition-slow)' 
+                     width: '100%', height: 'auto', aspectRatio: '4/3', objectFit: 'cover', transition: 'transform var(--transition-slow)' 
                    }} 
                    onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.03)')} 
                    onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')} 
@@ -129,13 +121,12 @@ export default function ArtworkDetail() {
                  <p className="text-caption" style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)' }}>{mockup.label}</p>
                  <p className="text-caption" style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)' }}>Perspective</p>
                </div>
-               </Link>
              </div>
           ))}
         </div>
       </div>
 
-      <InterestFormModal isOpen={modalOpen} onClose={() => setModalOpen(false)} artworkTitle="Wut" artistName="Beatrice Jud" />
+      <InterestFormModal isOpen={modalOpen} onClose={() => setModalOpen(false)} artworkTitle={currentArt.title} artistName={currentArt.artist} />
     </main>
   );
 }
