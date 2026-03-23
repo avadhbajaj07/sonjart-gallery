@@ -58,7 +58,7 @@ export async function POST(req: Request) {
         <!-- Header / Logo Area -->
         <div style="text-align: center; border-bottom: 1px solid #eeeeee; padding-bottom: 30px; margin-bottom: 30px;">
           <h1 style="font-weight: 300; letter-spacing: 0.2em; font-size: 24px; color: #000000; margin: 0;">SONJ ART</h1>
-          <p style="font-size: 12px; letter-spacing: 0.1em; color: #888888; text-transform: uppercase; margin-top: 10px;">Contemporary Art Gallery</p>
+          <p style="font-size: 12px; letter-spacing: 0.1em; color: #888888; text-transform: uppercase; margin-top: 10px;">Original artworks by international artists, spanning styles from realism to expressionism.</p>
         </div>
 
         <!-- Main Content -->

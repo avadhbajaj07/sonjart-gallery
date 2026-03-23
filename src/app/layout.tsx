@@ -7,13 +7,13 @@ import Navigation from '@/components/Navigation';
 import CookieBanner from '@/components/CookieBanner';
 
 export const metadata: Metadata = {
-  title: 'SONJ ART | Contemporary Art Gallery Zürich',
+  title: 'SONJ ART | Original artworks by international artists, spanning styles from realism to expressionism.',
   description: 'Ultra-luxury contemporary art gallery based in Zürich, Switzerland. Explore exclusive abstract works, modern paintings, and upcoming fine art exhibitions.',
   keywords: ['contemporary art', 'zurich art gallery', 'modern art', 'fine art', 'swiss gallery', 'Sonja Schlagel', 'luxury art', 'abstract paintings'],
   authors: [{ name: 'Sonja Schlagel' }],
   creator: 'SONJ ART',
   openGraph: {
-    title: 'SONJ ART | Contemporary Art Gallery',
+    title: 'SONJ ART | Original artworks by international artists, spanning styles from realism to expressionism.',
     description: 'Ultra-luxury contemporary art gallery based in Zürich, Switzerland.',
     url: 'https://sonjart.ch',
     siteName: 'SONJ ART Gallery',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SONJ ART | Contemporary Art Gallery Zürich',
+    title: 'SONJ ART | Original artworks by international artists, spanning styles from realism to expressionism.',
     description: 'Explore exclusive abstract works and conceptual fine art in Zürich.',
     images: ['https://sonjart.ch/assets/art1.jpg'],
   },
@@ -74,7 +74,7 @@ export default function RootLayout({
                 <Link href="/" style={{ display: 'inline-block', marginBottom: '1rem' }}>
                   <img src="/assets/logo.png" alt="SONJ ART Logo" style={{ height: '40px', objectFit: 'contain' }} />
                 </Link>
-                <p style={{ color: 'var(--color-grey-medium)', marginBottom: '0.5rem' }}>Contemporary Art Gallery</p>
+                <p style={{ color: 'var(--color-grey-medium)', marginBottom: '0.5rem' }}>Original artworks by international artists, spanning styles from realism to expressionism.</p>
                 <p style={{ color: 'var(--color-grey-medium)' }}>Zürich, Switzerland</p>
               </div>
               <div style={{ display: 'flex', gap: '4rem', flexWrap: 'wrap' }}>

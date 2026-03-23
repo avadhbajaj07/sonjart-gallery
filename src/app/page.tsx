@@ -112,7 +112,7 @@ export default function Home() {
                 SONJ ART
               </h1>
               <span className="text-caption" style={{ color: 'var(--color-grey-medium)', display: 'block', marginBottom: '1.5rem', fontSize: '1rem' }}>
-                Contemporary Art Gallery &middot; Exclusive Collection
+                Original artworks by international artists, spanning styles from realism to expressionism. &middot; Exclusive Collection
               </span>
               <h2 className="text-title" style={{ color: 'var(--color-white)', marginBottom: '0.5rem', fontSize: '2rem' }}>
                 {fadeSliderArts[currentSliderArt].title}
