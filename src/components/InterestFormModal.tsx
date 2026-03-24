@@ -116,7 +116,7 @@ export default function InterestFormModal({
             </p>
 
             {status === 'success' ? (
-              <div style={{ textAlign: 'center', padding: '2rem 0', color: '#4caf50' }}>
+              <div style={{ textAlign: 'center', padding: '2rem 0', color: 'var(--color-white)' }}>
                 <p>Thank you. Your inquiry has been sent to info@sonjart.ch. We will be in touch shortly.</p>
               </div>
             ) : (

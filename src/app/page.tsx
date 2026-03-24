@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
+import { allArtworks } from './artworks/data';
+
 // Real arts for the Hero Slider
 const fadeSliderArts = [
   { 
@@ -33,20 +35,7 @@ const fadeSliderArts = [
   }
 ];
 
-const featuredArtworksGrid = [
-  { id: 11, img: '/assets/S087.JPG', title: 'A lady reading', artist: 'Nicole Laceur', year: '2026', originalPrice: 3900, discount: 70, discountPrice: 1170 },
-  { id: 12, img: '/assets/2801.jpg', title: 'Untitled (yellow ladies)', artist: 'Corneille', year: '1991', originalPrice: 1100, discount: 50, discountPrice: 550 },
-  { id: 13, img: '/assets/S098.JPG', title: 'Longing', artist: 'Nicole Janssen', year: '2026', originalPrice: 4200, discount: 80, discountPrice: 840 },
-  { id: 14, img: '/assets/S108.JPG', title: 'Wut', artist: 'Beatrice Jud', year: '2026', originalPrice: 5500, discount: 50, discountPrice: 2750 },
-  { id: 15, img: '/assets/S026.JPG', title: 'Autumn in Paris', artist: 'Cees Müller', year: '2026', originalPrice: 5900, discount: 60, discountPrice: 2360 },
-  { id: 16, img: '/assets/Toro Small I.JPG', title: 'Toro 2', artist: 'F. Escobar', year: '2026', originalPrice: 2000, discount: 70, discountPrice: 600 },
-  { id: 17, img: '/assets/4121.JPG', title: 'Real life 4', artist: 'F. Escobar', year: '2026', originalPrice: 5500, discount: 80, discountPrice: 1100 },
-  { id: 18, img: '/assets/S480.JPG', title: 'Naked Lady in yellow room', artist: 'Henk Vierveijzer', year: '2026', originalPrice: 5500, discount: 50, discountPrice: 2750 },
-  { id: 19, img: '/assets/S419.JPG', title: 'Forgotten', artist: 'Nicole Laceur', year: '2026', originalPrice: 4500, discount: 70, discountPrice: 1350 },
-  { id: 20, img: '/assets/S099.JPG', title: 'Red dream', artist: 'Nicole Janssen', year: '2026', originalPrice: 4500, discount: 70, discountPrice: 1350 },
-  { id: 21, img: '/assets/S008.JPG', title: 'Flowercomposition VI', artist: 'Gyula Issak', year: '2026', originalPrice: 8300, discount: 70, discountPrice: 2490 },
-  { id: 22, img: '/assets/S014.JPG', title: 'My Apple', artist: 'Jean Lefort', year: '2026', originalPrice: 2100, discount: 70, discountPrice: 630 },
-];
+
 
 export default function Home() {
   const [currentSliderArt, setCurrentSliderArt] = useState(0);
@@ -222,7 +211,7 @@ export default function Home() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
             gap: '2rem',
           }}>
-            {featuredArtworksGrid.map((art) => (
+            {allArtworks.slice(0, 16).map((art) => (
               <Link key={art.id} href={`/artworks/${art.id}`} style={{ display: 'block' }}>
                 <div style={{ overflow: 'hidden', aspectRatio: '4/5', marginBottom: '1.5rem', position: 'relative' }}>
                   <img 
@@ -240,8 +229,8 @@ export default function Home() {
                     <h3 style={{ fontSize: '1.25rem', marginBottom: '0.25rem' }}>{art.title}</h3>
                     <p style={{ color: 'var(--color-grey-medium)', fontSize: '0.875rem' }}>{art.artist}</p>
                     <div style={{ marginTop: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                       <span style={{ fontSize: '1rem', color: 'var(--color-white)', fontWeight: 500 }}>CHF {(art as any).discountPrice?.toLocaleString()}</span>
-                       <span style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)', textDecoration: 'line-through' }}>CHF {(art as any).originalPrice?.toLocaleString()}</span>
+                       <span style={{ fontSize: '1rem', color: 'var(--color-white)', fontWeight: 500 }}>CHF {art.discountPrice?.toLocaleString()}</span>
+                       <span style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)', textDecoration: 'line-through' }}>CHF {art.originalPrice?.toLocaleString()}</span>
                     </div>
                   </div>
                   <span style={{ color: 'var(--color-grey-medium)', fontSize: '0.875rem' }}>{art.year}</span>

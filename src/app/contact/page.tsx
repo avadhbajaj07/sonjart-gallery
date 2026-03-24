@@ -54,7 +54,7 @@ export default function Contact() {
         </div>
         <div>
           {status === 'success' ? (
-            <div style={{ padding: '3rem', border: '1px solid #4caf50', color: '#4caf50', textAlign: 'center' }}>
+            <div style={{ padding: '3rem', border: '1px solid var(--color-border)', color: 'var(--color-white)', textAlign: 'center' }}>
               <p style={{ fontSize: '1.25rem' }}>Thank you!</p>
               <p>Your message has been received.</p>
             </div>
