@@ -80,7 +80,7 @@ export default function Home() {
                   src={art.img} 
                   onError={(e) => { e.currentTarget.src = art.fallback }}
                   alt={art.title}
-                  style={{ width: '100%', height: '100%', objectFit: 'contain', backgroundColor: 'var(--color-black)' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </motion.div>
             )
