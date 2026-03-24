@@ -28,8 +28,8 @@ export default function ArtworkDetail({ params }: { params: { id: string } }) {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem' }}>
           
           {/* Main Selected Artwork Image */}
-          <div style={{ aspectRatio: '4/5', width: '100%', maxWidth: '800px', margin: '0 auto', overflow: 'hidden' }}>
-             <img src={currentArt.img} alt={currentArt.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', display: 'flex', justifyContent: 'center' }}>
+             <img src={currentArt.img} alt={currentArt.title} style={{ maxWidth: '100%', height: 'auto', maxHeight: '80vh', objectFit: 'contain' }} />
           </div>
           
           {/* Artwork Data Block */}

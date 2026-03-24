@@ -19,11 +19,11 @@ export default function Artworks() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '3rem' }}>
         {allArtworks.map((art) => (
           <Link key={art.id} href={`/artworks/${art.id}`} style={{ display: 'block' }}>
-            <div style={{ aspectRatio: '4/5', backgroundColor: 'var(--color-black)', marginBottom: '1.5rem', overflow: 'hidden' }}>
+            <div style={{ aspectRatio: '4/5', backgroundColor: 'var(--color-black)', marginBottom: '1.5rem', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                <img 
                  src={art.img} 
                  alt={art.title} 
-                 style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform var(--transition-slow)' }} 
+                 style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', transition: 'transform var(--transition-slow)' }} 
                  onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
                  onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
                />
