@@ -75,5 +75,23 @@ Bathed in light and infused with playful ease, the works of Belgian artist Alber
 Chalet finds most of his subjects along the beaches of Belgium and the Netherlands. “I love to paint people—especially children—lost in carefree play,” says the self-taught artist, born in 1946. His scenes capture fleeting moments of innocence and delight, suspended in sunlight and salt air.
 Inspired by the French Impressionists, Chalet’s style celebrates the brighter side of life. “On the canvas, I wish to honor life’s sunlit moments—small pauses of calm in an often turbulent and hurried world.” Children of all ages play in pale sand, kites rise into open skies, and sunlight dances across gently rippling water.
 As one contemplates Chalet’s works, an entire soundscape unfolds in the imagination: the sight of rolling waves is joined by the murmur of the surf; the laughter of children seems to echo across the shore; and the boats moored along the water’s edge sway softly as the wind plays with their sails.`
+  },
+  {
+    id: 'richard-van-der-pol',
+    name: 'Richard van der Pol',
+    img: '/assets/artist1.jpg',
+    bio: `Richard van der Pol has the remarkable ability to capture an entire scene with just a few brushstrokes on large canvases. In a style reminiscent of spontaneous snapshots, he portrays people and street scenes in a manner that is unmistakably his own. Fully absorbed in the moment, a young couple daydreams on a park bench. Elsewhere, another pair seems equally detached from the outside world, chatting animatedly in a tavern while people dance in the background. In his paintings, van der Pol creates an atmosphere of intimacy and a quiet celebration of life — the pure joy of existence itself.
+
+From an early age, the Dutch artist discovered drawing and painting as his preferred means of expression. Born in 1936, he grew up in an artistic environment, as his father was also a practicing artist. Gifted with this natural talent and a keen, observant eye, van der Pol embarked on his artistic journey early on. He studied for several years at the Royal Academy of Art in The Hague, but his strong desire for artistic freedom eventually led him to leave formal training behind and pursue his own independent path. By the age of just twenty, he was already creating striking portraits of children and women dressed in the fashion of the early 20th century — works that radiate a powerful presence and bear witness to the artist’s remarkable maturity at such a young age.`
+  },
+  {
+    id: 'gyula-issak',
+    name: 'Gyula Issak',
+    img: '/assets/artist2.jpg',
+    bio: `The Hungarian artist Gyula Issak embraces every painterly challenge without hesitation. Fire, marble, paper, fabric—an array of diverse materials coexist side by side within his works. This intense engagement with texture and surface, with the very substance of his motifs, has continuously refined the talent of the artist born in Budapest in 1951. His fascination with tactile qualities, combined with dramatic, almost baroque compositions, gives his work its unmistakable signature. Particularly remarkable is the fact that Gyula developed his distinctive technique largely through self-study.
+
+Until 1977, Gyula Issak worked as a graphic designer, initially focusing his painting on landscapes. Over time, these receded—quite literally—into the background. Still lifes and the Baroque era increasingly captured his imagination. Inspired by the great Dutch masters of this period, who immortalized the wealth and opulence of their time on canvas, Issak honed his sense for drama, detail, romance, and atmosphere.
+
+The result is a unique painterly mastery, unmistakable in its depth and intensity, and highly sought after by collectors around the world.`
   }
 ];
