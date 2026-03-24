@@ -17,6 +17,7 @@ const allArtworks = [
   { id: 13, img: '/assets/S098.JPG', title: 'Longing', artist: 'Nicole Janssen', year: '2026', originalPrice: 4200, discount: 80, discountPrice: 840 },
   { id: 14, img: '/assets/S108.JPG', title: 'Wut', artist: 'Beatrice Jud', year: '2026', originalPrice: 5500, discount: 50, discountPrice: 2750 },
   { id: 15, img: '/assets/S026.JPG', title: 'Autumn in Paris', artist: 'Cees Müller', year: '2026', originalPrice: 5900, discount: 60, discountPrice: 2360 },
+  { id: 16, img: '/assets/Toro Small I.JPG', title: 'Toro 2', artist: 'F. Escobar', year: '2026', originalPrice: 2000, discount: 70, discountPrice: 600 },
 ];
 
 export default function Artworks() {
