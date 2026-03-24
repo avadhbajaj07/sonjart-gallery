@@ -37,7 +37,7 @@ Laceurs Arbeiten zeichnen sich insbesondere auch durch ein sehr feines Gespür f
   {
     id: 'nicole-janssen',
     name: 'Nicole Janssen',
-    img: '/assets/artist4.jpg',
+    img: '/assets/IMG_4677.jpg',
     bio: `Dutch artist Nicole Janssen was born in 1967 into a family of artists
 and grew up surrounded by paintings, sculptures and other forms of
 visual expression.
@@ -56,7 +56,7 @@ but also the emotional landscapes within.`
   {
     id: 'escobar',
     name: 'F. Escobar',
-    img: '/assets/artist5.jpg',
+    img: '/assets/Francisco Escobar.JPG',
     bio: `1944–2016, Costa Rica
 Born in Costa Rica in 1944, Francesco Escobar initially studied sociology, yet his true calling emerged far from academic halls—within the vibrant backstreets of San José. The city’s rich cultural diversity, shaped by both local talent and a strong international artistic presence, became a living classroom for Escobar. Surrounded by artists from around the world, he absorbed new ideas and developed a distinctive visual language rooted in Neo-Expressionism, infused with a contemporary, modern edge.
 Wandering through downtown San José, Escobar found inspiration in the layered urban landscape: street art spread across façades ranging from colonial architecture to modern structures. These encounters opened his eyes to the expressive power of the city itself, where history and modernity coexist in bold, spontaneous dialogue.
