@@ -12,6 +12,8 @@ const allArtworks = [
   { id: 18, img: '/assets/S480.JPG', title: 'Naked Lady in yellow room', artist: 'Henk Vierveijzer', year: '2026', originalPrice: 5500, discount: 50, discountPrice: 2750 },
   { id: 19, img: '/assets/S419.JPG', title: 'Forgotten', artist: 'Nicole Laceur', year: '2026', originalPrice: 4500, discount: 70, discountPrice: 1350 },
   { id: 20, img: '/assets/S099.JPG', title: 'Red dream', artist: 'Nicole Janssen', year: '2026', originalPrice: 4500, discount: 70, discountPrice: 1350 },
+  { id: 21, img: '/assets/S008.JPG', title: 'Flowercomposition VI', artist: 'Gyula Issak', year: '2026', originalPrice: 8300, discount: 70, discountPrice: 2490 },
+  { id: 22, img: '/assets/S014.JPG', title: 'My Apple', artist: 'Jean Lefort', year: '2026', originalPrice: 2100, discount: 70, discountPrice: 630 },
 ];
 
 export default function Artworks() {
