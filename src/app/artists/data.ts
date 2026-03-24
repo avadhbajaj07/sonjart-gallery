@@ -2,12 +2,18 @@ export const artistsData = [
   {
     id: 'elso-schiavo',
     name: 'Elso Schiavo',
-    img: '/assets/artist1.jpg',
+    img: '/assets/Elso Schiavo.jpg',
     bio: `Born on August 10, 1934, Elso Schiavo lives and works in Baar, Zug. He is an accomplished painter and designer whose artistic journey has unfolded over decades with remarkable consistency and joy. Since 1970, his work has been exhibited regularly both in Switzerland and internationally, including shows in the United States, Russia, Hungary, Germany, and Finland.
 Alongside his exhibitions, Schiavo has taken part in numerous competitions and has been actively involved in social and cultural projects, particularly within schools and public institutions. In recognition of his artistic contribution, he was awarded the Cultural Prize of the City of Zug in September 2003.
 His creative output extends beyond the canvas and includes several publications, among them an art book and children’s books. Notable highlights of his career include the artistic design of the Zurich tram “Schlaraffenland” and receiving an award in the international postage stamp competition organized by the Japanese State Post.
 Imaginative, humorous, and infused with a deep love of life, Elso Schiavo’s figurative-abstract works are distinguished by a strong and unmistakable visual identity. The creatures that emerge on his canvases are imbued with human expressions—playful, tender, and often gently ironic—inviting the viewer to smile.
 His art is experienced as fresh and spontaneous, yet at the same time emotionally resonant, engaging the viewer on both a visual and human level.`
+  },
+  {
+    id: 'cees-muller',
+    name: 'Cees Müller',
+    img: '/assets/Cees Muller.jpg',
+    bio: `Cees Müller is a masterful landscape painter known for his evocative captures of European cities and regions. His work "Autumn in Paris" showcases his ability to use light and color to create a warm, nostalgic atmosphere that invites the viewer directly into the scene.`
   },
   {
     id: 'beatrice-jud',
@@ -76,11 +82,13 @@ In 2003, he received national recognition when his series “Hurray for 4” won
     id: 'albert-chalet',
     name: 'Albert Chalet',
     img: '/assets/artist7.jpg',
-    bio: `Born in 1946, Belgium
-Bathed in light and infused with playful ease, the works of Belgian artist Albert Chalet seem to whisper to the viewer: “Do you remember those days by the sea—the wind, the waves, that feeling of endlessness?” His paintings awaken memories of the carefree joy of one’s own youth.
-Chalet finds most of his subjects along the beaches of Belgium and the Netherlands. “I love to paint people—especially children—lost in carefree play,” says the self-taught artist, born in 1946. His scenes capture fleeting moments of innocence and delight, suspended in sunlight and salt air.
-Inspired by the French Impressionists, Chalet’s style celebrates the brighter side of life. “On the canvas, I wish to honor life’s sunlit moments—small pauses of calm in an often turbulent and hurried world.” Children of all ages play in pale sand, kites rise into open skies, and sunlight dances across gently rippling water.
-As one contemplates Chalet’s works, an entire soundscape unfolds in the imagination: the sight of rolling waves is joined by the murmur of the surf; the laughter of children seems to echo across the shore; and the boats moored along the water’s edge sway softly as the wind plays with their sails.`
+    bio: `🎨 Albert Chalet
+
+Albert Chalet (born 1946) is a Belgian painter whose luminous works capture the quiet poetry of life by the sea. Self-taught and inspired by the French Impressionists, he developed a refined style that balances light, movement, and emotion with effortless elegance.
+
+His paintings—often set along the shores of Belgium and the Netherlands—depict carefree figures, drifting kites, and sunlit reflections on water. They evoke a sense of nostalgia and timeless serenity, celebrating fleeting moments of joy and freedom.
+
+With a delicate sensitivity to atmosphere and light, Chalet invites the viewer into a world where memories linger and the simple beauty of life unfolds.`
   },
   {
     id: 'richard-van-der-pol',
