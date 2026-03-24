@@ -9,6 +9,7 @@ const allArtworks = [
   { id: 15, img: '/assets/S026.JPG', title: 'Autumn in Paris', artist: 'Cees Müller', year: '2026', originalPrice: 5900, discount: 60, discountPrice: 2360 },
   { id: 16, img: '/assets/Toro Small I.JPG', title: 'Toro 2', artist: 'F. Escobar', year: '2026', originalPrice: 2000, discount: 70, discountPrice: 600 },
   { id: 17, img: '/assets/4121.JPG', title: 'Real life 4', artist: 'F. Escobar', year: '2026', originalPrice: 5500, discount: 80, discountPrice: 1100 },
+  { id: 18, img: '/assets/S480.JPG', title: 'Naked Lady in yellow room', artist: 'Henk Vierveijzer', year: '2026', originalPrice: 5500, discount: 50, discountPrice: 2750 },
 ];
 
 export default function Artworks() {
