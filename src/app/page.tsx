@@ -263,15 +263,40 @@ export default function Home() {
               
               <div style={{ fontSize: '1.125rem', color: 'var(--color-grey-dark)', marginBottom: '3rem', lineHeight: 1.8 }}>
                 <p style={{ marginBottom: '1.5rem' }}>
-                  Sonja Schlagel, founder and owner of SonjART Galerie, was born in Alkmaar, the Netherlands, in 1966. She moved to Switzerland in 1990, where she began her professional career in pharmaceutical sales, later choosing to follow a new professional path—one that united her lifelong passion for art with her strong background in management.
+                  Sonja Schlagel, founder of SonjART Galerie, was born in Alkmaar, the Netherlands, and has been based in Switzerland since 1990.
                 </p>
                 <p style={{ marginBottom: '1.5rem' }}>
-                  Today, feeling restored, inspired, and full of energy, she is reconnecting with her passion for both art and sales. She delights in helping people find the perfect artwork for their homes—pieces that bring beauty, individuality, and character.
+                  With a background in international pharmaceutical sales and management, she later chose to follow a more personal path—bringing her lifelong passion for art into her professional life.
                 </p>
-                <p>
-                  &quot;The gallery is not just a room with white walls; it is a canvas in its own right—a sanctuary designed to protect the integrity of the narratives our artists share with the world.&quot; 
-                  <br /><span style={{ fontStyle: 'italic', marginTop: '1rem', display: 'inline-block' }}>— Sonja Schlagel</span>
+                <p style={{ marginBottom: '2.5rem' }}>
+                  Today, she is fully dedicated to helping people discover artworks that add depth, emotion, and individuality to their homes. With a refined eye and years of experience, Sonja believes that the right piece of art doesn’t just decorate a space—it transforms it.
                 </p>
+                
+                <div style={{ 
+                  paddingLeft: '2rem', 
+                  borderLeft: '2px solid var(--color-black)', 
+                  marginTop: '3rem' 
+                }}>
+                  <p style={{ 
+                    fontSize: '1.5rem', 
+                    fontStyle: 'italic', 
+                    color: 'var(--color-black)', 
+                    lineHeight: 1.4,
+                    marginBottom: '1rem',
+                    fontWeight: 300
+                  }}>
+                    &quot;Furniture fills a house, but art gives it a soul.&quot;
+                  </p>
+                  <span style={{ 
+                    textTransform: 'uppercase', 
+                    letterSpacing: '0.1em', 
+                    fontSize: '0.875rem', 
+                    fontWeight: 600,
+                    color: 'var(--color-black)'
+                  }}>
+                    — Sonja Schlagel
+                  </span>
+                </div>
               </div>
               
               <Link href="/about" className="btn-primary" style={{ alignSelf: 'flex-start' }}>
