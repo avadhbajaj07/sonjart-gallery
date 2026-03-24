@@ -313,7 +313,8 @@ export default function Home() {
               { id: 'nicole-laceur', name: 'Nicole Laceur', img: '/assets/artist3.jpg' },
               { id: 'nicole-janssen', name: 'Nicole Janssen', img: '/assets/artist4.jpg' },
               { id: 'escobar', name: 'F. Escobar', img: '/assets/artist5.jpg' },
-              { id: 'henk-vierveijzer', name: 'Henk Vierveijzer', img: '/assets/artist6.jpg' }
+              { id: 'henk-vierveijzer', name: 'Henk Vierveijzer', img: '/assets/artist6.jpg' },
+              { id: 'albert-chalet', name: 'Albert Chalet', img: '/assets/artist7.jpg' }
             ].map((artist) => (
               <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
                 <div style={{ 

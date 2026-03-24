@@ -65,5 +65,15 @@ After several years within this supportive framework, he began exhibiting his wo
 Vierveijzer’s use of color often resonates with the spirit of COBRA and Nieuwe Figuratie. Anchored by a strong sense of symbolism, his work feels deeply at home within these movements while maintaining a voice distinctly his own.
 His art has been shown in numerous renowned galleries across the Netherlands, as well as in Athens, Brussels, Copenhagen, and Madrid. Vierveijzer  presented his work in Switzerland for the first time at sonjART Galerie.
 In 2003, he received national recognition when his series “Hurray for 4” won both the Dutch Olympic Sports and Arts Contest and the Ernst & Young Graphic Prize `
+  },
+  {
+    id: 'albert-chalet',
+    name: 'Albert Chalet',
+    img: '/assets/artist7.jpg',
+    bio: `Born in 1946, Belgium
+Bathed in light and infused with playful ease, the works of Belgian artist Albert Chalet seem to whisper to the viewer: “Do you remember those days by the sea—the wind, the waves, that feeling of endlessness?” His paintings awaken memories of the carefree joy of one’s own youth.
+Chalet finds most of his subjects along the beaches of Belgium and the Netherlands. “I love to paint people—especially children—lost in carefree play,” says the self-taught artist, born in 1946. His scenes capture fleeting moments of innocence and delight, suspended in sunlight and salt air.
+Inspired by the French Impressionists, Chalet’s style celebrates the brighter side of life. “On the canvas, I wish to honor life’s sunlit moments—small pauses of calm in an often turbulent and hurried world.” Children of all ages play in pale sand, kites rise into open skies, and sunlight dances across gently rippling water.
+As one contemplates Chalet’s works, an entire soundscape unfolds in the imagination: the sight of rolling waves is joined by the murmur of the surf; the laughter of children seems to echo across the shore; and the boats moored along the water’s edge sway softly as the wind plays with their sails.`
   }
 ];
