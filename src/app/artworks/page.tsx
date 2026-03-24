@@ -5,7 +5,7 @@ import { allArtworks } from './data';
 
 export default function Artworks() {
   return (
-    <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="fade-in">
+    <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
       <h1 className="text-title" style={{ marginBottom: '4rem' }}>Art Collections</h1>
       
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '3rem' }}>

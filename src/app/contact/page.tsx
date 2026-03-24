@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <main style={{ padding: '12rem 0 var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
+    <main style={{ paddingTop: '12rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem' }}>
         <div>
           <h1 className="text-title" style={{ marginBottom: '2rem' }}>Contact</h1>

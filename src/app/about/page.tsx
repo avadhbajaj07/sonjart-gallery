@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main style={{ padding: '12rem 0 var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
+    <main style={{ paddingTop: '12rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <h1 className="text-title" style={{ marginBottom: '4rem' }}>About Sonj</h1>
         <div style={{ aspectRatio: '16/9', overflow: 'hidden', marginBottom: '4rem' }}>
