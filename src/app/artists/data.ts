@@ -27,7 +27,7 @@ Beatrice Jud hatte zahlreiche Einzel- und Gruppenausstellungen, unter anderem an
   {
     id: 'nicole-laceur',
     name: 'Nicole Laceur',
-    img: '/assets/artist3.jpg',
+    img: '/assets/Nicole Laceur.jpeg',
     bio: `Ein freundlicher Nachmittag im Frühling. Nach der langen und Winterzeit spriesst die Natur in all ihrer Fülle und Buntheit hervor und lockt die Menschen ins Freie.
  Glücklich, wer sich die Zeit nehmen kann, dieses Aufkeimen von Leben im eigenen Garten oder auf einer Terrasse geniessen zu können. Und glücklich auch all jene, die sich mit einem Gemälde von Nicole Laceur diese Eindrücke nach Hause holen werden. 
 Die 1969 in einer Künstlerfamilie in Arnhem/ Holland aufgewachsene Künstlerin studierte bereits in relativ jungen Jahren in Frankreich.
