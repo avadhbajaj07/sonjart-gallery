@@ -314,10 +314,12 @@ export default function Home() {
               { id: 'nicole-janssen', name: 'Nicole Janssen', img: '/assets/IMG_4677.jpg' },
               { id: 'escobar', name: 'F. Escobar', img: '/assets/Francisco Escobar.JPG' },
               { id: 'henk-vierveijzer', name: 'Henk Vierveijzer', img: '/assets/Henk Vierveijzer.JPG' },
-              { id: 'albert-chalet', name: 'Albert Chalet', img: '/assets/artist7.jpg' },
+              { id: 'albert-chalet', name: 'Albert Chalet', img: '/assets/Albert Chalet.jpg' },
+              { id: 'richard-van-der-pol', name: 'R. van der Pol', img: '/assets/Richard van de Pol.jpeg' },
               { id: 'jean-lefort', name: 'Jean Lefort', img: '/assets/Jean Lefort.jpg' },
               { id: 'cees-muller', name: 'Cees Müller', img: '/assets/Cees Muller.jpg' },
-              { id: 'gyula-issak', name: 'Gyula Issak', img: '/assets/Balazs Wanyi.jpeg' }
+              { id: 'gyula-issak', name: 'Gyula Issak', img: '/assets/Balazs Wanyi.jpeg' },
+              { id: 'corneille', name: 'Corneille', img: '/assets/Corneille.jpg' }
             ].map((artist) => (
               <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
                 <div style={{ 

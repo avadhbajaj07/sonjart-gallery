@@ -81,7 +81,7 @@ In 2003, he received national recognition when his series “Hurray for 4” won
   {
     id: 'albert-chalet',
     name: 'Albert Chalet',
-    img: '/assets/artist7.jpg',
+    img: '/assets/Albert Chalet.jpg',
     bio: `🎨 Albert Chalet
 
 Albert Chalet (born 1946) is a Belgian painter whose luminous works capture the quiet poetry of life by the sea. Self-taught and inspired by the French Impressionists, he developed a refined style that balances light, movement, and emotion with effortless elegance.
@@ -93,7 +93,7 @@ With a delicate sensitivity to atmosphere and light, Chalet invites the viewer i
   {
     id: 'richard-van-der-pol',
     name: 'Richard van der Pol',
-    img: '/assets/artist1.jpg',
+    img: '/assets/Richard van de Pol.jpeg',
     bio: `Richard van der Pol has the remarkable ability to capture an entire scene with just a few brushstrokes on large canvases. In a style reminiscent of spontaneous snapshots, he portrays people and street scenes in a manner that is unmistakably his own. Fully absorbed in the moment, a young couple daydreams on a park bench. Elsewhere, another pair seems equally detached from the outside world, chatting animatedly in a tavern while people dance in the background. In his paintings, van der Pol creates an atmosphere of intimacy and a quiet celebration of life — the pure joy of existence itself.
 
 From an early age, the Dutch artist discovered drawing and painting as his preferred means of expression. Born in 1936, he grew up in an artistic environment, as his father was also a practicing artist. Gifted with this natural talent and a keen, observant eye, van der Pol embarked on his artistic journey early on. He studied for several years at the Royal Academy of Art in The Hague, but his strong desire for artistic freedom eventually led him to leave formal training behind and pursue his own independent path. By the age of just twenty, he was already creating striking portraits of children and women dressed in the fashion of the early 20th century — works that radiate a powerful presence and bear witness to the artist’s remarkable maturity at such a young age.`
@@ -107,5 +107,11 @@ From an early age, the Dutch artist discovered drawing and painting as his prefe
 Until 1977, Gyula Issak worked as a graphic designer, initially focusing his painting on landscapes. Over time, these receded—quite literally—into the background. Still lifes and the Baroque era increasingly captured his imagination. Inspired by the great Dutch masters of this period, who immortalized the wealth and opulence of their time on canvas, Issak honed his sense for drama, detail, romance, and atmosphere.
 
 The result is a unique painterly mastery, unmistakable in its depth and intensity, and highly sought after by collectors around the world.`
+  },
+  {
+    id: 'corneille',
+    name: 'Corneille',
+    img: '/assets/Corneille.jpg',
+    bio: `Guillaume Cornelis van Beverloo (1922–2010), better known as Corneille, was a Belgian-born Dutch painter and a founding member of the COBRA movement. His work is celebrated for its vibrant energy, bold primary colors, and a playful, almost primal visual language. Corneille often incorporated poetic motifs such as birds, flowers, and women, creating a world of exuberant freedom and emotional resonance that continues to captivate collectors worldwide.`
   }
 ];
