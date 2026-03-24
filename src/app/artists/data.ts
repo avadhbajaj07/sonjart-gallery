@@ -59,12 +59,18 @@ His artistic journey was further shaped by travels through Spain, where new pers
   {
     id: 'henk-vierveijzer',
     name: 'Henk Vierveijzer',
-    img: '/assets/artist6.jpg',
+    img: '/assets/Henk Vierveijzer.JPG',
     bio: `Henk Vierveijzer was born in 1950 in Tilburg, the Netherlands. He spent his early years in Zaandam, near Amsterdam, and in Bergen op Zoom, before later studying at the Academy of Fine Arts in Tilburg. A formative chapter of his career unfolded under the BKR program—a Dutch government initiative that allowed artists to work in exchange for a stipend. “It gave me the freedom to devote myself entirely to my art,” Vierveijzer once reflected.
 After several years within this supportive framework, he began exhibiting his work publicly. During this period, his artistic language bore similarities to the German movement Neue Wilde, characterized by expressive intensity and raw energy. Over time, however, his work evolved—becoming less severe and increasingly infused with irony and playful wit.
 Vierveijzer’s use of color often resonates with the spirit of COBRA and Nieuwe Figuratie. Anchored by a strong sense of symbolism, his work feels deeply at home within these movements while maintaining a voice distinctly his own.
 His art has been shown in numerous renowned galleries across the Netherlands, as well as in Athens, Brussels, Copenhagen, and Madrid. Vierveijzer  presented his work in Switzerland for the first time at sonjART Galerie.
 In 2003, he received national recognition when his series “Hurray for 4” won both the Dutch Olympic Sports and Arts Contest and the Ernst & Young Graphic Prize `
+  },
+  {
+    id: 'jean-lefort',
+    name: 'Jean Lefort',
+    img: '/assets/Jean Lefort.jpg',
+    bio: `Jean Lefort is an international artist known for his exquisite still life paintings on panel. His works, such as "My Apple," demonstrate a masterful precision and a deep appreciation for the humble beauty of everyday objects, captured with rich texture and a focus on form and light.`
   },
   {
     id: 'albert-chalet',
