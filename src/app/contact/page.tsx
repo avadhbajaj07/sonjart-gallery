@@ -42,16 +42,14 @@ export default function Contact() {
         <div>
           <h1 className="text-title" style={{ marginBottom: '2rem' }}>Contact</h1>
           <p style={{ fontSize: '1.25rem', marginBottom: '2rem', color: 'var(--color-grey-medium)' }}>
-            We welcome inquiries regarding the collection, private viewings, and artist representation.
+            We welcome inquiries regarding the collection and private viewings.
+          </p>
+          <p style={{ fontSize: '1.25rem', marginBottom: '4rem', color: 'var(--color-grey-medium)', lineHeight: 1.6 }}>
+            If you are furnishing a new home or renovating and would like guidance in choosing artworks, we are happy to offer personal advice based on years of experience.
           </p>
           <div style={{ marginBottom: '4rem' }}>
             <p style={{ marginBottom: '0.5rem' }}>Email</p>
             <a href="mailto:info@sonjart.ch" style={{ fontSize: '1.5rem' }}>info@sonjart.ch</a>
-          </div>
-          <div>
-            <p style={{ marginBottom: '0.5rem' }}>Location</p>
-            <p style={{ fontSize: '1.5rem', marginBottom: '0.25rem' }}>Kunstraum 15</p>
-            <p style={{ fontSize: '1.25rem', color: 'var(--color-grey-medium)' }}>Zeltweg 15<br/>8032 Zürich<br/>Switzerland</p>
           </div>
         </div>
         <div>

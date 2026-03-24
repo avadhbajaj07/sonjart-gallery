@@ -79,9 +79,8 @@ export async function POST(req: Request) {
           <strong>Sonja Schlagel & The SONJ ART Team</strong>
         </p>
 
-        <!-- Footer -->
         <div style="border-top: 1px solid #eeeeee; padding-top: 30px; text-align: center; font-size: 12px; color: #888888;">
-          <p style="margin: 0;"><strong>Kunstraum 15</strong><br />Zeltweg 15, 8032 Zürich, Switzerland</p>
+          <p style="margin: 0;"><strong>SONJ ART Galerie</strong><br />Zürich, Switzerland</p>
           <p style="margin-top: 10px;">
             <a href="https://sonjart.ch" style="color: #888888; text-decoration: none;">www.sonjart.ch</a> | 
             <a href="mailto:info@sonjart.ch" style="color: #888888; text-decoration: none;">info@sonjart.ch</a>

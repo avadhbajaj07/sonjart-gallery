@@ -75,7 +75,6 @@ export default function RootLayout({
                   <img src="/assets/logo.png" alt="SONJ ART Logo" style={{ height: '40px', objectFit: 'contain' }} />
                 </Link>
                 <p style={{ color: 'var(--color-grey-medium)', marginBottom: '0.5rem' }}>Original artworks by international artists, spanning styles from realism to expressionism.</p>
-                <p style={{ color: 'var(--color-grey-medium)' }}>Zürich, Switzerland</p>
               </div>
               <div style={{ display: 'flex', gap: '4rem', flexWrap: 'wrap' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
