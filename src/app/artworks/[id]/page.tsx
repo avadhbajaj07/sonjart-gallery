@@ -5,16 +5,17 @@ import Link from 'next/link';
 import InterestFormModal from '@/components/InterestFormModal';
 
 const allArtworks = [
-  { id: '1', img: '/assets/art1.jpg', title: 'Absence of Color', artist: 'Henk Vierveijzer', year: '2023', material: 'Oil on canvas', dim: '120 x 100 cm', desc: 'A profound exploration of the absence of color.' },
-  { id: '2', img: '/assets/art2.jpg', title: 'Monochrome Dream', artist: 'Beatrice Jud', year: '2024', material: 'Acrylic on canvas', dim: '100 x 100 cm', desc: 'The layered acrylic application invites viewers to embrace the monochrome aesthetic.' },
-  { id: '3', img: '/assets/art3.jpg', title: 'Abstract Reality', artist: 'F. Escobar', year: '2025', material: 'Mixed media', dim: '150 x 120 cm', desc: 'Finding inspiration in layered urban landscapes.' },
-  { id: '4', img: '/assets/art4.jpg', title: 'Visions of Light', artist: 'Nicole Laceur', year: '2023', material: 'Oil on canvas', dim: '90 x 90 cm', desc: 'Impressions of spring and vibrant light.' },
-  { id: '5', img: '/assets/art5.jpg', title: 'Echoes I', artist: 'Elso Schiavo', year: '2026', material: 'Acrylic on canvas', dim: '110 x 90 cm', desc: 'Imaginative and figurative expressions.' },
-  { id: '6', img: '/assets/art6.jpg', title: 'Spatial Void', artist: 'Nicole Janssen', year: '2026', material: 'Oil and acrylic', dim: '140 x 110 cm', desc: 'A spatial reflection of natural moods.' },
-  { id: '7', img: '/assets/art7.jpg', title: 'Echoes II', artist: 'Nicole Janssen', year: '2026', material: 'Oil and acrylic', dim: '140 x 110 cm', desc: 'Deep sensitivity to atmosphere and calm introspection.' },
-  { id: '8', img: '/assets/art8.jpg', title: 'Fragmented', artist: 'F. Escobar', year: '2025', material: 'Mixed media', dim: '130 x 130 cm', desc: 'Capturing the pulse of urban life and human complexity.' },
-  { id: '9', img: '/assets/art9.jpg', title: 'Spectrum', artist: 'Beatrice Jud', year: '2023', material: 'Acrylic on canvas', dim: '100 x 100 cm', desc: 'Living with bold primary colors and intense visual language.' },
-  { id: '10', img: '/assets/art10.jpg', title: 'Lost Forms', artist: 'Elso Schiavo', year: '2022', material: 'Acrylic on canvas', dim: '120 x 120 cm', desc: 'Playful, tender, and gently ironic shapes.' },
+  { id: '1', img: '/assets/art1.jpg', title: 'Absence of Color', artist: 'Henk Vierveijzer', year: '2023', material: 'Oil on canvas', dim: '120 x 100 cm', desc: 'A profound exploration of the absence of color.', originalPrice: 4500, discount: 15, discountPrice: 3825 },
+  { id: '2', img: '/assets/art2.jpg', title: 'Monochrome Dream', artist: 'Beatrice Jud', year: '2024', material: 'Acrylic on canvas', dim: '100 x 100 cm', desc: 'The layered acrylic application invites viewers to embrace the monochrome aesthetic.', originalPrice: 3200, discount: 10, discountPrice: 2880 },
+  { id: '3', img: '/assets/art3.jpg', title: 'Abstract Reality', artist: 'F. Escobar', year: '2025', material: 'Mixed media', dim: '150 x 120 cm', desc: 'Finding inspiration in layered urban landscapes.', originalPrice: 5800, discount: 20, discountPrice: 4640 },
+  { id: '4', img: '/assets/art4.jpg', title: 'Visions of Light', artist: 'Nicole Laceur', year: '2023', material: 'Oil on canvas', dim: '90 x 90 cm', desc: 'Impressions of spring and vibrant light.', originalPrice: 2900, discount: 5, discountPrice: 2755 },
+  { id: '5', img: '/assets/art5.jpg', title: 'Echoes I', artist: 'Elso Schiavo', year: '2026', material: 'Acrylic on canvas', dim: '110 x 90 cm', desc: 'Imaginative and figurative expressions.', originalPrice: 4100, discount: 12, discountPrice: 3608 },
+  { id: '6', img: '/assets/art6.jpg', title: 'Spatial Void', artist: 'Nicole Janssen', year: '2026', material: 'Oil and acrylic', dim: '140 x 110 cm', desc: 'A spatial reflection of natural moods.', originalPrice: 5200, discount: 15, discountPrice: 4420 },
+  { id: '7', img: '/assets/art7.jpg', title: 'Echoes II', artist: 'Nicole Janssen', year: '2026', material: 'Oil and acrylic', dim: '140 x 110 cm', desc: 'Deep sensitivity to atmosphere and calm introspection.', originalPrice: 5200, discount: 15, discountPrice: 4420 },
+  { id: '8', img: '/assets/art8.jpg', title: 'Fragmented', artist: 'F. Escobar', year: '2025', material: 'Mixed media', dim: '130 x 130 cm', desc: 'Capturing the pulse of urban life and human complexity.', originalPrice: 4800, discount: 18, discountPrice: 3936 },
+  { id: '9', img: '/assets/art9.jpg', title: 'Spectrum', artist: 'Beatrice Jud', year: '2023', material: 'Acrylic on canvas', dim: '100 x 100 cm', desc: 'Living with bold primary colors and intense visual language.', originalPrice: 3600, discount: 10, discountPrice: 3240 },
+  { id: '10', img: '/assets/art10.jpg', title: 'Lost Forms', artist: 'Elso Schiavo', year: '2022', material: 'Acrylic on canvas', dim: '120 x 120 cm', desc: 'Playful, tender, and gently ironic shapes.', originalPrice: 3900, discount: 15, discountPrice: 3315 },
+  { id: '11', img: '/assets/S030.JPG', title: 'A lady reading', artist: 'Nicole Laceur', year: '2026', material: 'Oil on canvas', dim: '60x70 cm', desc: 'A serene and evocative painting of a lady reading, capturing a moment of quiet reflection.', originalPrice: 3900, discount: 70, discountPrice: 1170 },
 ];
 
 export default function ArtworkDetail({ params }: { params: { id: string } }) {
@@ -40,11 +41,26 @@ export default function ArtworkDetail({ params }: { params: { id: string } }) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
               <div>
                 <h1 className="text-title" style={{ marginBottom: '1rem', letterSpacing: '-0.02em' }}>{currentArt.title}</h1>
-                <h2 style={{ fontSize: '1.5rem', color: 'var(--color-grey-medium)' }}>
-                  <Link href="/artists" style={{ borderBottom: '1px solid var(--color-grey-medium)', paddingBottom: '0.25rem' }}>
-                    {currentArt.artist}
-                  </Link>
-                </h2>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+                  <h2 style={{ fontSize: '1.5rem', color: 'var(--color-grey-medium)' }}>
+                    <Link href="/artists" style={{ borderBottom: '1px solid var(--color-grey-medium)', paddingBottom: '0.25rem' }}>
+                      {currentArt.artist}
+                    </Link>
+                  </h2>
+                  <div style={{ textAlign: 'right' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                      <span style={{ color: 'var(--color-grey-medium)', textDecoration: 'line-through', fontSize: '1.125rem' }}>
+                        CHF {currentArt.originalPrice?.toLocaleString()}
+                      </span>
+                      <span style={{ backgroundColor: 'var(--color-white)', color: 'var(--color-black)', padding: '0.25rem 0.5rem', fontSize: '0.75rem', fontWeight: 600 }}>
+                        -{currentArt.discount}%
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '2rem', color: 'var(--color-white)', fontWeight: 300, marginTop: '0.25rem' }}>
+                      CHF {currentArt.discountPrice?.toLocaleString()}
+                    </div>
+                  </div>
+                </div>
               </div>
               
               <div style={{ 
