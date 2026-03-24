@@ -18,6 +18,7 @@ const allArtworks = [
   { id: '11', img: '/assets/S030.JPG', title: 'A lady reading', artist: 'Nicole Laceur', year: '2026', material: 'Oil on canvas', dim: '60x70 cm', desc: 'A serene and evocative painting of a lady reading, capturing a moment of quiet reflection.', originalPrice: 3900, discount: 70, discountPrice: 1170 },
   { id: '12', img: '/assets/2801.jpg', title: 'Untitled (yellow ladies)', artist: 'Corneille', year: '1991', material: 'Litho signed behind glass', dim: '40 x 64 cm', desc: 'A vibrant lithograph by Corneille, featuring his signature bold colors and expressive forms. Ed. 200.', originalPrice: 1100, discount: 50, discountPrice: 550 },
   { id: '13', img: '/assets/S098.JPG', title: 'Longing', artist: 'Nicole Janssen', year: '2026', material: 'Oil on canvas', dim: '80 x 60 cm', desc: 'An expressive exploration of atmosphere and emotion in blue tones, capturing a deep sense of introspection.', originalPrice: 4200, discount: 80, discountPrice: 840 },
+  { id: '14', img: '/assets/S108.JPG', title: 'Wut', artist: 'Beatrice Jud', year: '2026', material: 'Acrylic on canvas and frame', dim: '100 x 100 cm', desc: 'A powerful abstract piece characterized by bold primary colors and dynamic brushwork, exploring intense emotional themes.', originalPrice: 5500, discount: 50, discountPrice: 2750 },
 ];
 
 export default function ArtworkDetail({ params }: { params: { id: string } }) {
