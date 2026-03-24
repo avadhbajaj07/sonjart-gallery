@@ -16,6 +16,7 @@ const allArtworks = [
   { id: '9', img: '/assets/art9.jpg', title: 'Spectrum', artist: 'Beatrice Jud', year: '2023', material: 'Acrylic on canvas', dim: '100 x 100 cm', desc: 'Living with bold primary colors and intense visual language.', originalPrice: 3600, discount: 10, discountPrice: 3240 },
   { id: '10', img: '/assets/art10.jpg', title: 'Lost Forms', artist: 'Elso Schiavo', year: '2022', material: 'Acrylic on canvas', dim: '120 x 120 cm', desc: 'Playful, tender, and gently ironic shapes.', originalPrice: 3900, discount: 15, discountPrice: 3315 },
   { id: '11', img: '/assets/S030.JPG', title: 'A lady reading', artist: 'Nicole Laceur', year: '2026', material: 'Oil on canvas', dim: '60x70 cm', desc: 'A serene and evocative painting of a lady reading, capturing a moment of quiet reflection.', originalPrice: 3900, discount: 70, discountPrice: 1170 },
+  { id: '12', img: '/assets/2801.jpg', title: 'Untitled (yellow ladies)', artist: 'Corneille', year: '1991', material: 'Litho signed behind glass', dim: '40 x 64 cm', desc: 'A vibrant lithograph by Corneille, featuring his signature bold colors and expressive forms. Ed. 200.', originalPrice: 1100, discount: 50, discountPrice: 550 },
 ];
 
 export default function ArtworkDetail({ params }: { params: { id: string } }) {
