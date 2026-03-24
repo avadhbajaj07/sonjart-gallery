@@ -309,14 +309,15 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '2rem' }}>
             {[
               { id: 'elso-schiavo', name: 'Elso Schiavo', img: '/assets/Elso Schiavo.jpg' },
-              { id: 'beatrice-jud', name: 'Beatrice Jud', img: '/assets/artist2.jpg' },
+              { id: 'beatrice-jud', name: 'Beatrice Jud', img: '/assets/Beatrice Jud.jpeg' },
               { id: 'nicole-laceur', name: 'Nicole Laceur', img: '/assets/artist3.jpg' },
               { id: 'nicole-janssen', name: 'Nicole Janssen', img: '/assets/IMG_4677.jpg' },
               { id: 'escobar', name: 'F. Escobar', img: '/assets/Francisco Escobar.JPG' },
               { id: 'henk-vierveijzer', name: 'Henk Vierveijzer', img: '/assets/Henk Vierveijzer.JPG' },
               { id: 'albert-chalet', name: 'Albert Chalet', img: '/assets/artist7.jpg' },
               { id: 'jean-lefort', name: 'Jean Lefort', img: '/assets/Jean Lefort.jpg' },
-              { id: 'cees-muller', name: 'Cees Müller', img: '/assets/Cees Muller.jpg' }
+              { id: 'cees-muller', name: 'Cees Müller', img: '/assets/Cees Muller.jpg' },
+              { id: 'gyula-issak', name: 'Gyula Issak', img: '/assets/Balazs Wanyi.jpeg' }
             ].map((artist) => (
               <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
                 <div style={{ 

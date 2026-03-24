@@ -18,7 +18,7 @@ His art is experienced as fresh and spontaneous, yet at the same time emotionall
   {
     id: 'beatrice-jud',
     name: 'Beatrice Jud',
-    img: '/assets/artist2.jpg',
+    img: '/assets/Beatrice Jud.jpeg',
     bio: `Beatrice Jud ist Sängerin, Schauspielerin und Malerin – ein künstlerisches Multitalent aus Zumikon. Aufgewachsen in einer Familie mit tiefen künstlerischen Wurzeln, begleitete sie die Kunst von klein auf, zunächst durch die Musik, später durch die Malerei.
 Heute widmet sie sich mit grosser Leidenschaft der abstrakten Kunst. Ihre Werke leben von kräftigen Primärfarben, dynamischen Flächen und einer intensiven Bildsprache, die den Betrachter unmittelbar berührt.
 „Ich bin hungrig nach Farben“, sagt sie, „denn eine Welt ohne Farben ist trostlos.“
@@ -101,7 +101,7 @@ From an early age, the Dutch artist discovered drawing and painting as his prefe
   {
     id: 'gyula-issak',
     name: 'Gyula Issak',
-    img: '/assets/artist2.jpg',
+    img: '/assets/Balazs Wanyi.jpeg',
     bio: `The Hungarian artist Gyula Issak embraces every painterly challenge without hesitation. Fire, marble, paper, fabric—an array of diverse materials coexist side by side within his works. This intense engagement with texture and surface, with the very substance of his motifs, has continuously refined the talent of the artist born in Budapest in 1951. His fascination with tactile qualities, combined with dramatic, almost baroque compositions, gives his work its unmistakable signature. Particularly remarkable is the fact that Gyula developed his distinctive technique largely through self-study.
 
 Until 1977, Gyula Issak worked as a graphic designer, initially focusing his painting on landscapes. Over time, these receded—quite literally—into the background. Still lifes and the Baroque era increasingly captured his imagination. Inspired by the great Dutch masters of this period, who immortalized the wealth and opulence of their time on canvas, Issak honed his sense for drama, detail, romance, and atmosphere.
