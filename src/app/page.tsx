@@ -311,7 +311,7 @@ export default function Home() {
               { id: 'elso-schiavo', name: 'Elso Schiavo', img: '/assets/Elso Schiavo.jpg' },
               { id: 'beatrice-jud', name: 'Beatrice Jud', img: '/assets/Beatrice Jud.jpeg' },
               { id: 'nicole-laceur', name: 'Nicole Laceur', img: '/assets/Nicole Laceur.jpeg' },
-              { id: 'nicole-janssen', name: 'Nicole Janssen', img: '/assets/IMG_4677.jpg' },
+              { id: 'nicole-janssen', name: 'Nicole Janssen', img: '/assets/Nicole Janssen.jpeg' },
               { id: 'escobar', name: 'F. Escobar', img: '/assets/Francisco Escobar.JPG' },
               { id: 'henk-vierveijzer', name: 'Henk Vierveijzer', img: '/assets/Henk Vierveijzer.JPG' },
               { id: 'albert-chalet', name: 'Albert Chalet', img: '/assets/Albert Chalet.jpg' },

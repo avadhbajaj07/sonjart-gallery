@@ -37,7 +37,7 @@ Laceurs Arbeiten zeichnen sich insbesondere auch durch ein sehr feines Gespür f
   {
     id: 'nicole-janssen',
     name: 'Nicole Janssen',
-    img: '/assets/IMG_4677.jpg',
+    img: '/assets/Nicole Janssen.jpeg',
     bio: `Dutch artist Nicole Janssen was born in 1967 into a family of artists
 and grew up surrounded by paintings, sculptures and other forms of
 visual expression.
