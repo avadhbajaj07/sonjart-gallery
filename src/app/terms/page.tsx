@@ -1,6 +1,6 @@
 export default function Terms() {
   return (
-    <main style={{ padding: '8rem 0 var(--spacing-xl)', minHeight: '100vh', maxWidth: '800px' }} className="container fade-in">
+    <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
       <h1 className="text-title" style={{ marginBottom: '2rem' }}>Terms & Conditions</h1>
       <div style={{ color: 'var(--color-grey-medium)', lineHeight: 1.8 }}>
         <h2 style={{ color: 'var(--color-white)', marginTop: '2rem', marginBottom: '1rem' }}>Website Usage</h2>

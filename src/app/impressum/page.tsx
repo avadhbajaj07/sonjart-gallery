@@ -1,6 +1,6 @@
 export default function Impressum() {
   return (
-    <main style={{ padding: '8rem 0 var(--spacing-xl)', minHeight: '100vh', maxWidth: '800px' }} className="container fade-in">
+    <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
       <h1 className="text-title" style={{ marginBottom: '2rem' }}>Impressum</h1>
       <div style={{ color: 'var(--color-grey-medium)', lineHeight: 1.8 }}>
         <h2 style={{ color: 'var(--color-white)', marginTop: '2rem', marginBottom: '1rem' }}>Owner & Operator</h2>

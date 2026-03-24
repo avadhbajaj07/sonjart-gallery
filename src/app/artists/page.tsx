@@ -3,7 +3,7 @@ import { artistsData } from './data';
 
 export default function Artists() {
   return (
-    <main style={{ padding: '8rem 0 var(--spacing-xl)' }} className="container fade-in">
+    <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
       <h1 className="text-title" style={{ marginBottom: '4rem' }}>Gallery Artists</h1>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '4rem' }}>
         {artistsData.map(artist => (

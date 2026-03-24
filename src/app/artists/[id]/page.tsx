@@ -13,7 +13,7 @@ export default async function ArtistDetail({ params }: { params: Promise<{ id: s
   const artistArtworks = allArtworks.filter(art => art.artist === artist.name);
 
   return (
-    <main style={{ padding: '8rem 0 var(--spacing-xl)', minHeight: '100vh' }} className="fade-in">
+    <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="fade-in">
       <div className="container" style={{ maxWidth: '1200px' }}>
         <Link href="/artists" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '4rem', color: 'var(--color-grey-medium)' }}>
           <ArrowLeft size={16} /> Artists

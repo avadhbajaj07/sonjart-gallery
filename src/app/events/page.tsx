@@ -1,6 +1,6 @@
 export default function Events() {
   return (
-    <main style={{ padding: '8rem 0 var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
+    <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
       <h1 className="text-title" style={{ marginBottom: '1rem' }}>Events</h1>
       <p style={{ color: 'var(--color-grey-medium)', marginBottom: '4rem', fontSize: '1.25rem' }}>Kunstraum 15, Zeltweg 15, 8032 Zürich</p>
       <div style={{ maxWidth: '800px' }}>

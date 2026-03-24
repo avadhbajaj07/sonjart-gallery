@@ -1,6 +1,6 @@
 export default function Privacy() {
   return (
-    <main style={{ padding: '8rem 0 var(--spacing-xl)', minHeight: '100vh', maxWidth: '800px' }} className="container fade-in">
+    <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
       <h1 className="text-title" style={{ marginBottom: '2rem' }}>Privacy Policy</h1>
       <div style={{ color: 'var(--color-grey-medium)', lineHeight: 1.8 }}>
         <p style={{ marginBottom: '1.5rem' }}>This privacy policy explains how SONJ ART handles your personal data. We are committed to protecting your privacy and complying with GDPR and Swiss Data Protection laws.</p>
