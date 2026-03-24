@@ -4,12 +4,16 @@ import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import InterestFormModal from '@/components/InterestFormModal';
 
+import { artistsData } from '../../artists/data';
+
 import { allArtworks } from '../data';
 
 export default function ArtworkDetail({ params }: { params: { id: string } }) {
   const [modalOpen, setModalOpen] = useState(false);
   
   const currentArt = allArtworks.find(a => a.id === params.id) || allArtworks[0];
+  const artist = artistsData.find(a => a.name === currentArt.artist);
+  const artistLink = artist ? `/artists/${artist.id}` : '/artists';
   
   return (
     <main style={{ padding: '8rem 0 var(--spacing-xl)', minHeight: '100vh' }} className="fade-in">
@@ -31,7 +35,7 @@ export default function ArtworkDetail({ params }: { params: { id: string } }) {
                 <h1 className="text-title" style={{ marginBottom: '1rem', letterSpacing: '-0.02em' }}>{currentArt.title}</h1>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
                   <h2 style={{ fontSize: '1.5rem', color: 'var(--color-grey-medium)' }}>
-                    <Link href="/artists" style={{ borderBottom: '1px solid var(--color-grey-medium)', paddingBottom: '0.25rem' }}>
+                    <Link href={artistLink} style={{ borderBottom: '1px solid var(--color-grey-medium)', paddingBottom: '0.25rem' }}>
                       {currentArt.artist}
                     </Link>
                   </h2>
