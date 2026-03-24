@@ -4,20 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import InterestFormModal from '@/components/InterestFormModal';
 
-const allArtworks = [
-  { id: '11', img: '/assets/S087.JPG', title: 'A lady reading', artist: 'Nicole Laceur', year: '2026', material: 'Oil on canvas', dim: '60x70 cm', desc: 'A serene and evocative painting of a lady reading, capturing a moment of quiet reflection.', originalPrice: 3900, discount: 70, discountPrice: 1170 },
-  { id: '12', img: '/assets/2801.jpg', title: 'Untitled (yellow ladies)', artist: 'Corneille', year: '1991', material: 'Litho signed behind glass', dim: '40 x 64 cm', desc: 'A vibrant lithograph by Corneille, featuring his signature bold colors and expressive forms. Ed. 200.', originalPrice: 1100, discount: 50, discountPrice: 550 },
-  { id: '13', img: '/assets/S098.JPG', title: 'Longing', artist: 'Nicole Janssen', year: '2026', material: 'Oil on canvas', dim: '80 x 60 cm', desc: 'An expressive exploration of atmosphere and emotion in blue tones, capturing a deep sense of introspection.', originalPrice: 4200, discount: 80, discountPrice: 840 },
-  { id: '14', img: '/assets/S108.JPG', title: 'Wut', artist: 'Beatrice Jud', year: '2026', material: 'Acrylic on canvas and frame', dim: '100 x 100 cm', desc: 'A powerful abstract piece characterized by bold primary colors and dynamic brushwork, exploring intense emotional themes.', originalPrice: 5500, discount: 50, discountPrice: 2750 },
-  { id: '15', img: '/assets/S026.JPG', title: 'Autumn in Paris', artist: 'Cees Müller', year: '2026', material: 'Oil on Canvas', dim: '80 x 100 cm', desc: 'A classic and evocative street scene capturing the warm atmospheric glow of a Parisian autumn evening.', originalPrice: 5900, discount: 60, discountPrice: 2360 },
-  { id: '16', img: '/assets/Toro Small I.JPG', title: 'Toro 2', artist: 'F. Escobar', year: '2026', material: 'Oil on canvas', dim: '50 x 50 cm', desc: 'A dynamic and expressive depiction of a bull, showcasing Escobar\'s signature neo-expressionist style with bold reds and powerful energy.', originalPrice: 2000, discount: 70, discountPrice: 600 },
-  { id: '17', img: '/assets/4121.JPG', title: 'Real life 4', artist: 'F. Escobar', year: '2026', material: 'Oil on canvas', dim: '100x 100cm', desc: 'A striking neo-expressionist work by F. Escobar, featuring bold textures and complex urban themes that pulse with modern life.', originalPrice: 5500, discount: 80, discountPrice: 1100 },
-  { id: '18', img: '/assets/S480.JPG', title: 'Naked Lady in yellow room', artist: 'Henk Vierveijzer', year: '2026', material: 'Mixed media', dim: '100x 100 cm', desc: 'A vibrant and bold exploration of form and color, featuring Vierveijzer\'s signature expressive style and intense yellow atmosphere.', originalPrice: 5500, discount: 50, discountPrice: 2750 },
-  { id: '19', img: '/assets/S419.JPG', title: 'Forgotten', artist: 'Nicole Laceur', year: '2026', material: 'Oil on canvas', dim: '100 cm x 100 cm', desc: 'A modern and introspective piece by Nicole Laceur, exploring themes of memory and the passage of time in her evolving style.', originalPrice: 4500, discount: 70, discountPrice: 1350 },
-  { id: '20', img: '/assets/S099.JPG', title: 'Red dream', artist: 'Nicole Janssen', year: '2026', material: 'Oil on canvas', dim: '100x 100 cm', desc: 'An evocative abstract work in vibrant reds, capturing the intensity and mystery of a deep, emotional dreamscape.', originalPrice: 4500, discount: 70, discountPrice: 1350 },
-  { id: '21', img: '/assets/S008.JPG', title: 'Flowercomposition VI', artist: 'Gyula Issak', year: '2026', material: 'Oil on Panel', dim: '80x 60 cm', desc: 'A rich and detailed floral still life on panel, demonstrating Gyula Issak\'s masterful handling of light and traditional composition.', originalPrice: 8300, discount: 70, discountPrice: 2490 },
-  { id: '22', img: '/assets/S014.JPG', title: 'My Apple', artist: 'Jean Lefort', year: '2026', material: 'Oil on panel', dim: '24x18 cm', desc: 'An intimate and finely painted miniature study of an apple, highlighting the simple beauty and textures of still life subjects.', originalPrice: 2100, discount: 70, discountPrice: 630 },
-];
+import { allArtworks } from '../data';
 
 export default function ArtworkDetail({ params }: { params: { id: string } }) {
   const [modalOpen, setModalOpen] = useState(false);
