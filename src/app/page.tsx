@@ -5,30 +5,30 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-// Using the 2 provided arts + 1 dummy art for the Hero Slider
+// Real arts for the Hero Slider
 const fadeSliderArts = [
   { 
     id: 1, 
-    img: '/assets/slider1.jpg', 
-    fallback: '/assets/slider1.jpg',
-    title: 'Featured Canvas', 
-    artist: 'Selected Artist', 
+    img: '/assets/S480.JPG', 
+    fallback: '/assets/S480.JPG',
+    title: 'Naked Lady in yellow room', 
+    artist: 'Henk Vierveijzer', 
     year: '2026' 
   },
   { 
     id: 2, 
-    img: '/assets/slider2.jpg', 
-    fallback: '/assets/slider2.jpg',
-    title: 'Visionary Space', 
-    artist: 'Selected Artist', 
+    img: '/assets/S087.JPG', 
+    fallback: '/assets/S087.JPG',
+    title: 'A lady reading', 
+    artist: 'Nicole Laceur', 
     year: '2026' 
   },
   { 
     id: 3, 
-    img: '/assets/slider3.jpg',
-    fallback: '/assets/slider3.jpg',
-    title: 'Fluidity in Motion', 
-    artist: 'Featured Abstract', 
+    img: '/assets/S108.JPG',
+    fallback: '/assets/S108.JPG',
+    title: 'Wut', 
+    artist: 'Beatrice Jud', 
     year: '2026' 
   }
 ];
@@ -80,7 +80,7 @@ export default function Home() {
                   src={art.img} 
                   onError={(e) => { e.currentTarget.src = art.fallback }}
                   alt={art.title}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'contain', backgroundColor: 'var(--color-black)' }}
                 />
               </motion.div>
             )
