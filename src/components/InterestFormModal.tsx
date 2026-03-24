@@ -66,26 +66,35 @@ export default function InterestFormModal({
               zIndex: 100,
             }}
           />
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 50, scale: 0.95 }}
-            transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
+          <div
             style={{
               position: 'fixed',
-              left: '50%',
-              top: '50%',
-              transform: 'translate(-50%, -50%)',
-              backgroundColor: 'var(--color-black)',
-              border: '1px solid var(--color-border)',
-              padding: '3rem',
-              width: '100%',
-              maxWidth: '500px',
+              inset: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
               zIndex: 101,
-              maxHeight: '90vh',
-              overflowY: 'auto',
+              padding: '1.5rem',
+              pointerEvents: 'none'
             }}
           >
+            <motion.div
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 30, scale: 0.95 }}
+              transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
+              style={{
+                backgroundColor: 'var(--color-black)',
+                border: '1px solid var(--color-border)',
+                padding: '2.5rem',
+                width: '100%',
+                maxWidth: '500px',
+                maxHeight: '90vh',
+                overflowY: 'auto',
+                pointerEvents: 'auto',
+                position: 'relative'
+              }}
+            >
             <button
               onClick={onClose}
               style={{
@@ -138,7 +147,8 @@ export default function InterestFormModal({
                 </button>
               </form>
             )}
-          </motion.div>
+            </motion.div>
+          </div>
         </>
       )}
     </AnimatePresence>
