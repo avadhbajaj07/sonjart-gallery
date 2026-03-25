@@ -149,7 +149,7 @@ export default function Home() {
                   RSVP / Contact Us to Reserve Your Visit
                 </Link>
             </div>
-                         <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                {[
                  { date: '05 June', title: 'Opening Night', subtitle: 'Vernissage', time: '18–21 Uhr', desc: 'Join us for an intimate evening with artist introductions and curated drinks.' },
                  { date: '06 June', title: 'Gallery Soirée', subtitle: 'Exhibition Party', time: '15–21 Uhr', desc: 'Experience live atmospheric music alongside our latest collection.' },
@@ -159,18 +159,26 @@ export default function Home() {
                  { date: '14 June', title: 'Farewell', subtitle: 'Last Day', time: '12–18 Uhr', desc: 'Final public walk-ins.' },
                ].map((event, i) => (
                  <div key={i} style={{ 
-                   display: 'flex', 
+                   padding: '3rem 2rem', 
+                   backgroundColor: '#fcfcfc',
+                   border: '1px solid #f0f0f0',
+                   display: 'flex',
                    flexDirection: 'column',
-                   paddingBottom: '2rem',
-                   borderBottom: '1px solid var(--color-border-light)',
+                   alignItems: 'center',
+                   textAlign: 'center',
+                   boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.02)',
                  }}>
-                   <h3 style={{ fontSize: '1.5rem', fontWeight: 500, color: 'var(--color-black)', marginBottom: '0.5rem' }}>
-                     ✨ {event.title} — {event.subtitle}
+                   <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--color-grey-medium)', marginBottom: '1.5rem', fontWeight: 500 }}>
+                     {event.date} &middot; {event.time}
+                   </span>
+                   <h3 style={{ fontSize: '1.5rem', fontWeight: 300, color: 'var(--color-black)', marginBottom: '0.5rem', letterSpacing: '-0.01em' }}>
+                     {event.title}
                    </h3>
-                   <div style={{ color: 'var(--color-grey-dark)', fontSize: '1rem', marginBottom: '1rem', fontWeight: 500 }}>
-                     {event.date} | {event.time}
-                   </div>
-                   <p style={{ fontSize: '1rem', color: 'var(--color-grey-dark)', lineHeight: 1.6 }}>{event.desc}</p>
+                   <span style={{ fontSize: '0.875rem', fontStyle: 'italic', opacity: 0.7, color: 'var(--color-grey-dark)', marginBottom: '1.5rem' }}>{event.subtitle}</span>
+                   <div style={{ width: '30px', height: '1px', backgroundColor: '#ddd', marginBottom: '1.5rem' }}></div>
+                   <p style={{ fontSize: '0.9rem', color: 'var(--color-grey-dark)', lineHeight: 1.8, opacity: 0.9 }}>
+                     {event.desc}
+                   </p>
                  </div>
                ))}
              </div>
