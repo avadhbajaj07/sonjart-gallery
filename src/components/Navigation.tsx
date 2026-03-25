@@ -43,7 +43,7 @@ export default function Navigation() {
       >
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src="/assets/logo.png" alt="SONJ ART Logo" style={{ height: '40px', objectFit: 'contain' }} />
+            <img src="/assets/logo.png" alt="sonjART Logo" style={{ height: '40px', objectFit: 'contain' }} />
           </Link>
 
           {/* Desktop Nav */}
@@ -110,7 +110,7 @@ export default function Navigation() {
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4rem' }}>
               <Link href="/" style={{ display: 'flex', alignItems: 'center' }} onClick={() => setMobileMenuOpen(false)}>
-                <img src="/assets/logo.png" alt="SONJ ART Logo" style={{ height: '40px', objectFit: 'contain' }} />
+                <img src="/assets/logo.png" alt="sonjART Logo" style={{ height: '40px', objectFit: 'contain' }} />
               </Link>
               <button 
                 onClick={() => setMobileMenuOpen(false)}

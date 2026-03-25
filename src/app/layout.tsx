@@ -7,22 +7,22 @@ import Navigation from '@/components/Navigation';
 import CookieBanner from '@/components/CookieBanner';
 
 export const metadata: Metadata = {
-  title: 'SONJ ART | Original artworks by international artists, spanning styles from realism to expressionism.',
+  title: 'sonjART | Original artworks by international artists, spanning styles from realism to expressionism.',
   description: 'Ultra-luxury contemporary art gallery based in Zürich, Switzerland. Explore exclusive abstract works, modern paintings, and upcoming fine art exhibitions.',
   keywords: ['contemporary art', 'zurich art gallery', 'modern art', 'fine art', 'swiss gallery', 'Sonja Schlagel', 'luxury art', 'abstract paintings'],
   authors: [{ name: 'Sonja Schlagel' }],
-  creator: 'SONJ ART',
+  creator: 'sonjART',
   openGraph: {
-    title: 'SONJ ART | Original artworks by international artists, spanning styles from realism to expressionism.',
+    title: 'sonjART | Original artworks by international artists, spanning styles from realism to expressionism.',
     description: 'Ultra-luxury contemporary art gallery based in Zürich, Switzerland.',
     url: 'https://sonjart.ch',
-    siteName: 'SONJ ART Gallery',
+    siteName: 'sonjART Gallery',
     images: [
       {
         url: 'https://sonjart.ch/assets/art1.jpg', // Placeholder for OG image
         width: 1200,
         height: 630,
-        alt: 'SONJ ART Gallery Preview',
+        alt: 'sonjART Gallery Preview',
       },
     ],
     locale: 'en_US',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SONJ ART | Original artworks by international artists, spanning styles from realism to expressionism.',
+    title: 'sonjART | Original artworks by international artists, spanning styles from realism to expressionism.',
     description: 'Explore exclusive abstract works and conceptual fine art in Zürich.',
     images: ['https://sonjart.ch/assets/art1.jpg'],
   },
@@ -72,7 +72,7 @@ export default function RootLayout({
             <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem' }}>
               <div>
                 <Link href="/" style={{ display: 'inline-block', marginBottom: '1rem' }}>
-                  <img src="/assets/logo.png" alt="SONJ ART Logo" style={{ height: '40px', objectFit: 'contain' }} />
+                  <img src="/assets/logo.png" alt="sonjART Logo" style={{ height: '40px', objectFit: 'contain' }} />
                 </Link>
                 <p style={{ color: 'var(--color-grey-medium)', marginBottom: '0.5rem' }}>Original artworks by international artists, spanning styles from realism to expressionism.</p>
               </div>
@@ -98,7 +98,7 @@ export default function RootLayout({
               </div>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--color-grey-dark)', fontSize: '0.875rem', marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid var(--color-border)' }}>
-              <span>© {new Date().getFullYear()} SONJ ART. All rights reserved.</span>
+              <span>© {new Date().getFullYear()} sonjART. All rights reserved.</span>
               <span>Switzerland</span>
             </div>
           </div>

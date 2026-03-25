@@ -5,7 +5,7 @@ export default function AdminDashboard() {
     <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: 'var(--color-black)' }}>
       {/* Sidebar */}
       <aside style={{ width: '280px', borderRight: '1px solid var(--color-border)', padding: '2rem', display: 'flex', flexDirection: 'column' }}>
-        <h2 style={{ fontSize: '1.25rem', marginBottom: '3rem', fontWeight: 500, letterSpacing: '0.1em' }}>SONJ ART Admin</h2>
+        <h2 style={{ fontSize: '1.25rem', marginBottom: '3rem', fontWeight: 500, letterSpacing: '0.1em' }}>sonjART Admin</h2>
         
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '1rem', flex: 1 }}>
           <p className="text-caption" style={{ marginBottom: '0.5rem' }}>Management</p>

@@ -29,7 +29,7 @@ export async function POST(req: Request) {
 
     // Email body content
     const htmlContent = `
-      <h3>New Message from SONJ ART Website</h3>
+      <h3>New Message from sonjART Website</h3>
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       ${artwork ? `<p><strong>Inquiring About:</strong> ${artwork}</p>` : ''}
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
     // Send the email to the destination (client's Gmail)
     const info = await transporter.sendMail({
-      from: `"SONJ ART Website" <${process.env.SMTP_EMAIL}>`, // Sender address must match the authenticated user
+      from: `"sonjART Website" <${process.env.SMTP_EMAIL}>`, // Sender address must match the authenticated user
       to: destinationEmail, // The client's Gmail address where they want to receive emails
       replyTo: email,       // Doing this allows the client to click 'Reply' and reply directly to the customer
       subject: subject,
@@ -49,15 +49,15 @@ export async function POST(req: Request) {
 
     // Generate a sleek, stylish auto-reply email for the customer
     const customerSubject = artwork 
-      ? `Thank you for your interest in ${artwork} — SONJ ART` 
-      : `Thank you for your message — SONJ ART`;
+      ? `Thank you for your interest in ${artwork} — sonjART` 
+      : `Thank you for your message — sonjART`;
 
     const customerHtmlContent = `
       <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; color: #333333; background-color: #ffffff; line-height: 1.6;">
         
         <!-- Header / Logo Area -->
         <div style="text-align: center; border-bottom: 1px solid #eeeeee; padding-bottom: 30px; margin-bottom: 30px;">
-          <h1 style="font-weight: 300; letter-spacing: 0.2em; font-size: 24px; color: #000000; margin: 0;">SONJ ART</h1>
+          <h1 style="font-weight: 300; letter-spacing: 0.2em; font-size: 24px; color: #000000; margin: 0;">sonjART</h1>
           <p style="font-size: 12px; letter-spacing: 0.1em; color: #888888; text-transform: uppercase; margin-top: 10px;">Original artworks by international artists, spanning styles from realism to expressionism.</p>
         </div>
 
@@ -76,11 +76,11 @@ export async function POST(req: Request) {
 
         <p style="font-size: 16px; margin-top: 40px; margin-bottom: 60px;">
           Warm regards,<br />
-          <strong>Sonja Schlagel & The SONJ ART Team</strong>
+          <strong>Sonja Schlagel & The sonjART Team</strong>
         </p>
 
         <div style="border-top: 1px solid #eeeeee; padding-top: 30px; text-align: center; font-size: 12px; color: #888888;">
-          <p style="margin: 0;"><strong>SONJ ART Galerie</strong><br />Zürich, Switzerland</p>
+          <p style="margin: 0;"><strong>sonjART Galerie</strong><br />Zürich, Switzerland</p>
           <p style="margin-top: 10px;">
             <a href="https://sonjart.ch" style="color: #888888; text-decoration: none;">www.sonjart.ch</a> | 
             <a href="mailto:info@sonjart.ch" style="color: #888888; text-decoration: none;">info@sonjart.ch</a>
@@ -91,7 +91,7 @@ export async function POST(req: Request) {
 
     // Send the auto-reply to the user who filled the form
     await transporter.sendMail({
-      from: `"SONJ ART Gallery" <${process.env.SMTP_EMAIL}>`,
+      from: `"sonjART Gallery" <${process.env.SMTP_EMAIL}>`,
       to: email, // The customer's email
       subject: customerSubject,
       html: customerHtmlContent,

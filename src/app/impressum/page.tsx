@@ -4,7 +4,7 @@ export default function Impressum() {
       <h1 className="text-title" style={{ marginBottom: '2rem' }}>Impressum</h1>
       <div style={{ color: 'var(--color-grey-medium)', lineHeight: 1.8 }}>
         <h2 style={{ color: 'var(--color-white)', marginTop: '2rem', marginBottom: '1rem' }}>Owner & Operator</h2>
-        <p style={{ marginBottom: '1.5rem' }}>Sonja Schlagel<br/>SONJ ART<br/>Zürich, Switzerland</p>
+        <p style={{ marginBottom: '1.5rem' }}>Sonja Schlagel<br/>sonjART<br/>Zürich, Switzerland</p>
         <h2 style={{ color: 'var(--color-white)', marginTop: '2rem', marginBottom: '1rem' }}>Contact</h2>
         <p style={{ marginBottom: '1.5rem' }}>Email: <a href="mailto:info@sonjart.ch" style={{ textDecoration: 'underline' }}>info@sonjart.ch</a><br/>Website: <a href="https://sonjart.ch" style={{ textDecoration: 'underline' }}>sonjart.ch</a></p>
         <h2 style={{ color: 'var(--color-white)', marginTop: '2rem', marginBottom: '1rem' }}>Legal Responsibility</h2>
