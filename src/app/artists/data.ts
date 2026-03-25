@@ -125,5 +125,11 @@ During her studies at the Academy of Fine Arts, Molnar developed a technique of 
 In her large-scale paintings, one senses a quiet celebration of freedom—after years of working within the confined surfaces of porcelain, Molnar now expands into vast compositions, as if revealing the hidden through a magnifying lens. Her works invite the viewer to discover what might otherwise remain unseen.
 
 Her floral compositions elevate nature to a realm of quiet luxury—each petal rendered with such refinement that it evokes the elegance of bespoke design. Molnar transforms the natural world into something both intimate and extraordinary, where beauty is not only observed, but deeply felt.`
+  },
+  {
+    id: 'unknown',
+    name: 'Unknown',
+    img: '/assets/logo.png',
+    bio: `Artwork with unconfirmed or anonymous attribution. These pieces are selected for their intrinsic artistic value and compelling visual presence.`
   }
 ];
