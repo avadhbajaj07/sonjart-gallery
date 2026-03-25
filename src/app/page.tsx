@@ -137,10 +137,12 @@ export default function Home() {
                <h2 className="text-title" style={{ marginTop: '1rem', marginBottom: '2rem' }}>Kunstraum 15</h2>
                <div style={{ marginBottom: '3rem', color: 'var(--color-grey-dark)', fontSize: '1.125rem', lineHeight: 1.8 }}>
                  <img src="/assets/popup.jpeg" alt="Event Flyer pop-up gallery" style={{ width: '100%', maxWidth: '500px', display: 'block', marginBottom: '2rem', borderRadius: '4px' }} />
-                 <p style={{ fontWeight: 600, fontSize: '1.25rem', marginBottom: '0.5rem', color: 'var(--color-black)' }}>An Exploration of Contemporary Silence</p>
-                 <p style={{ marginBottom: '2rem' }}>
-                   Join us for our upcoming exclusive exhibition focusing on minimalist geometry and modern interpretations of absence. Curated by Sonja Schlagel, this immersive experience features the works of four international contemporary artists.
-                 </p>
+                 <p style={{ fontWeight: 600, fontSize: '1.25rem', marginBottom: '1.5rem', color: 'var(--color-black)' }}>5–15 June | Zürich</p>
+                 <div style={{ marginBottom: '2rem' }}>
+                   <p style={{ marginBottom: '1rem', fontWeight: 500 }}>You are warmly invited to visit the Kunstraum 15 Gallery.</p>
+                   <p style={{ marginBottom: '1rem' }}>For two weeks, discover a curated selection of paintings from international artists—available for acquisition at special exhibition prices.</p>
+                   <p style={{ fontStyle: 'italic', color: 'var(--color-grey-dark)' }}>Your home will thank you.</p>
+                 </div>
                  <p style={{ fontWeight: 500 }}>Location:</p>
                  <p>Zeltweg 15</p>
                  <p>8032 Zürich, Switzerland</p>
