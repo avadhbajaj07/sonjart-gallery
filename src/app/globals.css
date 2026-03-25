@@ -196,3 +196,25 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-grey-medium);
 }
+
+/* Event Grid Responsive Behavior */
+@media (max-width: 1024px) {
+  .events-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    padding: 0 2rem 2rem 2rem !important;
+    margin: 0 -1.5rem !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  .events-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+  .event-card {
+    flex: 0 0 85% !important;
+    scroll-snap-align: center !important;
+    min-width: 280px !important;
+    padding: 2.5rem 2rem !important;
+  }
+}

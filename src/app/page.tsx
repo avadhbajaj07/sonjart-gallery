@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 import { allArtworks } from './artworks/data';
+import { artistsData } from './artists/data';
 
 // Real arts for the Hero Slider
 const fadeSliderArts = [
@@ -133,7 +134,7 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '4rem' }}>
             <div>
-               <span className="text-caption">02 / Next Exhibition</span>
+               <span className="text-caption">01 / Next Exhibition</span>
                <h2 className="text-title" style={{ marginTop: '1rem', marginBottom: '2rem' }}>Kunstraum 15</h2>
                <div style={{ marginBottom: '3rem', color: 'var(--color-grey-dark)', fontSize: '1.125rem', lineHeight: 1.8 }}>
                  <img src="/assets/popup.jpeg" alt="Event Flyer pop-up gallery" style={{ width: '100%', maxWidth: '500px', display: 'block', marginBottom: '2rem', borderRadius: '4px' }} />
@@ -150,28 +151,7 @@ export default function Home() {
                 <Link href="/contact" className="btn-primary">
                   RSVP / Contact Us to Reserve Your Visit
                 </Link>
-            </div>             <style dangerouslySetInnerHTML={{ __html: `
-               @media (max-width: 1024px) {
-                 .events-grid {
-                   display: flex !important;
-                   overflow-x: auto !important;
-                   scroll-snap-type: x mandatory !important;
-                   padding: 0 1rem 2rem 1rem !important;
-                   margin: 0 -1rem !important;
-                   -webkit-overflow-scrolling: touch !important;
-                   scrollbar-width: none !important;
-                 }
-                 .events-grid::-webkit-scrollbar {
-                   display: none !important;
-                 }
-                 .event-card {
-                   flex: 0 0 85% !important;
-                   scroll-snap-align: center !important;
-                   min-width: 280px !important;
-                   padding: 2rem !important; /* more compact on mobile */
-                 }
-               }
-             `}} />
+            </div>
 
              <div className="events-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                {[
@@ -215,7 +195,7 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '4rem', flexWrap: 'wrap', gap: '2rem' }}>
             <div>
-              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>03 / Curated Art</span>
+              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>02 / Curated Art</span>
               <h2 className="text-title" style={{ marginTop: '1rem', color: 'var(--color-white)' }}>Art Collections</h2>
             </div>
             
@@ -267,7 +247,7 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '6rem', alignItems: 'center' }}>
             
             <div style={{ order: 2 }}>
-              <span className="text-caption" style={{ marginBottom: '2rem', display: 'block' }}>04 / The Visionary</span>
+              <span className="text-caption" style={{ marginBottom: '2rem', display: 'block' }}>03 / The Visionary</span>
               <h2 className="text-title" style={{ marginBottom: '2rem', color: 'var(--color-black)' }}>About Sonja</h2>
               
               <div style={{ fontSize: '1.125rem', color: 'var(--color-grey-dark)', marginBottom: '3rem', lineHeight: 1.8 }}>
@@ -333,7 +313,7 @@ export default function Home() {
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '4rem' }}>
             <div>
-              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>05 / The Creators</span>
+              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>04 / The Creators</span>
               <h2 className="text-title" style={{ marginTop: '1rem', color: 'var(--color-white)' }}>Gallery Artists</h2>
             </div>
             <Link href="/artists" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: '0.875rem', color: 'var(--color-white)' }}>
@@ -341,33 +321,22 @@ export default function Home() {
             </Link>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '2rem' }}>
-            {[
-              { id: 'elso-schiavo', name: 'Elso Schiavo', img: '/assets/Elso Schiavo.jpg' },
-              { id: 'beatrice-jud', name: 'Beatrice Jud', img: '/assets/Beatrice Jud.jpeg' },
-              { id: 'nicole-laceur', name: 'Nicole Laceur', img: '/assets/Nicole Laceur.jpeg' },
-              { id: 'nicole-janssen', name: 'Nicole Janssen', img: '/assets/Nicole Janssen.jpeg' },
-              { id: 'escobar', name: 'F. Escobar', img: '/assets/Francisco Escobar.JPG' },
-              { id: 'henk-vierveijzer', name: 'Henk Vierveijzer', img: '/assets/Henk Vierveijzer.JPG' },
-              { id: 'albert-chalet', name: 'Albert Chalet', img: '/assets/Albert Chalet.jpg' },
-              { id: 'richard-van-der-pol', name: 'R. van der Pol', img: '/assets/Richard van de Pol.jpeg' },
-              { id: 'jean-lefort', name: 'Jean Lefort', img: '/assets/Jean Lefort.jpg' },
-              { id: 'cees-muller', name: 'Cees Müller', img: '/assets/Cees Muller.jpg' },
-              { id: 'gyula-issak', name: 'Gyula Issak', img: '/assets/Balazs Wanyi.jpeg' },
-              { id: 'corneille', name: 'Corneille', img: '/assets/Corneille.jpg' }
-            ].map((artist) => (
+            {artistsData.slice(0, 12).map((artist) => (
               <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
                 <div style={{ 
                   aspectRatio: '1/1', 
                   borderRadius: '50%', 
                   overflow: 'hidden', 
                   marginBottom: '1.5rem',
+                  padding: '0.5rem',
+                  border: '1px solid var(--color-border)',
                   width: '80%',
                   margin: '0 auto 1.5rem',
                 }}>
                   <img 
                     src={artist.img} 
                     alt={artist.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%)', transition: 'filter var(--transition-slow)' }}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%)', transition: 'filter var(--transition-slow)', borderRadius: '50%' }}
                     onMouseOver={(e) => (e.currentTarget.style.filter = 'grayscale(0%)')}
                     onMouseOut={(e) => (e.currentTarget.style.filter = 'grayscale(100%)')}
                   />
