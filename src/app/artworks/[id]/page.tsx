@@ -106,14 +106,14 @@ export default function ArtworkDetail({ params }: { params: { id: string } }) {
         </div>
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: '2rem' }}>
-          {[
+          {(currentArt.gallery || [
             { img: '/assets/art%20gallery1.jpg', label: 'Gallery Vision I' },
             { img: '/assets/art%20gallery2.jpg', label: 'Gallery Vision II' },
             { img: '/assets/art%20gallery3.jpg', label: 'Gallery Vision III' },
             { img: '/assets/art%20gallery4.jpg', label: 'Gallery Vision IV' },
             { img: '/assets/art%20gallery5.jpg', label: 'Gallery Vision V' },
             { img: '/assets/art%20gallery6.jpg', label: 'Gallery Vision VI' }
-          ].map((mockup, i) => (
+          ]).map((mockup, i) => (
              <div key={i} style={{ width: '100%', overflow: 'hidden', position: 'relative' }}>
                <div style={{ overflow: 'hidden' }}>
                  <img 
