@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Sonja Schlagel | sonjART Founder',
+  description: 'Learn about Sonja Schlagel’s journey from the pharmaceutical industry to founding sonjART Gallery. Discover her passion for curation and her personal approach to fine art consultancy.',
+};
+
 export default function About() {
   return (
     <main style={{ paddingTop: '12rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">

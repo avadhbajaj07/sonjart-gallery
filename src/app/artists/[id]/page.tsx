@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import type { Metadata } from 'next';
 import { artistsData } from '../data';
 import { allArtworks } from '../../artworks/data';
 
@@ -7,13 +8,53 @@ export function generateStaticParams() {
    return artistsData.map((a) => ({ id: a.id }));
 }
 
-export default async function ArtistDetail({ params }: { params: Promise<{ id: string }> }) {
+type Props = {
+  params: Promise<{ id: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const artist = artistsData.find(a => a.id === resolvedParams.id);
+  
+  if (!artist) {
+    return { title: 'Artist | sonjART' };
+  }
+
+  return {
+    title: `${artist.name} | sonjART Portfolio`,
+    description: `Explore the original works of Hungarian artist ${artist.name} at sonjART gallery. Read their exhibition biography and browse their latest collection of fine art paintings.`,
+    alternates: {
+      canonical: `https://sonjart.ch/artists/${artist.id}`,
+    },
+    openGraph: {
+      title: `${artist.name} - Contemporary Artist`,
+      description: artist.bio.substring(0, 160) + '...',
+      images: [{ url: `https://sonjart.ch${artist.img}` }],
+    }
+  };
+}
+
+export default async function ArtistDetail({ params }: Props) {
   const resolvedParams = await params;
   const artist = artistsData.find(a => a.id === resolvedParams.id) || artistsData[0];
   const artistArtworks = allArtworks.filter(art => art.artist === artist.name);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: artist.name,
+    description: artist.bio,
+    image: `https://sonjart.ch${artist.img}`,
+    url: `https://sonjart.ch/artists/${artist.id}`,
+    knowsAbout: ['Contemporary Art', 'Fine Art Painting', 'Modern Art'],
+  };
+
   return (
     <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="fade-in">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="container" style={{ maxWidth: '1200px' }}>
         <Link href="/artists" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '4rem', color: 'var(--color-grey-medium)' }}>
           <ArrowLeft size={16} /> Artists
