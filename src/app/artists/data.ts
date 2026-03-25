@@ -113,5 +113,17 @@ The result is a unique painterly mastery, unmistakable in its depth and intensit
     name: 'Corneille',
     img: '/assets/Corneille.jpg',
     bio: `Guillaume Cornelis van Beverloo (1922–2010), better known as Corneille, was a Belgian-born Dutch painter and a founding member of the COBRA movement. His work is celebrated for its vibrant energy, bold primary colors, and a playful, almost primal visual language. Corneille often incorporated poetic motifs such as birds, flowers, and women, creating a world of exuberant freedom and emotional resonance that continues to captivate collectors worldwide.`
+  },
+  {
+    id: 'annemarie-molnar',
+    name: 'Annemarie Molnar',
+    img: '/assets/Annemarie Molnar.jpeg',
+    bio: `Otherworldly, almost monumental—and undeniably captivating in every detail—this is the unmistakable painterly language of Hungarian artist Annemarie Molnar, born in 1970.
+
+During her studies at the Academy of Fine Arts, Molnar developed a technique of remarkable precision, which she later brought to an exceptional level of refinement through the intricate art of porcelain painting. This period shaped her extraordinary sensitivity to detail before she ultimately embraced her true calling in fine art.
+
+In her large-scale paintings, one senses a quiet celebration of freedom—after years of working within the confined surfaces of porcelain, Molnar now expands into vast compositions, as if revealing the hidden through a magnifying lens. Her works invite the viewer to discover what might otherwise remain unseen.
+
+Her floral compositions elevate nature to a realm of quiet luxury—each petal rendered with such refinement that it evokes the elegance of bespoke design. Molnar transforms the natural world into something both intimate and extraordinary, where beauty is not only observed, but deeply felt.`
   }
 ];
