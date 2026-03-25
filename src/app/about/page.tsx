@@ -2,7 +2,7 @@ export default function About() {
   return (
     <main style={{ paddingTop: '12rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <h1 className="text-title" style={{ marginBottom: '4rem' }}>About Sonj</h1>
+        <h1 className="text-title" style={{ marginBottom: '4rem' }}>About Sonja</h1>
         <div style={{ aspectRatio: '16/9', overflow: 'hidden', marginBottom: '4rem' }}>
           <img src="/assets/sonja.jpeg" alt="Sonja Schlagel" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%' }} />
         </div>

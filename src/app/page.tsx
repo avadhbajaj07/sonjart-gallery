@@ -145,44 +145,38 @@ export default function Home() {
                  <p>Zeltweg 15</p>
                  <p>8032 Zürich, Switzerland</p>
                </div>
-               <Link href="/contact" className="btn-primary">
-                 RSVP / Contact Us
-               </Link>
+                <Link href="/contact" className="btn-primary">
+                  RSVP / Contact Us to Reserve Your Visit
+                </Link>
             </div>
-            
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-              {[
-                { date: '05.06.2026', title: 'Vernissage', time: '18–21 Uhr', desc: 'Opening night with artist introductions and curated drinks.' },
-                { date: '06.06.2026', title: 'Exhibition Party', time: '15–21 Uhr', desc: 'Live atmospheric music alongside the gallery pieces.' },
-                { date: '11.06.2026', title: 'Open Gallery', time: '14–18 Uhr', desc: 'Public viewing hours.' },
-                { date: '12.06.2026', title: 'Open Gallery', time: '14–18 Uhr', desc: 'Public viewing hours.' },
-                { date: '13.06.2026', title: 'Finissage', time: '14–21 Uhr', desc: 'Closing celebration and final acquisition opportunities.' },
-                { date: '14.06.2026', title: 'Last Day', time: '12–18 Uhr', desc: 'Final public walk-ins.' },
-              ].map((event, i) => (
-                <div key={i} className="border-b" style={{ 
-                  display: 'flex', 
-                  flexDirection: 'column',
-                  paddingBottom: '1.5rem',
-                  borderBottom: '1px solid var(--color-border-light)',
-                }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                    <div>
-                      <span style={{ color: 'var(--color-grey-dark)', fontSize: '0.875rem', marginBottom: '0.25rem', display: 'block', fontWeight: 500 }}>
-                        {event.date}
-                      </span>
-                      <h3 style={{ fontSize: '1.5rem', fontWeight: 500, color: 'var(--color-black)' }}>{event.title}</h3>
-                    </div>
-                    <div style={{ textAlign: 'right' }}>
-                      <span style={{ fontSize: '0.875rem', color: 'var(--color-grey-dark)', fontWeight: 500 }}>{event.time}</span>
-                    </div>
-                  </div>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--color-grey-dark)', marginTop: '0.25rem' }}>{event.desc}</p>
-                </div>
-              ))}
+                         <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
+               {[
+                 { date: '05 June', title: 'Opening Night', subtitle: 'Vernissage', time: '18–21 Uhr', desc: 'Join us for an intimate evening with artist introductions and curated drinks.' },
+                 { date: '06 June', title: 'Gallery Soirée', subtitle: 'Exhibition Party', time: '15–21 Uhr', desc: 'Experience live atmospheric music alongside our latest collection.' },
+                 { date: '11 June', title: 'Public Viewing', subtitle: 'Open Gallery', time: '14–18 Uhr', desc: 'Explore the exhibition at your own pace.' },
+                 { date: '12 June', title: 'Public Viewing', subtitle: 'Open Gallery', time: '14–18 Uhr', desc: 'Explore the exhibition at your own pace.' },
+                 { date: '13 June', title: 'Final Celebration', subtitle: 'Finissage', time: '14–21 Uhr', desc: 'Closing celebration and final acquisition opportunities.' },
+                 { date: '14 June', title: 'Farewell', subtitle: 'Last Day', time: '12–18 Uhr', desc: 'Final public walk-ins.' },
+               ].map((event, i) => (
+                 <div key={i} style={{ 
+                   display: 'flex', 
+                   flexDirection: 'column',
+                   paddingBottom: '2rem',
+                   borderBottom: '1px solid var(--color-border-light)',
+                 }}>
+                   <h3 style={{ fontSize: '1.5rem', fontWeight: 500, color: 'var(--color-black)', marginBottom: '0.5rem' }}>
+                     ✨ {event.title} — {event.subtitle}
+                   </h3>
+                   <div style={{ color: 'var(--color-grey-dark)', fontSize: '1rem', marginBottom: '1rem', fontWeight: 500 }}>
+                     {event.date} | {event.time}
+                   </div>
+                   <p style={{ fontSize: '1rem', color: 'var(--color-grey-dark)', lineHeight: 1.6 }}>{event.desc}</p>
+                 </div>
+               ))}
+             </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* 4. FEATURED COLLECTION (Normal scroll - Added demo arts) */}
       <section style={{ position: 'relative', zIndex: 3, padding: 'var(--spacing-xl) 0', backgroundColor: 'var(--color-black)' }}>
