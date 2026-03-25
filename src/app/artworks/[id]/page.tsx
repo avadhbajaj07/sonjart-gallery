@@ -71,10 +71,7 @@ export default function ArtworkDetail({ params }: { params: { id: string } }) {
                   <h3 className="text-caption" style={{ marginBottom: '0.75rem', color: 'var(--color-grey-dark)', letterSpacing: '0.1em' }}>Dimensions</h3>
                   <p style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--color-white)' }}>{currentArt.dim}</p>
                 </div>
-                <div>
-                  <h3 className="text-caption" style={{ marginBottom: '0.75rem', color: 'var(--color-grey-dark)', letterSpacing: '0.1em' }}>Year</h3>
-                  <p style={{ fontSize: '1.25rem', fontWeight: 400, color: 'var(--color-white)' }}>{currentArt.year}</p>
-                </div>
+
               </div>
 
               <div style={{ fontSize: '1.125rem', lineHeight: 1.8, color: 'var(--color-grey-light)', fontWeight: 300, maxWidth: '650px' }}>

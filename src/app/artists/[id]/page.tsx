@@ -40,7 +40,7 @@ export default async function ArtistDetail({ params }: { params: Promise<{ id: s
                      <img src={art.img} alt={art.title} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
                   </div>
                   <h3 className="text-caption" style={{ color: 'var(--color-white)', fontSize: '1rem', marginBottom: '0.25rem' }}>{art.title}</h3>
-                  <p className="text-caption" style={{ color: 'var(--color-grey-medium)', fontSize: '0.75rem' }}>{art.material} • {art.year}</p>
+                  <p className="text-caption" style={{ color: 'var(--color-grey-medium)', fontSize: '0.75rem' }}>{art.material}</p>
                 </Link>
               ))}
             </div>

@@ -99,17 +99,11 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <h1 className="text-title-huge" style={{ color: 'var(--color-white)', marginBottom: '1rem', letterSpacing: '-0.02em' }}>
-                SONJ ART
-              </h1>
-              <span className="text-caption" style={{ color: 'var(--color-grey-medium)', display: 'block', marginBottom: '1.5rem', fontSize: '1rem' }}>
-                Original artworks by international artists, spanning styles from realism to expressionism. &middot; Exclusive Collection
-              </span>
-              <h2 className="text-title" style={{ color: 'var(--color-white)', marginBottom: '0.5rem', fontSize: '2rem' }}>
+              <h2 className="text-title" style={{ color: 'var(--color-white)', marginBottom: '0.5rem', fontSize: '2.5rem', letterSpacing: '-0.02em' }}>
                 {fadeSliderArts[currentSliderArt].title}
               </h2>
               <p style={{ fontSize: '1.25rem', color: 'var(--color-grey-light)' }}>
-                {fadeSliderArts[currentSliderArt].artist}, {fadeSliderArts[currentSliderArt].year}
+                {fadeSliderArts[currentSliderArt].artist}
               </p>
             </motion.div>
 
@@ -233,7 +227,7 @@ export default function Home() {
                        <span style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)', textDecoration: 'line-through' }}>CHF {art.originalPrice?.toLocaleString()}</span>
                     </div>
                   </div>
-                  <span style={{ color: 'var(--color-grey-medium)', fontSize: '0.875rem' }}>{art.year}</span>
+
                 </div>
               </Link>
             ))}

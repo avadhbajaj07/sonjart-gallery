@@ -38,7 +38,7 @@ export default function Artworks() {
                    <span style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)', textDecoration: 'line-through' }}>CHF {(art as any).originalPrice?.toLocaleString()}</span>
                 </div>
               </div>
-              <span className="text-caption" style={{ color: 'var(--color-grey-medium)' }}>{art.year}</span>
+
             </div>
           </Link>
         ))}
