@@ -148,17 +148,39 @@ export default function Home() {
                 <Link href="/contact" className="btn-primary">
                   RSVP / Contact Us to Reserve Your Visit
                 </Link>
-            </div>
-                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+            </div>             <style dangerouslySetInnerHTML={{ __html: `
+               @media (max-width: 1024px) {
+                 .events-grid {
+                   display: flex !important;
+                   overflow-x: auto !important;
+                   scroll-snap-type: x mandatory !important;
+                   padding: 0 1rem 2rem 1rem !important;
+                   margin: 0 -1rem !important;
+                   -webkit-overflow-scrolling: touch !important;
+                   scrollbar-width: none !important;
+                 }
+                 .events-grid::-webkit-scrollbar {
+                   display: none !important;
+                 }
+                 .event-card {
+                   flex: 0 0 85% !important;
+                   scroll-snap-align: center !important;
+                   min-width: 280px !important;
+                   padding: 2rem !important; /* more compact on mobile */
+                 }
+               }
+             `}} />
+
+             <div className="events-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                {[
                  { date: '05 June', title: 'Opening Night', subtitle: 'Vernissage', time: '18–21 Uhr', desc: 'Join us for an intimate evening with artist introductions and curated drinks.' },
-                 { date: '06 June', title: 'Gallery Soirée', subtitle: 'Exhibition Party', time: '15–21 Uhr', desc: 'Experience live atmospheric music alongside our latest collection.' },
+                 { date: '06 June', title: 'Gallery Soirée', subtitle: 'Exhibition Party', time: '15–21 Uhr', desc: 'Experience live atmospheric music.' },
                  { date: '11 June', title: 'Public Viewing', subtitle: 'Open Gallery', time: '14–18 Uhr', desc: 'Explore the exhibition at your own pace.' },
                  { date: '12 June', title: 'Public Viewing', subtitle: 'Open Gallery', time: '14–18 Uhr', desc: 'Explore the exhibition at your own pace.' },
-                 { date: '13 June', title: 'Final Celebration', subtitle: 'Finissage', time: '14–21 Uhr', desc: 'Closing celebration and final acquisition opportunities.' },
+                 { date: '13 June', title: 'Final Celebration', subtitle: 'Finissage', time: '14–21 Uhr', desc: 'Closing celebration and final acquisition.' },
                  { date: '14 June', title: 'Farewell', subtitle: 'Last Day', time: '12–18 Uhr', desc: 'Final public walk-ins.' },
                ].map((event, i) => (
-                 <div key={i} style={{ 
+                 <div key={i} className="event-card" style={{ 
                    padding: '3rem 2rem', 
                    backgroundColor: '#fcfcfc',
                    border: '1px solid #f0f0f0',
@@ -168,15 +190,15 @@ export default function Home() {
                    textAlign: 'center',
                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.02)',
                  }}>
-                   <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--color-grey-medium)', marginBottom: '1.5rem', fontWeight: 500 }}>
+                   <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--color-grey-medium)', marginBottom: '1.25rem', fontWeight: 500 }}>
                      {event.date} &middot; {event.time}
                    </span>
-                   <h3 style={{ fontSize: '1.5rem', fontWeight: 300, color: 'var(--color-black)', marginBottom: '0.5rem', letterSpacing: '-0.01em' }}>
+                   <h3 style={{ fontSize: '1.4rem', fontWeight: 300, color: 'var(--color-black)', marginBottom: '0.5rem' }}>
                      {event.title}
                    </h3>
-                   <span style={{ fontSize: '0.875rem', fontStyle: 'italic', opacity: 0.7, color: 'var(--color-grey-dark)', marginBottom: '1.5rem' }}>{event.subtitle}</span>
-                   <div style={{ width: '30px', height: '1px', backgroundColor: '#ddd', marginBottom: '1.5rem' }}></div>
-                   <p style={{ fontSize: '0.9rem', color: 'var(--color-grey-dark)', lineHeight: 1.8, opacity: 0.9 }}>
+                   <span style={{ fontSize: '0.875rem', fontStyle: 'italic', opacity: 0.7, color: 'var(--color-grey-dark)', marginBottom: '1.25rem' }}>{event.subtitle}</span>
+                   <div style={{ width: '25px', height: '1px', backgroundColor: '#ddd', marginBottom: '1.25rem' }}></div>
+                   <p style={{ fontSize: '0.85rem', color: 'var(--color-grey-dark)', lineHeight: 1.6, opacity: 0.9 }}>
                      {event.desc}
                    </p>
                  </div>
