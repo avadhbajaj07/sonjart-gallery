@@ -252,7 +252,7 @@ export default function Home() {
               
               <div style={{ fontSize: '1.125rem', color: 'var(--color-grey-dark)', marginBottom: '3rem', lineHeight: 1.8 }}>
                 <p style={{ marginBottom: '1.5rem' }}>
-                  Sonja Schlagel, founder of SonjART Galerie, was born in Alkmaar, the Netherlands, and has been based in Switzerland since 1990.
+                  Sonja Schlagel, founder of sonjART, was born in Alkmaar, the Netherlands, and has been based in Switzerland since 1990.
                 </p>
                 <p style={{ marginBottom: '1.5rem' }}>
                   With a background in international pharmaceutical sales and management, she later chose to follow a more personal path—bringing her lifelong passion for art into her professional life.
@@ -371,7 +371,7 @@ export default function Home() {
         <div className="container" style={{ position: 'relative', zIndex: 10, textAlign: 'center', maxWidth: '800px' }}>
           <h2 className="text-title" style={{ marginBottom: '1.5rem' }}>Acquire a Masterpiece</h2>
           <p style={{ fontSize: '1.25rem', lineHeight: 1.8, color: 'var(--color-grey-light)', opacity: 0.9, marginBottom: '3rem' }}>
-            Every collection tells a personal story. Speak with our curation team to acquire new fine art and begin your journey into contemporary excellence.
+            Every collection tells a personal story. Speak with our curation team to acquire new fine art and begin your journey into artistic excellence.
           </p>
           <Link href="/contact" className="btn-primary" style={{ padding: '1.25rem 3rem', fontSize: '1rem' }}>
             Approach for Curation

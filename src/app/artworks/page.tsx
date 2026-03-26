@@ -3,8 +3,8 @@ import { allArtworks } from './data';
 import ArtworksClient from './ArtworksClient';
 
 export const metadata: Metadata = {
-  title: 'Art Collections | sonjART | Exclusive Contemporary Paintings',
-  description: 'Explore our curated collection of original contemporary paintings. Available for acquisition at special exhibition prices due to relocation. Worldwide shipping available from Zürich.',
+  title: 'Art Collections | sonjART | Exclusive Original Paintings',
+  description: 'Explore our curated collection of original paintings. Available for acquisition at special exhibition prices due to relocation. Worldwide shipping available from Zürich.',
 };
 
 export default function Artworks() {

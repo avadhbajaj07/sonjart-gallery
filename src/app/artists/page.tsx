@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { artistsData } from './data';
 
 export const metadata: Metadata = {
-  title: 'Gallery Artists | sonjART | International Contemporary Talent',
+  title: 'Gallery Artists | sonjART | International Talent',
   description: 'Meet the international artists represented by sonjART. Discover unique artistic voices from Hungary, the Netherlands, and Switzerland, specializing in oil painting and mixed media.',
 };
 

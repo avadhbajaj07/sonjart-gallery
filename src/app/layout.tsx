@@ -8,15 +8,15 @@ import CookieBanner from '@/components/CookieBanner';
 
 export const metadata: Metadata = {
   title: 'sonjART | Original artworks by international artists, spanning styles from realism to expressionism.',
-  description: 'Ultra-luxury contemporary art gallery based in Zürich, Switzerland. Explore exclusive abstract works, modern paintings, and upcoming fine art exhibitions.',
-  keywords: ['contemporary art', 'zurich art gallery', 'modern art', 'fine art', 'swiss gallery', 'Sonja Schlagel', 'luxury art', 'abstract paintings'],
+  description: 'Original artworks by international artists, spanning styles from realism to expressionism. Explore fine art paintings and upcoming exhibitions in Zürich, Switzerland.',
+  keywords: ['art gallery', 'zurich art gallery', 'modern art', 'fine art', 'swiss gallery', 'Sonja Schlagel', 'original paintings', 'abstract works'],
   authors: [{ name: 'Sonja Schlagel' }],
   creator: 'sonjART',
   openGraph: {
     title: 'sonjART | Original artworks by international artists, spanning styles from realism to expressionism.',
-    description: 'Ultra-luxury contemporary art gallery based in Zürich, Switzerland.',
+    description: 'Original artworks by international artists, spanning styles from realism to expressionism.',
     url: 'https://sonjart.ch',
-    siteName: 'sonjART Gallery',
+    siteName: 'sonjART',
     images: [
       {
         url: 'https://sonjart.ch/assets/art1.jpg', // Placeholder for OG image

@@ -45,7 +45,7 @@ Laceurs Arbeiten zeichnen sich insbesondere auch durch ein sehr feines Gespür f
     name: 'F. Escobar',
     img: '/assets/Francisco Escobar.JPG',
     bio: `1944–2016, Costa Rica
-Born in Costa Rica in 1944, Francesco Escobar initially studied sociology, yet his true calling emerged far from academic halls—within the vibrant backstreets of San José. The city’s rich cultural diversity, shaped by both local talent and a strong international artistic presence, became a living classroom for Escobar. Surrounded by artists from around the world, he absorbed new ideas and developed a distinctive visual language rooted in Neo-Expressionism, infused with a contemporary, modern edge.
+Born in Costa Rica in 1944, Francesco Escobar initially studied sociology, yet his true calling emerged far from academic halls—within the vibrant backstreets of San José. The city’s rich cultural diversity, shaped by both local talent and a strong international artistic presence, became a living classroom for Escobar. Surrounded by artists from around the world, he absorbed new ideas and developed a distinctive visual language rooted in Neo-Expressionism, infused with a modern, sophisticated edge.
 Wandering through downtown San José, Escobar found inspiration in the layered urban landscape: street art spread across façades ranging from colonial architecture to modern structures. These encounters opened his eyes to the expressive power of the city itself, where history and modernity coexist in bold, spontaneous dialogue.
 His artistic journey was further shaped by travels through Spain, where new perspectives deepened both his thought and his work. Escobar’s paintings reflect this synthesis of place and experience—raw yet thoughtful, expressive yet grounded—capturing the pulse of urban life and the emotional complexity of the human condition.`
   },
@@ -130,7 +130,7 @@ The result is a unique painterly mastery, unmistakable in its depth and intensit
     id: 'joop-van-bennekom',
     name: 'Joop van Bennekom',
     img: '/assets/Joop van Bennekom.jpeg',
-    bio: `From 1975 to 1979, Joop studied at the renowned Gerrit Rietveld Academie in Amsterdam, one of Europe's most influential art institutions, where he developed his distinctive artistic voice alongside notable figures of the contemporary art scene.
+    bio: `From 1975 to 1979, Joop studied at the renowned Gerrit Rietveld Academie in Amsterdam, one of Europe's most influential art institutions, where he developed his distinctive artistic voice alongside notable figures of the modern art scene.
 
 Working exclusively in oil, Joop is best known for his compelling portraits—intimate, expressive, and deeply human. His subjects reveal a wide spectrum of emotion: from quiet melancholy to subtle humor, each face carrying its own story. Encounters linger with him; people he meets are remembered, absorbed, and ultimately reimagined on canvas.
 
@@ -158,6 +158,6 @@ Over time, his artistic expression evolved. While his early works are marked by 
 
 Beyond painting, Appel also explored sculpture and assemblage, creating works in painted wood that extend his bold visual language into three dimensions.
 
-At SonjART, Karel Appel's work is valued for its ability to bring vitality, colour, and emotional depth into a space—art that is not only seen, but truly felt.`
+At sonjART, Karel Appel's work is valued for its ability to bring vitality, colour, and emotional depth into a space—art that is not only seen, but truly felt.`
   }
 ];

@@ -105,7 +105,7 @@ export default function ArtworkDetailClient({ currentArt, artistLink }: { curren
           <span className="text-caption" style={{ color: 'var(--color-grey-medium)', marginBottom: '1rem' }}>Exhibition</span>
           <h2 className="text-title" style={{ fontSize: '2rem' }}>Art Gallery</h2>
           <p style={{ color: 'var(--color-grey-light)', marginTop: '1rem', maxWidth: '600px', fontWeight: 300 }}>
-            Immerse yourself in curated perspectives of our contemporary collection.
+            Immerse yourself in curated perspectives of our collection.
           </p>
         </div>
         

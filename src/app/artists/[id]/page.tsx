@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `https://sonjart.ch/artists/${artist.id}`,
     },
     openGraph: {
-      title: `${artist.name} - Contemporary Artist`,
+      title: `${artist.name} - Artist`,
       description: artist.bio.substring(0, 160) + '...',
       images: [{ url: `https://sonjart.ch${artist.img}` }],
     }
@@ -46,7 +46,7 @@ export default async function ArtistDetail({ params }: Props) {
     description: artist.bio,
     image: `https://sonjart.ch${artist.img}`,
     url: `https://sonjart.ch/artists/${artist.id}`,
-    knowsAbout: ['Contemporary Art', 'Fine Art Painting', 'Modern Art'],
+    knowsAbout: ['Fine Art Painting', 'Modern Art', 'International Art'],
   };
 
   return (
