@@ -131,5 +131,33 @@ Her floral compositions elevate nature to a realm of quiet luxury—each petal r
     name: 'Unknown',
     img: '/assets/logo.png',
     bio: `Artwork with unconfirmed or anonymous attribution. These pieces are selected for their intrinsic artistic value and compelling visual presence.`
+  },
+  {
+    id: 'joop-van-bennekom',
+    name: 'Joop van Bennekom',
+    img: '/assets/Joop van Bennekom.jpeg',
+    bio: `From 1975 to 1979, Joop studied at the renowned Gerrit Rietveld Academie in Amsterdam, one of Europe's most influential art institutions, where he developed his distinctive artistic voice alongside notable figures of the contemporary art scene.
+
+Working exclusively in oil, Joop is best known for his compelling portraits—intimate, expressive, and deeply human. His subjects reveal a wide spectrum of emotion: from quiet melancholy to subtle humor, each face carrying its own story. Encounters linger with him; people he meets are remembered, absorbed, and ultimately reimagined on canvas.
+
+Alongside portraiture, Joop creates finely observed still lifes, executed with remarkable precision and sensitivity. His mastery is equally evident in his backgrounds, where atmosphere and depth become an essential part of the narrative, enriching the overall composition.
+
+A particular passion for birds runs through his work. Studying them closely, he captures their presence with both accuracy and affection, translating their character into painterly form.`
+  },
+  {
+    id: 'karel-appel',
+    name: 'Karel Appel',
+    img: '/assets/Karel Appel.jpeg',
+    bio: `Born in Amsterdam in 1921, Karel Appel emerged as one of the most influential figures of post-war European art. He received his artistic training in his native city and held his first solo exhibition in 1946, marking the beginning of an international career that would shape the course of modern expressionism.
+
+In 1949, Appel became a founding member of the avant-garde COBRA group, alongside artists such as Corneille and Asger Jorn. This movement, rooted in spontaneity and artistic freedom, profoundly influenced his work and quickly gained recognition across Europe and beyond. Appel's paintings were soon exhibited internationally, with important shows in cities such as Paris, Brussels, and throughout the United States.
+
+Working primarily in oil, Appel developed a powerful visual language defined by bold colour, raw energy, and an almost childlike immediacy. His paintings are intensely expressive—figures, faces, and forms emerge through dynamic gestures and richly textured surfaces. There is a striking directness in his work, where emotion takes precedence over refinement, and instinct guides the hand.
+
+Over time, his artistic expression evolved. While his early works are marked by a vigorous, almost explosive energy, his later pieces reveal a more playful and imaginative dimension. The dramatic intensity softens into a world of vibrant forms and symbolic imagery, where colour and composition take on a more structured yet still highly expressive role.
+
+Beyond painting, Appel also explored sculpture and assemblage, creating works in painted wood that extend his bold visual language into three dimensions.
+
+At SonjART, Karel Appel's work is valued for its ability to bring vitality, colour, and emotional depth into a space—art that is not only seen, but truly felt.`
   }
 ];

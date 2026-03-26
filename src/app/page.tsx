@@ -20,8 +20,8 @@ const fadeSliderArts = [
   },
   { 
     id: 2, 
-    img: '/assets/S087.JPG', 
-    fallback: '/assets/S087.JPG',
+    img: '/assets/S030.JPG', 
+    fallback: '/assets/S030.JPG',
     title: 'A lady reading', 
     artist: 'Nicole Laceur', 
     year: '2026' 
