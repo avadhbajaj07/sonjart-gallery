@@ -28,7 +28,7 @@ const allArtworks = [
   { id: '40', img: 'S962.jpg', title: 'Three faced like clouds', artist: 'Karel Appel' },
   { id: '41', img: 'My Home.JPG', title: 'Monkey home Love', artist: 'F. Escobar' },
   { id: '42', img: 'Toro Small II.JPG', title: 'Toro 3', artist: 'F. Escobar' },
-  { id: '43', img: 'S115.jpg', title: 'Famous blue girl', artist: 'Unknown' },
+  { id: '43', img: 'S115.JPG', title: 'Famous blue girl', artist: 'Unknown' },
   { id: '44', img: 'S4122.JPG', title: 'Real life 3', artist: 'F. Escobar' },
   { id: '45', img: 'Mind your step in the world.JPG', title: 'Oxygen', artist: 'F. Escobar' },
   { id: '46', img: 'S4120.JPG', title: 'What is rich?', artist: 'F. Escobar' },
