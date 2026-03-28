@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${artist.name} | sonjART Portfolio`,
-    description: `Explore the original works of Hungarian artist ${artist.name} at sonjART gallery. Read their exhibition biography and browse their latest collection of fine art paintings.`,
+    description: `Explore the original works of international artist ${artist.name} at sonjART gallery. Read their exhibition biography and browse their latest collection of fine art paintings.`,
     alternates: {
       canonical: `https://sonjart.ch/artists/${artist.id}`,
     },

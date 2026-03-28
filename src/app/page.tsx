@@ -156,11 +156,12 @@ export default function Home() {
              <div className="events-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                {[
                  { date: '05 June', title: 'Opening Night', subtitle: 'Vernissage', time: '18–21 Uhr', desc: 'Join us for an intimate evening with artist introductions and curated drinks.' },
-                 { date: '06 June', title: 'Gallery Soirée', subtitle: 'Exhibition Party', time: '15–21 Uhr', desc: 'Experience live atmospheric music.' },
+                 { date: '06 June', title: '20 Years of sonjART', subtitle: 'and 60 years of Sonja', time: '14–21 Uhr', desc: 'Join us for a special celebration marking two milestones.' },
                  { date: '11 June', title: 'Public Viewing', subtitle: 'Open Gallery', time: '14–18 Uhr', desc: 'Explore the exhibition at your own pace.' },
                  { date: '12 June', title: 'Public Viewing', subtitle: 'Open Gallery', time: '14–18 Uhr', desc: 'Explore the exhibition at your own pace.' },
                  { date: '13 June', title: 'Final Celebration', subtitle: 'Finissage', time: '14–21 Uhr', desc: 'Closing celebration and final acquisition.' },
                  { date: '14 June', title: 'Farewell', subtitle: 'Last Day', time: '12–18 Uhr', desc: 'Final public walk-ins.' },
+                 { date: '15 June', title: 'Moving Day', subtitle: 'Pick Up the Paintings', time: '14–18 Uhr', desc: 'Collection of purchased artworks.' },
                ].map((event, i) => (
                  <div key={i} className="event-card" style={{ 
                    padding: '3rem 2rem', 

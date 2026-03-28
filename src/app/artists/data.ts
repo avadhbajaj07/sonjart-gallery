@@ -13,10 +13,11 @@ His art is experienced as fresh and spontaneous, yet at the same time emotionall
     id: 'beatrice-jud',
     name: 'Beatrice Jud',
     img: '/assets/Beatrice Jud.jpeg',
-    bio: `Beatrice Jud ist Sängerin, Schauspielerin und Malerin – ein künstlerisches Multitalent aus Zumikon. Aufgewachsen in einer Familie mit tiefen künstlerischen Wurzeln, begleitete sie die Kunst von klein auf, zunächst durch die Musik, später durch die Malerei.
-Heute widmet sie sich mit grosser Leidenschaft der abstrakten Kunst. Ihre Werke leben von kräftigen Primärfarben, dynamischen Flächen und einer intensiven Bildsprache, die den Betrachter unmittelbar berührt.
-„Ich bin hungrig nach Farben“, sagt sie, „denn eine Welt ohne Farben ist trostlos.“
-Beatrice Jud hatte zahlreiche Einzel- und Gruppenausstellungen, unter anderem an der Art Zurich. Für sie steht weniger der Erfolg im Vordergrund als der Austausch, das Gespräch und die gemeinsame Leidenschaft für Kunst.`
+    bio: `Beatrice Jud is a singer, actress, and painter—an artist of remarkable versatility based in Zumikon. Raised in a family with deep artistic roots, creativity accompanied her from an early age, first through music and later finding its full expression in painting.
+
+Today, she devotes herself passionately to abstract art. Her works are defined by vibrant primary colours, dynamic compositions, and an expressive visual language that resonates instantly with the viewer. “I am hungry for colour,” she says, “because a world without colour is without soul.”
+
+Beatrice Jud has presented her work in numerous solo and group exhibitions, including at Art Zurich. For her, artistic success is not measured solely by recognition, but by dialogue—the exchange of ideas and the shared passion for art that connects people.`
   },
   {
     id: 'cees-muller',
@@ -34,11 +35,15 @@ Beatrice Jud hatte zahlreiche Einzel- und Gruppenausstellungen, unter anderem an
     id: 'nicole-laceur',
     name: 'Nicole Laceur',
     img: '/assets/Nicole Laceur.jpeg',
-    bio: `Ein freundlicher Nachmittag im Frühling. Nach der langen und Winterzeit spriesst die Natur in all ihrer Fülle und Buntheit hervor und lockt die Menschen ins Freie.
- Glücklich, wer sich die Zeit nehmen kann, dieses Aufkeimen von Leben im eigenen Garten oder auf einer Terrasse geniessen zu können. Und glücklich auch all jene, die sich mit einem Gemälde von Nicole Laceur diese Eindrücke nach Hause holen werden. 
-Die 1969 in einer Künstlerfamilie in Arnhem/ Holland aufgewachsene Künstlerin studierte bereits in relativ jungen Jahren in Frankreich.
- In dieser Zeit beeindruckten sie die Werke der französischen Impressionisten ganz besonders. Ihr Stilgefühl ist stark geprägt von den Künstlern jener Epoche Diese Ästhetik zieht sich denn auch als Grundthema durch ihr gesamtes Schaffen. Nach ihrer Rückkehr aus Frankreich hatte Laceur erfolgreiche Ausstellungen in Holland, Deutschland und in den USA. 
-Laceurs Arbeiten zeichnen sich insbesondere auch durch ein sehr feines Gespür für Farben aus. Sie beherrscht das Spektrum der Nuancen, wie sie in der Natur vorkommen, auf eine äusserst lebendige und feinfühlige Art und Weise.`
+    bio: `A serene spring afternoon. After the stillness of winter, nature awakens in radiant abundance, unfolding in a symphony of color and gently inviting life back outdoors.
+
+Fortunate are those who can pause to savor this quiet blossoming in the intimacy of their own garden or upon a sunlit terrace. And equally fortunate are those who can bring this fleeting beauty into their homes through the paintings of Nicole Laceur.
+
+Born in 1969 into an artistic family in Arnhem, the Netherlands, Nicole Laceur pursued her studies in France at an early age. There, she developed a profound admiration for the French Impressionists, whose sensitivity to light, atmosphere, and color left a lasting imprint on her artistic language. This timeless aesthetic continues to resonate throughout her work.
+
+Following her return from France, Laceur presented her work in a series of successful exhibitions across the Netherlands, Germany, and the United States.
+
+Her paintings are distinguished by an exceptional refinement of color. With remarkable sensitivity, she captures the subtle nuances of the natural world, translating them into compositions that are both luminous and deeply evocative.`
   },
   {
     id: 'escobar',
@@ -111,14 +116,14 @@ In her large-scale paintings, one senses a quiet celebration of freedom—after 
 Her floral compositions elevate nature to a realm of quiet luxury—each petal rendered with such refinement that it evokes the elegance of bespoke design. Molnar transforms the natural world into something both intimate and extraordinary, where beauty is not only observed, but deeply felt.`
   },
   {
-    id: 'gyula-issak',
-    name: 'Gyula Issak',
+    id: 'balazs-wanyi',
+    name: 'Balázs Wányi',
     img: '/assets/Balazs Wanyi.jpeg',
-    bio: `The Hungarian artist Gyula Issak embraces every painterly challenge without hesitation. Fire, marble, paper, fabric—an array of diverse materials coexist side by side within his works. This intense engagement with texture and surface, with the very substance of his motifs, has continuously refined the talent of the artist born in Budapest in 1951. His fascination with tactile qualities, combined with dramatic, almost baroque compositions, gives his work its unmistakable signature. Particularly remarkable is the fact that Gyula developed his distinctive technique largely through self-study.
+    bio: `Balázs Wányi was born in Budapest in 1943. He first cultivated his artistic sensibility at the Technical University of Budapest, where he initially trained as an architect before dedicating himself fully to painting. This early architectural discipline remains visible in the remarkable precision and structure that define his work.
 
-Until 1977, Gyula Issak worked as a graphic designer, initially focusing his painting on landscapes. Over time, these receded—quite literally—into the background. Still lifes and the Baroque era increasingly captured his imagination. Inspired by the great Dutch masters of this period, who immortalized the wealth and opulence of their time on canvas, Issak honed his sense for drama, detail, romance, and atmosphere.
+During an extended period in England, Wányi became an established presence within the London gallery scene, where his exquisitely rendered still lifes—distinguished by their refined, almost hyperrealistic quality—earned him both recognition and acclaim.
 
-The result is a unique painterly mastery, unmistakable in its depth and intensity, and highly sought after by collectors around the world.`
+Following the political transformation of Hungary in the late 1980s, he returned to Budapest, where he continues to work as a highly regarded artist. Today, his paintings are held in private collections across Europe and the United States, appreciated for their quiet intensity and technical mastery.`
   },
   {
     id: 'unknown',
