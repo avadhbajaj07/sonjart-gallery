@@ -78,7 +78,7 @@ git add .
 git commit -m "update: [Brief description of content changes, e.g., 'Update Beatrice Jud biography and add new artworks']"
 
 # 3. Push to GitHub
-git push origin main
+git push origin master
 ```
 
 **Outcome:** Once pushed, Vercel will automatically detect the changes and deploy the updated version to the live website.

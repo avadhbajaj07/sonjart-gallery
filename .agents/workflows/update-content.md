@@ -16,7 +16,7 @@ Use this workflow to quickly apply changes to artists or artworks and deploy the
     ```bash
     git add .
     git commit -m "update: content update via automated workflow"
-    git push origin main
+    git push origin master
     ```
 
 5.  **Verify**: Check the live website (on Vercel via GitHub integration) for the changes.
