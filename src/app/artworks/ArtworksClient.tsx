@@ -72,16 +72,10 @@ export default function ArtworksClient({ allArtworks }: { allArtworks: Artwork[]
     return acc;
   }, {} as Record<string, Artwork[]>);
 
-  // Divide into main artists and "Selected Works"
   const mainArtists: { name: string; works: Artwork[] }[] = [];
-  const selectedWorks: Artwork[] = [];
 
   Object.entries(grouped).forEach(([name, works]) => {
-    if (works.length > 2) {
-      mainArtists.push({ name, works });
-    } else {
-      selectedWorks.push(...works);
-    }
+    mainArtists.push({ name, works });
   });
 
   // Sort main artists alphabetically
@@ -92,10 +86,6 @@ export default function ArtworksClient({ allArtworks }: { allArtworks: Artwork[]
       {mainArtists.map((artist) => (
         <ArtworkRow key={artist.name} title={artist.name} artworks={artist.works} />
       ))}
-      
-      {selectedWorks.length > 0 && (
-        <ArtworkRow title="Selected Works" artworks={selectedWorks} />
-      )}
     </div>
   );
 }
