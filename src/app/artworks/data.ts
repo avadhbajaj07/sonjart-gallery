@@ -70,5 +70,18 @@ export const allArtworks = [
   { id: '72', img: '/assets/S082.JPG', title: 'Feeding the kittens', artist: 'Jean Lefort', year: '2026', material: 'Oil on panel', dim: '24 x 18 cm', desc: 'An intimate Still life (S082) captured with technical mastery and a gentle touch, typical of Lefort\'s narrative charm.', originalPrice: 2100, discount: 70, discountPrice: 630 },
   { id: '73', img: '/assets/S0323.JPG', title: 'Solo', artist: 'Nicole Laceur', year: '2026', material: 'Oil on Canvas', dim: '60 x 60 cm', desc: 'A quiet and focused piece (S861) where a single motif is elevated through Laceur\'s sensitive handling of color and atmosphere.', originalPrice: 2000, discount: 70, discountPrice: 600 },
   { id: '74', img: '/assets/S003.JPG', title: 'My little sister', artist: 'Jean Lefort', year: '2026', material: 'Oil on Canvas', dim: '60 x 80 cm', desc: 'A warm and evocative portrait (S002) full of familial affection and captured with a luminous, impressionistic quality.', originalPrice: 5100, discount: 70, discountPrice: 1530 },
-  { id: '75', img: '/assets/S019.jpg', title: 'Sitting in the grass', artist: 'Jean Lefort', year: '2026', material: 'Oil on Canvas', dim: '40 x 50 cm', desc: 'A serene and inviting oil painting by Jean Lefort capturing a moment of quiet repose in nature, rendered with delicate details.', originalPrice: 3900, discount: 70, discountPrice: 1170 }
+  { id: '75', img: '/assets/S019.jpg', title: 'Sitting in the grass', artist: 'Jean Lefort', year: '2026', material: 'Oil on Canvas', dim: '40 x 50 cm', desc: 'A serene and inviting oil painting by Jean Lefort capturing a moment of quiet repose in nature, rendered with delicate details.', originalPrice: 3900, discount: 70, discountPrice: 1170 },
+  {
+    id: '76',
+    img: '/assets/S076.JPG',
+    title: 'Colorful flowers 2',
+    artist: 'Nicole Laceur',
+    year: '2026',
+    material: 'Oil on Canvas',
+    dim: '30 x 40 cm',
+    desc: 'A vibrant and expressive floral composition by Nicole Laceur, showcasing her mastery of color and delicate brushwork.',
+    originalPrice: 1500,
+    discount: 70,
+    discountPrice: 450
+  }
 ];
