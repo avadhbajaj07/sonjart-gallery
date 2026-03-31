@@ -83,5 +83,18 @@ export const allArtworks = [
     originalPrice: 1500,
     discount: 70,
     discountPrice: 450
+  },
+  {
+    id: '77',
+    img: '/assets/S033.JPG',
+    title: 'Julie’s Garden',
+    artist: 'Nicole Laceur',
+    year: '2026',
+    material: 'Oil on Canvas',
+    dim: '70 x 60 cm',
+    desc: 'A serene and vibrant depiction of a lush garden, capturing the peaceful atmosphere and rich beauty of nature.',
+    originalPrice: 3900,
+    discount: 70,
+    discountPrice: 1170
   }
 ];
