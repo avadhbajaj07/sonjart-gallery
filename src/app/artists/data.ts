@@ -164,5 +164,11 @@ Over time, his artistic expression evolved. While his early works are marked by 
 Beyond painting, Appel also explored sculpture and assemblage, creating works in painted wood that extend his bold visual language into three dimensions.
 
 At sonjART, Karel Appel's work is valued for its ability to bring vitality, colour, and emotional depth into a space—art that is not only seen, but truly felt.`
+  },
+  {
+    id: 'gyula-issak',
+    name: 'Gyula Issak',
+    img: '/assets/logo.png',
+    bio: `A talented artist known for rich floral compositions on panel, Gyula Issak captures the vibrant energy and delicate details of nature with masterful brushwork and a deep understanding of light and color.`
   }
 ];
