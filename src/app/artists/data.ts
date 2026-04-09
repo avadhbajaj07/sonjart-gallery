@@ -168,19 +168,44 @@ At sonjART, Karel Appel's work is valued for its ability to bring vitality, colo
   {
     id: 'gyula-issak',
     name: 'Gyula Issak',
-    img: '/assets/logo.png',
+    img: '/assets/Gyula Issak new.jpeg',
     bio: `A talented artist known for rich floral compositions on panel, Gyula Issak captures the vibrant energy and delicate details of nature with masterful brushwork and a deep understanding of light and color.`
   },
   {
     id: 'egmont-hartwig',
     name: 'Egmont Hartwig',
-    img: '/assets/logo.png',
-    bio: `Egmont Hartwig is an artist known for his striking oil on canvas works. His pieces explore everyday objects and scenes with a unique perspective, capturing careful detail and vibrant energy.`
+    img: '/assets/Egmont Hartwig.jpg',
+    bio: `Biography Egmont Hartwig
+Born in 1973 in Groningen , the Netherlands, Egmont Hartwig is a contemporary painter
+whose work bridges quiet observation with a deeply human sensitivity. Now based in
+Dornbirn, Austria, he has developed a distinctive artistic language rooted in figurative
+painting.
+Educated at the Hogeschool voor de Kunst in Arnhem, the AKI Academy of Art & Design in
+Enschede, and the California College of the Arts, Hartwig brings together European tradition
+and an international perspective. His paintings, executed primarily in oil, capture fleeting
+moments of everyday life—subtle, intimate, and often contemplative.
+What defines Hartwig’s work is a refined balance between realism and atmosphere. His
+compositions invite the viewer into a world that feels both familiar and slightly distant, where
+light, gesture, and silence play an essential role. There is a calm intensity in his work that
+resonates deeply with collectors seeking authenticity and emotional depth.
+Egmont is regarded as a significant voice in contemporary figurative painting, with works that
+continue to find their place in discerning private collections across Europe.`
   },
   {
     id: 'martin-wollmer',
     name: 'Martin Wollmer',
-    img: '/assets/logo.png',
-    bio: `Martin Wollmer is a talented artist whose classic oil on panel works often feature beautiful, elaborate framing and powerful subjects. His paintings resonate with rich textures and emotional depth.`
+    img: '/assets/Martin Wollmer.jpeg',
+    bio: `Martin Wollmer
+Born 1939, Cologne, Germany
+
+Martin Wollmer’s artistic journey began in Cologne, where he was born in 1939. He trained early under the respected church painter Windelschmidt, before continuing his studies in Cologne between 1960 and 1963—a formative period marked by a profound shift in the European art landscape. Surrounded by a generation seeking new visual languages, Wollmer absorbed the spirit of artistic departure that would later define his own work.
+
+From 1964 onwards, he established himself as a church painter on the Lower Rhine, receiving numerous commissions for ecclesiastical works across Germany. These early years reflect a deep understanding of tradition, craftsmanship, and symbolic composition.
+
+Yet, driven by an inner restlessness and a desire to explore beyond convention, Wollmer gradually turned toward the evolving currents of contemporary art. Influenced by the dynamic impulses emerging from the United States, he sought dialogue with fellow artists who had shaped and survived the post-war era, reconnecting with the artistic questions that defined Europe after 1945.
+
+His work reveals a growing affinity for Expressionism and the spirit of the Cobra movement—embracing emotional intensity, freedom of gesture, and a bold, intuitive approach to form and color.
+
+Today, Martin Wollmer’s oeuvre stands as a compelling bridge between tradition and artistic liberation—rooted in craftsmanship, yet driven by a continuous search for expressive depth.`
   }
 ];
