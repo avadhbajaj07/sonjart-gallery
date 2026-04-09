@@ -170,5 +170,17 @@ At sonjART, Karel Appel's work is valued for its ability to bring vitality, colo
     name: 'Gyula Issak',
     img: '/assets/logo.png',
     bio: `A talented artist known for rich floral compositions on panel, Gyula Issak captures the vibrant energy and delicate details of nature with masterful brushwork and a deep understanding of light and color.`
+  },
+  {
+    id: 'egmont-hartwig',
+    name: 'Egmont Hartwig',
+    img: '/assets/logo.png',
+    bio: `Egmont Hartwig is an artist known for his striking oil on canvas works. His pieces explore everyday objects and scenes with a unique perspective, capturing careful detail and vibrant energy.`
+  },
+  {
+    id: 'martin-wollmer',
+    name: 'Martin Wollmer',
+    img: '/assets/logo.png',
+    bio: `Martin Wollmer is a talented artist whose classic oil on panel works often feature beautiful, elaborate framing and powerful subjects. His paintings resonate with rich textures and emotional depth.`
   }
 ];

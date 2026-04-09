@@ -96,5 +96,17 @@ export const allArtworks = [
     originalPrice: 3900,
     discount: 70,
     discountPrice: 1170
-  }
+  },
+  { id: 'S864', img: '/assets/S0140.JPG', title: 'Lemon 2', artist: 'Egmont Hartwig', year: '2026', material: 'Oil on Canvas', dim: '50 x 40 cm', desc: 'A striking and careful depiction of Lemon 2 by Egmont Hartwig.', originalPrice: 1800, discount: 50, discountPrice: 900 },
+  { id: 'S582', img: '/assets/S07631.JPG', title: 'Scissors 2', artist: 'Egmont Hartwig', year: '2026', material: 'Oil on Canvas', dim: '40 x 50 cm', desc: 'An intriguing oil on canvas titled Scissors 2.', originalPrice: 1800, discount: 50, discountPrice: 900 },
+  { id: 'S581', img: '/assets/S07632.JPG', title: 'Scissors', artist: 'Egmont Hartwig', year: '2026', material: 'Oil on Canvas', dim: '40 x 50 cm', desc: 'An intriguing oil on canvas titled Scissors.', originalPrice: 1800, discount: 50, discountPrice: 900 },
+  { id: 'S866', img: '/assets/S886.JPG', title: 'The Key in the box', artist: 'Egmont Hartwig', year: '2026', material: 'Oil on canvas', dim: '30 x 50 cm', desc: 'A detailed representation of The Key in the box.', originalPrice: 1600, discount: 50, discountPrice: 800 },
+  { id: 'S193', img: '/assets/S171.JPG', title: 'Astonishing', artist: 'Martin Wollmer', year: '2026', material: 'Oil on Panel with beautiful golden frame', dim: '80 x 100 cm', desc: 'An astonishing piece on panel, beautifully framed in gold.', originalPrice: 17000, discount: 60, discountPrice: 6800 },
+  { id: 'S496', img: '/assets/S496.JPG', title: 'Vision', artist: 'Martin Wollmer', year: '2026', material: 'Oil on Panel with beautiful frame', dim: '50 x 70 cm', desc: 'A captivating vision, masterfully painted and framed.', originalPrice: 9900, discount: 60, discountPrice: 3960 },
+  { id: 'S031', img: '/assets/S085.JPG', title: 'Flowers and fruit', artist: 'Nicole Laceur', year: '2026', material: 'Oil on Canvas', dim: '60 x 70 cm', desc: 'A vivid combination of flowers and fruit.', originalPrice: 3900, discount: 70, discountPrice: 1170 },
+  { id: 'S017', img: '/assets/S017.JPG', title: 'Waiting for the men', artist: 'Jean Lefort', year: '2026', material: 'Oil on Panel', dim: '20 x 50 cm', desc: 'A quiet narrative scene by Jean Lefort.', originalPrice: 2100, discount: 70, discountPrice: 630 },
+  { id: 'S015', img: '/assets/S015.JPG', title: 'Mum and child on her back', artist: 'Jean Lefort', year: '2026', material: 'Oil on Panel', dim: '30 x 30 cm', desc: 'A touching depiction of a mother and child.', originalPrice: 2500, discount: 70, discountPrice: 750 },
+  { id: 'S005', img: '/assets/S005.JPG', title: 'Where are the fish?', artist: 'Jean Lefort', year: '2026', material: 'Oil on Canvas', dim: '60 x 80 cm', desc: 'A beautifully observed scene full of story.', originalPrice: 5100, discount: 70, discountPrice: 1530 },
+  { id: 'S001', img: '/assets/S002.JPG', title: 'Little sailor', artist: 'Jean Lefort', year: '2026', material: 'Oil on Canvas', dim: '50 x 60 cm', desc: 'A narrative portrait of a little sailor.', originalPrice: 4900, discount: 70, discountPrice: 1470 },
+  { id: 'S024', img: '/assets/S024.JPG', title: 'The dance party', artist: 'Richard van der Pol', year: '2026', material: 'Oil on Canvas', dim: '80 x 100 cm', desc: 'A bustling and lively scene capturing the joy of a dance party.', originalPrice: 6100, discount: 70, discountPrice: 1830 }
 ];
