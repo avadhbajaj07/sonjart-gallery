@@ -252,6 +252,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1rem;
 }
 
+.artwork-row-scroll::after {
+  content: "";
+  flex: 0 0 4rem; /* creates empty space for the right arrow */
+}
+
 .artwork-row-scroll::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
 }
@@ -304,16 +309,16 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-white);
   cursor: pointer;
   z-index: 10;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  opacity: 1;
   transition: opacity var(--transition-fast);
 }
 
-@media (min-width: 1024px) {
+@media (hover: hover) and (pointer: fine) {
   .scroll-button {
-    display: flex;
+    opacity: 0;
   }
   
   .artwork-row-wrapper:hover .scroll-button {
