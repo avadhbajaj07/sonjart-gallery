@@ -259,18 +259,18 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1rem;
 }
 
-/* On tablet/desktop: pad the scroll track so first/last cards clear the nav buttons */
+/* On tablet/desktop: constrain scroll track within the flex wrapper and
+   pad inward so first/last cards clear the nav buttons */
 @media (min-width: 768px) {
   .artwork-row-scroll {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    flex: 1;          /* fill available space */
+    min-width: 0;     /* CRITICAL: allows flex child to shrink below content size */
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
   }
 }
 
-.artwork-row-scroll::after {
-  content: "";
-  flex: 0 0 4rem; /* creates empty space for the right arrow */
-}
+/* ::after spacer no longer needed — padding handles right-edge spacing */
 
 .artwork-row-scroll::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
