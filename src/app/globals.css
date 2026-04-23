@@ -241,6 +241,13 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
+/* Clip overflow on tablet & desktop so no half-visible edge cards */
+@media (min-width: 768px) {
+  .artwork-row-wrapper {
+    overflow: hidden;
+  }
+}
+
 .artwork-row-scroll {
   display: flex;
   overflow-x: auto;
@@ -250,6 +257,14 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
   padding-bottom: 1rem;
+}
+
+/* On tablet/desktop: pad the scroll track so first/last cards clear the nav buttons */
+@media (min-width: 768px) {
+  .artwork-row-scroll {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 .artwork-row-scroll::after {
