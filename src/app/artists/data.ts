@@ -223,7 +223,7 @@ The result is a body of work that is both visually compelling and timelessly ele
   {
     id: 'gyula-boros',
     name: 'Gyula Boros',
-    img: '/assets/logo.png',
+    img: '/assets/Gyula Boros.jpeg',
     bio: `Gyula Boros is a masterful painter known for his ability to capture the elegance and narrative depth of classical themes with a contemporary sensibility. His works are characterized by refined technique and a timeless aesthetic.`
   },
   {
