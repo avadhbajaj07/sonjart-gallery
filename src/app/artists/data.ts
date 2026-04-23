@@ -207,5 +207,29 @@ Yet, driven by an inner restlessness and a desire to explore beyond convention, 
 His work reveals a growing affinity for Expressionism and the spirit of the Cobra movement—embracing emotional intensity, freedom of gesture, and a bold, intuitive approach to form and color.
 
 Today, Martin Wollmer’s oeuvre stands as a compelling bridge between tradition and artistic liberation—rooted in craftsmanship, yet driven by a continuous search for expressive depth.`
+  },
+  {
+    id: 'peter-meszaros',
+    name: 'Peter Meszaros',
+    img: '/assets/Peter Meszaros.jpeg',
+    bio: `Peter Meszaros, born in Hungary in 1942, studied art in Budapest before traveling extensively through Western Europe from 1962 into the 1970s. During these formative years, he was immersed in a world increasingly shaped by the seductive power of mass media, the cult of celebrity, and the unmistakable glamour of popular culture — the defining spirit of Pop Art.
+
+In Western Europe, the influence of the American way of life revealed itself with far greater intensity than in his homeland. Meszaros was deeply fascinated by this new visual language: the allure of media icons, the rhythm of contemporary music, and the elegance of modern progress. These impressions found their way into his striking large-scale works, where cultural observation is transformed into bold, sophisticated painterly expression.
+
+At the same time, his art carries a refined echo of 1920s and 1930s America — an era of style, charisma, and cinematic allure. In his paintings, the atmosphere of these decades is reimagined with remarkable sensitivity, balancing nostalgia with modernity, and grandeur with emotional depth.
+
+The result is a body of work that is both visually compelling and timelessly elegant. Peter Meszaros creates paintings that celebrate the beauty of cultural memory and the power of iconic imagery — works that continue to enchant collectors and admirers around the world.`
+  },
+  {
+    id: 'gyula-boros',
+    name: 'Gyula Boros',
+    img: '/assets/logo.png',
+    bio: `Gyula Boros is a masterful painter known for his ability to capture the elegance and narrative depth of classical themes with a contemporary sensibility. His works are characterized by refined technique and a timeless aesthetic.`
+  },
+  {
+    id: 'w-boomkens',
+    name: 'W.Boomkens',
+    img: '/assets/logo.png',
+    bio: `W.Boomkens is an artist whose works reflect a deep appreciation for classical forms and atmospheric light. Working primarily in oil, he creates compositions that are both technically proficient and emotionally resonant.`
   }
 ];
