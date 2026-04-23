@@ -239,13 +239,15 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: flex;
   align-items: center;
+  gap: 0;
 }
 
-/* Clip overflow on tablet & desktop so no half-visible edge cards */
-@media (min-width: 768px) {
-  .artwork-row-wrapper {
-    overflow: hidden;
-  }
+/* Dedicated clip container between the two buttons.
+   overflow:hidden here — NOT on the wrapper — so buttons are never cut. */
+.artwork-row-clip {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .artwork-row-scroll {
@@ -255,19 +257,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1.5rem;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
   padding-bottom: 1rem;
-}
-
-/* On tablet/desktop: constrain scroll track within the flex wrapper and
-   pad inward so first/last cards clear the nav buttons */
-@media (min-width: 768px) {
-  .artwork-row-scroll {
-    flex: 1;          /* fill available space */
-    min-width: 0;     /* CRITICAL: allows flex child to shrink below content size */
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
-  }
+  /* Snap: always land on a full card, never stop mid-card */
+  scroll-snap-type: x mandatory;
 }
 
 /* ::after spacer no longer needed — padding handles right-edge spacing */
@@ -278,6 +271,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .artwork-card {
   flex: 0 0 160px;
+  scroll-snap-align: start;
   transition: transform var(--transition-fast);
 }
 

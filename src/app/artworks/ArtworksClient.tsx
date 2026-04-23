@@ -29,30 +29,33 @@ function ArtworkRow({ title, artworks }: { title: string; artworks: Artwork[] })
         <button className="scroll-button left" onClick={() => scroll('left')} aria-label="Scroll Left">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
-        
-        <div className="artwork-row-scroll" ref={scrollRef}>
-          {artworks.map((art) => (
-            <Link key={art.id} href={`/artworks/${art.id}`} className="artwork-card">
-              <div className="artwork-card-image">
-                <img src={art.img} alt={art.title} loading="lazy" />
-              </div>
-              <div>
-                <h3 style={{ fontSize: '1rem', marginBottom: '0.25rem', color: 'var(--color-white)', fontWeight: 400, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                  {art.title}
-                </h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <span style={{ fontSize: '0.9rem', color: 'var(--color-white)', fontWeight: 500 }}>
-                    CHF {art.discountPrice?.toLocaleString()}
-                  </span>
-                  {art.originalPrice && (
-                    <span style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)', textDecoration: 'line-through' }}>
-                      CHF {art.originalPrice.toLocaleString()}
-                    </span>
-                  )}
+
+        {/* clip wrapper: hides any card that isn't fully in view */}
+        <div className="artwork-row-clip">
+          <div className="artwork-row-scroll" ref={scrollRef}>
+            {artworks.map((art) => (
+              <Link key={art.id} href={`/artworks/${art.id}`} className="artwork-card">
+                <div className="artwork-card-image">
+                  <img src={art.img} alt={art.title} loading="lazy" />
                 </div>
-              </div>
-            </Link>
-          ))}
+                <div>
+                  <h3 style={{ fontSize: '1rem', marginBottom: '0.25rem', color: 'var(--color-white)', fontWeight: 400, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                    {art.title}
+                  </h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <span style={{ fontSize: '0.9rem', color: 'var(--color-white)', fontWeight: 500 }}>
+                      CHF {art.discountPrice?.toLocaleString()}
+                    </span>
+                    {art.originalPrice && (
+                      <span style={{ fontSize: '0.75rem', color: 'var(--color-grey-medium)', textDecoration: 'line-through' }}>
+                        CHF {art.originalPrice.toLocaleString()}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
 
         <button className="scroll-button right" onClick={() => scroll('right')} aria-label="Scroll Right">
