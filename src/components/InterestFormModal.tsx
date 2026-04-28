@@ -135,7 +135,7 @@ export default function InterestFormModal({
                     required 
                     name="message"
                     rows={4} 
-                    defaultValue={`I am interested in acquiring "${artworkTitle}" by ${artistName}. Please send me more information regarding pricing and availability.`}
+                    defaultValue={`Please send me more information about the availability and shipping of "${artworkTitle}" by ${artistName}.`}
                     style={{ width: '100%', padding: '0.75rem', backgroundColor: 'transparent', border: '1px solid var(--color-border)', color: 'white', outline: 'none', resize: 'vertical' }} 
                   />
                 </div>

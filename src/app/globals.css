@@ -300,7 +300,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: var(--color-grey-dark);
   transition: transform var(--transition-slow);
 }
 
@@ -344,4 +345,29 @@ h1, h2, h3, h4, h5, h6 {
   width: 2rem;
   height: 2rem;
   filter: drop-shadow(0 0 4px rgba(0,0,0,0.5));
+}
+
+/* Tablet: replace carousel with full-image grid — no partial/half-visible cards */
+@media (min-width: 640px) and (max-width: 1199px) {
+  .artwork-row-clip {
+    overflow: visible;
+  }
+
+  .artwork-row-scroll {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    overflow: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+  }
+
+  .artwork-card {
+    flex: unset;
+    width: 100%;
+    scroll-snap-align: none;
+  }
+
+  .scroll-button {
+    display: none !important;
+  }
 }

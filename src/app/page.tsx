@@ -214,12 +214,12 @@ export default function Home() {
           }}>
             {allArtworks.slice(0, 16).map((art) => (
               <Link key={art.id} href={`/artworks/${art.id}`} style={{ display: 'block' }}>
-                <div style={{ overflow: 'hidden', aspectRatio: '4/5', marginBottom: '1.5rem', position: 'relative' }}>
+                <div style={{ overflow: 'hidden', aspectRatio: '4/5', marginBottom: '1.5rem', position: 'relative', backgroundColor: 'var(--color-grey-dark)' }}>
                   <img 
                     src={art.img} 
                     alt={art.title}
                     style={{
-                      width: '100%', height: '100%', objectFit: 'cover', transition: 'transform var(--transition-slow)',
+                      width: '100%', height: '100%', objectFit: 'contain', transition: 'transform var(--transition-slow)',
                     }}
                     onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
                     onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}

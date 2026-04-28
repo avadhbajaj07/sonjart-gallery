@@ -10,8 +10,8 @@ export default function About() {
     <main style={{ paddingTop: '12rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <h1 className="text-title" style={{ marginBottom: '4rem' }}>About Sonja</h1>
-        <div style={{ aspectRatio: '16/9', overflow: 'hidden', marginBottom: '4rem' }}>
-          <img src="/assets/sonja.jpeg" alt="Sonja Schlagel" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%' }} />
+        <div style={{ overflow: 'hidden', marginBottom: '4rem', maxHeight: '500px' }}>
+          <img src="/assets/sonja.jpeg" alt="Sonja Schlagel" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }} />
         </div>
         <div style={{ fontSize: '1.25rem', lineHeight: 1.8, color: 'var(--color-white)', opacity: 0.9 }}>
           <p style={{ marginBottom: '2rem' }}>Sonja Schlagel, founder and owner of sonjART Galerie, was born in Alkmaar, the Netherlands, in 1966. She moved to Switzerland in 1990, where she built a successful career in the pharmaceutical industry, working with internationally recognized companies including Marion Merrell Dow (MMD), Hoechst, Glaxo, and Merck Sharp & Dohme. During these years, she developed strong expertise in sales, client relations, and project management.</p>
