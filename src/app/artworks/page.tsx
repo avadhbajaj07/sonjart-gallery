@@ -2,6 +2,15 @@ import type { Metadata } from 'next';
 import { allArtworks } from './data';
 import ArtworksClient from './ArtworksClient';
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sonjart.ch' },
+    { '@type': 'ListItem', position: 2, name: 'Art Collections', item: 'https://www.sonjart.ch/artworks' },
+  ],
+};
+
 export const metadata: Metadata = {
   title: 'Buy Original Fine Art Paintings | sonjART Zürich Gallery',
   description: 'Browse 65+ original oil, acrylic and mixed-media paintings for sale. All works by international artists, available at exhibition prices. sonjART, Zürich.',
@@ -13,6 +22,7 @@ export const metadata: Metadata = {
 export default function Artworks() {
   return (
     <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <h1 className="text-title" style={{ marginBottom: '1rem' }}>Art Collections</h1>
       
       <div style={{ marginBottom: '6rem', maxWidth: '800px' }}>

@@ -55,11 +55,25 @@ export default async function ArtistDetail({ params }: Props) {
     },
   };
 
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sonjart.ch' },
+      { '@type': 'ListItem', position: 2, name: 'Artists', item: 'https://www.sonjart.ch/artists' },
+      { '@type': 'ListItem', position: 3, name: artist.name, item: `https://www.sonjart.ch/artists/${artist.id}` },
+    ],
+  };
+
   return (
     <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="fade-in">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <div className="container" style={{ maxWidth: '1200px' }}>
         <Link href="/artists" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '4rem', color: 'var(--color-grey-medium)' }}>

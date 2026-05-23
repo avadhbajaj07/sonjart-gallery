@@ -68,11 +68,25 @@ export default async function ArtworkDetail({ params }: Props) {
     },
   };
 
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sonjart.ch' },
+      { '@type': 'ListItem', position: 2, name: 'Art Collections', item: 'https://www.sonjart.ch/artworks' },
+      { '@type': 'ListItem', position: 3, name: currentArt.title, item: `https://www.sonjart.ch/artworks/${currentArt.id}` },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <ArtworkDetailClient currentArt={currentArt} artistLink={artistLink} />
     </>

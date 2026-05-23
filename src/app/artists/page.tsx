@@ -2,6 +2,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { artistsData } from './data';
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sonjart.ch' },
+    { '@type': 'ListItem', position: 2, name: 'Artists', item: 'https://www.sonjart.ch/artists' },
+  ],
+};
+
 export const metadata: Metadata = {
   title: 'International Gallery Artists | sonjART Zürich',
   description: 'Meet the 19 international artists represented by sonjART gallery in Zürich — from Dutch realists to Swiss expressionists. Explore their collections.',
@@ -13,6 +22,7 @@ export const metadata: Metadata = {
 export default function Artists() {
   return (
     <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="container fade-in">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <h1 className="text-title" style={{ marginBottom: '4rem' }}>Gallery Artists</h1>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '4rem' }}>
         {artistsData.map(artist => (
