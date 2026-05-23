@@ -47,9 +47,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic artwork pages
+  // Dynamic artwork pages — use slug for SEO-friendly URLs, fallback to id
   const artworkPages: MetadataRoute.Sitemap = allArtworks.map((art) => ({
-    url: `${BASE_URL}/artworks/${art.id}`,
+    url: `${BASE_URL}/artworks/${art.slug || art.id}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.8,

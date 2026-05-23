@@ -4,7 +4,15 @@ import { allArtworks } from '../data';
 import ArtworkDetailClient from './ArtworkDetailClient';
 
 export function generateStaticParams() {
-   return allArtworks.map((art) => ({ id: art.id }));
+  // Generate both slug-based and legacy numeric ID routes
+  const params: { id: string }[] = [];
+  allArtworks.forEach((art) => {
+    params.push({ id: art.id }); // legacy numeric/alphanumeric ID (backward compat)
+    if (art.slug && art.slug !== art.id) {
+      params.push({ id: art.slug }); // new slug-based route
+    }
+  });
+  return params;
 }
 
 type Props = {
@@ -13,7 +21,8 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const resolvedParams = await params;
-  const art = allArtworks.find(a => a.id === resolvedParams.id);
+  // Find by slug first, then fall back to legacy id
+  const art = allArtworks.find(a => a.slug === resolvedParams.id) || allArtworks.find(a => a.id === resolvedParams.id);
   
   if (!art) {
     return { title: 'Artwork | sonjART' };
@@ -23,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${art.title} by ${art.artist} — Buy Original | sonjART`,
     description: `${art.title} by ${art.artist}. Original ${art.material}, ${art.dim}. Available at sonjART gallery Zürich at exhibition price CHF ${art.discountPrice}. Enquire now.`,
     alternates: {
-      canonical: `https://www.sonjart.ch/artworks/${art.id}`,
+      canonical: `https://www.sonjart.ch/artworks/${art.slug || art.id}`,
     },
     openGraph: {
       title: `${art.title} by ${art.artist} — sonjART`,
@@ -35,7 +44,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ArtworkDetail({ params }: Props) {
   const resolvedParams = await params;
-  const currentArt = allArtworks.find(a => a.id === resolvedParams.id) || allArtworks[0];
+  // Find by slug first, then fall back to legacy id
+  const currentArt = allArtworks.find(a => a.slug === resolvedParams.id) || allArtworks.find(a => a.id === resolvedParams.id) || allArtworks[0];
   const artist = artistsData.find(a => a.name === currentArt.artist);
   const artistLink = artist ? `/artists/${artist.id}` : '/artists';
 
