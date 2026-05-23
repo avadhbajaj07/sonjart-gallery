@@ -8,6 +8,31 @@ import { ArrowRight } from 'lucide-react';
 import { allArtworks } from './artworks/data';
 import { artistsData } from './artists/data';
 
+const artGallerySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ArtGallery',
+  name: 'sonjART',
+  url: 'https://www.sonjart.ch',
+  logo: 'https://www.sonjart.ch/assets/logo.png',
+  image: 'https://www.sonjart.ch/assets/art1.jpg',
+  description: 'Original artworks by international artists, spanning styles from realism to expressionism. Zürich, Switzerland.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Zeltweg 15',
+    addressLocality: 'Zürich',
+    postalCode: '8032',
+    addressCountry: 'CH',
+  },
+  email: 'info@sonjart.ch',
+  openingHours: 'By appointment',
+  priceRange: 'CHF 380 - CHF 8300',
+  founder: {
+    '@type': 'Person',
+    name: 'Sonja Schlagel',
+  },
+  sameAs: ['https://www.instagram.com/sonjart'],
+};
+
 // Real arts for the Hero Slider
 const fadeSliderArts = [
   { 
@@ -51,6 +76,10 @@ export default function Home() {
 
   return (
     <main style={{ minHeight: '100vh', position: 'relative' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(artGallerySchema) }}
+      />
       
       {/* 1. HERO FADE SLIDER (Pinned Layer 1) */}
       <section id="hero-slider" style={{ height: '100vh', position: 'sticky', top: 0, overflow: 'hidden', zIndex: 1, backgroundColor: 'var(--color-black)' }}>
@@ -67,11 +96,11 @@ export default function Home() {
                 style={{ position: 'absolute', inset: 0, zIndex: 0 }}
               >
                 <img 
-                  src={art.img} 
-                  onError={(e) => { e.currentTarget.src = art.fallback }}
-                  alt={art.title}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
+                   src={art.img} 
+                   onError={(e) => { e.currentTarget.src = art.fallback }}
+                   alt={`${art.title} by ${art.artist} — original painting available at sonjART gallery Zürich`}
+                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                 />
               </motion.div>
             )
           })}
@@ -215,15 +244,16 @@ export default function Home() {
             {allArtworks.slice(0, 16).map((art) => (
               <Link key={art.id} href={`/artworks/${art.id}`} style={{ display: 'block' }}>
                 <div style={{ overflow: 'hidden', aspectRatio: '4/5', marginBottom: '1.5rem', position: 'relative', backgroundColor: 'var(--color-grey-dark)' }}>
-                  <img 
-                    src={art.img} 
-                    alt={art.title}
-                    style={{
-                      width: '100%', height: '100%', objectFit: 'contain', transition: 'transform var(--transition-slow)',
-                    }}
-                    onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-                    onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
-                  />
+                   <img 
+                     src={art.img} 
+                     alt={`${art.title} by ${art.artist} — ${art.material}, available at sonjART gallery Zürich`}
+                     style={{
+                       width: '100%', height: '100%', objectFit: 'contain', transition: 'transform var(--transition-slow)',
+                     }}
+                     onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+                     onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+                     loading="lazy"
+                   />
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', color: 'var(--color-white)' }}>
                   <div>
@@ -296,10 +326,10 @@ export default function Home() {
 
             <div style={{ order: 1, position: 'relative', aspectRatio: '3/4', overflow: 'hidden' }}>
               <img 
-                src="/assets/sonja.jpeg"
-                alt="Portrait of Sonja, the gallery owner"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
-              />
+                 src="/assets/sonja.jpeg"
+                 alt="Sonja Schlagel — founder and curator of sonjART gallery Zürich"
+                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }}
+               />
               <div style={{ position: 'absolute', bottom: '1.5rem', left: '1.5rem', backgroundColor: 'var(--color-black)', color: 'var(--color-white)', padding: '0.5rem 1rem', fontSize: '0.875rem' }}>
                 Sonja Schlagel
               </div>
@@ -336,10 +366,11 @@ export default function Home() {
                 }}>
                   <img 
                     src={artist.img} 
-                    alt={artist.name}
+                    alt={`${artist.name} — artist represented by sonjART gallery Zürich`}
                     style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%)', transition: 'filter var(--transition-slow)', borderRadius: '50%' }}
                     onMouseOver={(e) => (e.currentTarget.style.filter = 'grayscale(0%)')}
                     onMouseOut={(e) => (e.currentTarget.style.filter = 'grayscale(100%)')}
+                    loading="lazy"
                   />
                 </div>
                 <h3 style={{ fontSize: '1.125rem', color: 'var(--color-white)' }}>{artist.name}</h3>

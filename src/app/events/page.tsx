@@ -1,6 +1,34 @@
 'use client';
 import { motion } from 'framer-motion';
 
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ExhibitionEvent',
+  name: 'Kunstraum 15 — sonjART Exhibition 2026',
+  startDate: '2026-06-05T18:00',
+  endDate: '2026-06-15T18:00',
+  location: {
+    '@type': 'Place',
+    name: 'Kunstraum 15',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Zeltweg 15',
+      addressLocality: 'Zürich',
+      postalCode: '8032',
+      addressCountry: 'CH',
+    },
+  },
+  organizer: {
+    '@type': 'Organization',
+    name: 'sonjART',
+    url: 'https://www.sonjart.ch',
+  },
+  image: 'https://www.sonjart.ch/assets/popup.jpeg',
+  description: 'Original paintings by international artists at special exhibition prices. Vernissage 5 June, 18–21h. Public viewing 6–15 June.',
+  isAccessibleForFree: true,
+  eventStatus: 'https://schema.org/EventScheduled',
+};
+
 export default function Events() {
   const eventSchedule = [
     { date: '05 June', title: 'Opening Night', subtitle: 'Vernissage', time: '18–21 Uhr', desc: 'Join us for an intimate evening with artist introductions and curated drinks.' },
@@ -13,6 +41,11 @@ export default function Events() {
   ];
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
+      />
     <main style={{ backgroundColor: '#ffffff', minHeight: '100vh', paddingTop: '10rem', color: '#000000' }}>
       <div className="container" style={{ maxWidth: '1200px' }}>
         
@@ -99,5 +132,6 @@ export default function Events() {
 
       </div>
     </main>
+    </>
   );
 }

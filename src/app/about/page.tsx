@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Sonja Schlagel | sonjART Founder',
-  description: 'Learn about Sonja Schlagel’s journey from the pharmaceutical industry to founding sonjART Gallery. Discover her passion for curation and her personal approach to fine art consultancy.',
+  title: 'About Sonja Schlagel | 20 Years Curating Art in Switzerland',
+  description: 'Sonja Schlagel founded sonjART in Zürich after 20 years in pharmaceutical management. Her gallery connects collectors with original artworks that transform homes.',
+  alternates: {
+    canonical: 'https://www.sonjart.ch/about',
+  },
 };
 
 export default function About() {
@@ -11,7 +14,7 @@ export default function About() {
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <h1 className="text-title" style={{ marginBottom: '4rem' }}>About Sonja</h1>
         <div style={{ overflow: 'hidden', marginBottom: '4rem', maxHeight: '500px' }}>
-          <img src="/assets/sonja.jpeg" alt="Sonja Schlagel" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }} />
+          <img src="/assets/sonja.jpeg" alt="Sonja Schlagel — founder and curator of sonjART gallery Zürich" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' }} />
         </div>
         <div style={{ fontSize: '1.25rem', lineHeight: 1.8, color: 'var(--color-white)', opacity: 0.9 }}>
           <p style={{ marginBottom: '2rem' }}>Sonja Schlagel, founder and owner of sonjART Galerie, was born in Alkmaar, the Netherlands, in 1966. She moved to Switzerland in 1990, where she built a successful career in the pharmaceutical industry, working with internationally recognized companies including Marion Merrell Dow (MMD), Hoechst, Glaxo, and Merck Sharp & Dohme. During these years, she developed strong expertise in sales, client relations, and project management.</p>

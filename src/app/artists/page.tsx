@@ -3,8 +3,11 @@ import Link from 'next/link';
 import { artistsData } from './data';
 
 export const metadata: Metadata = {
-  title: 'Gallery Artists | sonjART | International Talent',
-  description: 'Meet the international artists represented by sonjART. Discover unique artistic voices from Hungary, the Netherlands, and Switzerland, specializing in oil painting and mixed media.',
+  title: 'International Gallery Artists | sonjART Zürich',
+  description: 'Meet the 19 international artists represented by sonjART gallery in Zürich — from Dutch realists to Swiss expressionists. Explore their collections.',
+  alternates: {
+    canonical: 'https://www.sonjart.ch/artists',
+  },
 };
 
 export default function Artists() {
@@ -15,7 +18,7 @@ export default function Artists() {
         {artistsData.map(artist => (
           <Link key={artist.id} href={`/artists/${artist.id}`} style={{ display: 'block', textAlign: 'center' }}>
             <div style={{ aspectRatio: '1/1', borderRadius: '50%', overflow: 'hidden', marginBottom: '1.5rem', margin: '0 auto 1.5rem', width: '80%', backgroundColor: 'var(--color-grey-dark)' }}>
-               <img src={artist.img} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, transition: 'opacity var(--transition-slow)' }} alt={artist.name} />
+               <img src={artist.img} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8, transition: 'opacity var(--transition-slow)' }} alt={`${artist.name} — artist represented by sonjART gallery Zürich`} />
             </div>
             <h3 style={{ fontSize: '1.5rem' }}>{artist.name}</h3>
           </Link>

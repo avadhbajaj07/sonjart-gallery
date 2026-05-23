@@ -32,7 +32,7 @@ export default function ArtworkDetailClient({ currentArt, artistLink }: { curren
           
           {/* Main Selected Artwork Image */}
           <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', display: 'flex', justifyContent: 'center' }}>
-             <img src={currentArt.img} alt={currentArt.title} style={{ maxWidth: '100%', height: 'auto', maxHeight: '80vh', objectFit: 'contain' }} />
+             <img src={currentArt.img} alt={`${currentArt.title} by ${currentArt.artist} — ${currentArt.material}, available at sonjART gallery Zürich`} style={{ maxWidth: '100%', height: 'auto', maxHeight: '80vh', objectFit: 'contain' }} />
           </div>
           
           {/* Artwork Data Block */}

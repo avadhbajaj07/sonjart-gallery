@@ -7,32 +7,39 @@ import Navigation from '@/components/Navigation';
 import CookieBanner from '@/components/CookieBanner';
 
 export const metadata: Metadata = {
-  title: 'sonjART | Original artworks by international artists, spanning styles from realism to expressionism.',
-  description: 'Original artworks by international artists, spanning styles from realism to expressionism. Explore fine art paintings and upcoming exhibitions in Zürich, Switzerland.',
-  keywords: ['art gallery', 'zurich art gallery', 'modern art', 'fine art', 'swiss gallery', 'Sonja Schlagel', 'original paintings', 'abstract works'],
+  title: {
+    default: 'sonjART — Original Paintings for Sale | Art Gallery Zürich',
+    template: '%s | sonjART',
+  },
+  description: 'Discover original paintings by international artists at sonjART, Zürich. Styles from realism to expressionism. Visit our gallery at Zeltweg 15 or browse online.',
+  keywords: ['art gallery Zürich', 'original paintings Switzerland', 'buy original art Zürich', 'fine art gallery', 'Sonja Schlagel', 'original paintings for sale', 'Swiss art gallery', 'international artists Zürich'],
   authors: [{ name: 'Sonja Schlagel' }],
   creator: 'sonjART',
+  metadataBase: new URL('https://www.sonjart.ch'),
+  alternates: {
+    canonical: 'https://www.sonjart.ch/',
+  },
   openGraph: {
-    title: 'sonjART | Original artworks by international artists, spanning styles from realism to expressionism.',
-    description: 'Original artworks by international artists, spanning styles from realism to expressionism.',
-    url: 'https://sonjart.ch',
+    title: 'sonjART — Original Paintings for Sale | Art Gallery Zürich',
+    description: 'Discover original paintings by international artists at sonjART, Zürich. Styles from realism to expressionism. Visit our gallery at Zeltweg 15 or browse online.',
+    url: 'https://www.sonjart.ch',
     siteName: 'sonjART',
     images: [
       {
-        url: 'https://sonjart.ch/assets/art1.jpg', // Placeholder for OG image
+        url: 'https://www.sonjart.ch/assets/art1.jpg',
         width: 1200,
         height: 630,
-        alt: 'sonjART Gallery Preview',
+        alt: 'sonjART Gallery — Original Paintings, Zürich',
       },
     ],
-    locale: 'en_US',
+    locale: 'en_CH',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'sonjART | Original artworks by international artists, spanning styles from realism to expressionism.',
-    description: 'Explore exclusive abstract works and conceptual fine art in Zürich.',
-    images: ['https://sonjart.ch/assets/art1.jpg'],
+    title: 'sonjART — Original Paintings for Sale | Art Gallery Zürich',
+    description: 'Discover original paintings by international artists at sonjART gallery Zürich. Browse 65+ works online.',
+    images: ['https://www.sonjart.ch/assets/art1.jpg'],
   },
   robots: {
     index: true,

@@ -3,8 +3,11 @@ import { allArtworks } from './data';
 import ArtworksClient from './ArtworksClient';
 
 export const metadata: Metadata = {
-  title: 'Art Collections | sonjART | Exclusive Original Paintings',
-  description: 'Explore our curated collection of original paintings. Available for acquisition at special exhibition prices due to relocation. Worldwide shipping available from Zürich.',
+  title: 'Buy Original Fine Art Paintings | sonjART Zürich Gallery',
+  description: 'Browse 65+ original oil, acrylic and mixed-media paintings for sale. All works by international artists, available at exhibition prices. sonjART, Zürich.',
+  alternates: {
+    canonical: 'https://www.sonjart.ch/artworks',
+  },
 };
 
 export default function Artworks() {

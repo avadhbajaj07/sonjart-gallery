@@ -21,15 +21,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${artist.name} | sonjART Portfolio`,
-    description: `Explore the original works of international artist ${artist.name} at sonjART gallery. Read their exhibition biography and browse their latest collection of fine art paintings.`,
+    title: `${artist.name} — Original Paintings | sonjART Gallery`,
+    description: `${artist.name} — original paintings available at sonjART gallery Zürich. Explore their biography and full collection of fine art works.`,
     alternates: {
-      canonical: `https://sonjart.ch/artists/${artist.id}`,
+      canonical: `https://www.sonjart.ch/artists/${artist.id}`,
     },
     openGraph: {
-      title: `${artist.name} - Artist`,
-      description: artist.bio.substring(0, 160) + '...',
-      images: [{ url: `https://sonjart.ch${artist.img}` }],
+      title: `${artist.name} — sonjART Gallery Zürich`,
+      description: artist.bio.substring(0, 160),
+      images: [{ url: `https://www.sonjart.ch${artist.img}` }],
     }
   };
 }
@@ -43,10 +43,16 @@ export default async function ArtistDetail({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: artist.name,
-    description: artist.bio,
-    image: `https://sonjart.ch${artist.img}`,
-    url: `https://sonjart.ch/artists/${artist.id}`,
+    jobTitle: 'Visual Artist',
+    description: artist.bio.substring(0, 300),
+    image: `https://www.sonjart.ch${artist.img}`,
+    url: `https://www.sonjart.ch/artists/${artist.id}`,
     knowsAbout: ['Fine Art Painting', 'Modern Art', 'International Art'],
+    worksFor: {
+      '@type': 'Organization',
+      name: 'sonjART',
+      url: 'https://www.sonjart.ch',
+    },
   };
 
   return (
@@ -62,7 +68,7 @@ export default async function ArtistDetail({ params }: Props) {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem', marginBottom: '8rem' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <div style={{ aspectRatio: '1/1', borderRadius: '50%', overflow: 'hidden', width: '200px', margin: '0 auto 3rem' }}>
-              <img src={artist.img} alt={artist.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={artist.img} alt={`${artist.name} — artist represented by sonjART gallery Zürich`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <h1 className="text-title" style={{ marginBottom: '1.5rem' }}>{artist.name}</h1>
             <p style={{ fontSize: '1.25rem', lineHeight: 1.8, color: 'var(--color-grey-medium)', marginBottom: '4rem', whiteSpace: 'pre-wrap' }}>

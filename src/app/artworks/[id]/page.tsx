@@ -20,15 +20,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${art.title} by ${art.artist} | sonjART Collection`,
-    description: `Acquire the original painting "${art.title}" by ${art.artist}. ${art.material}, ${art.dim}. Available at a special exhibition price at sonjART Zurich.`,
+    title: `${art.title} by ${art.artist} — Buy Original | sonjART`,
+    description: `${art.title} by ${art.artist}. Original ${art.material}, ${art.dim}. Available at sonjART gallery Zürich at exhibition price CHF ${art.discountPrice}. Enquire now.`,
     alternates: {
-      canonical: `https://sonjart.ch/artworks/${art.id}`,
+      canonical: `https://www.sonjart.ch/artworks/${art.id}`,
     },
     openGraph: {
-      title: `${art.title} - ${art.artist}`,
-      description: art.desc.substring(0, 160) + '...',
-      images: [{ url: `https://sonjart.ch${art.img}` }],
+      title: `${art.title} by ${art.artist} — sonjART`,
+      description: art.desc.substring(0, 160),
+      images: [{ url: `https://www.sonjart.ch${art.img}` }],
     }
   };
 }
@@ -43,20 +43,29 @@ export default async function ArtworkDetail({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'VisualArtwork',
     name: currentArt.title,
-    image: `https://sonjart.ch${currentArt.img}`,
+    image: `https://www.sonjart.ch${currentArt.img}`,
     description: currentArt.desc,
     creator: {
       '@type': 'Person',
       name: currentArt.artist,
+      url: artist ? `https://www.sonjart.ch/artists/${artist.id}` : 'https://www.sonjart.ch/artists',
     },
-    material: currentArt.material,
-    width: currentArt.dim,
+    artMedium: currentArt.material,
+    artworkSurface: currentArt.material.includes('canvas') ? 'Canvas' : currentArt.material.includes('panel') || currentArt.material.includes('Panel') ? 'Panel' : 'Other',
+    width: { '@type': 'Distance', name: currentArt.dim },
+    height: { '@type': 'Distance', name: currentArt.dim },
     offers: {
       '@type': 'Offer',
       price: currentArt.discountPrice,
       priceCurrency: 'CHF',
       availability: 'https://schema.org/InStock',
-    }
+      validThrough: '2026-06-15',
+      seller: {
+        '@type': 'Organization',
+        name: 'sonjART',
+        url: 'https://www.sonjart.ch',
+      },
+    },
   };
 
   return (
