@@ -25,8 +25,8 @@ export default function ArtworkDetailClient({ currentArt, artistLink }: { curren
   return (
     <main style={{ paddingTop: '8rem', paddingBottom: 'var(--spacing-xl)', minHeight: '100vh' }} className="fade-in">
       <div className="container">
-        <Link href="/artworks" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '4rem', color: 'var(--color-grey-medium)' }}>
-          <ArrowLeft size={16} /> Back to Collection
+        <Link href={artistLink} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '4rem', color: 'var(--color-grey-medium)' }}>
+          <ArrowLeft size={16} /> Back to Artist
         </Link>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem' }}>
           
