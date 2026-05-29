@@ -166,7 +166,10 @@ export default function Home() {
                <span className="text-caption">01 / Next Exhibition</span>
                <h2 className="text-title" style={{ marginTop: '1rem', marginBottom: '2rem' }}>Kunstraum 15</h2>
                <div style={{ marginBottom: '3rem', color: 'var(--color-grey-dark)', fontSize: '1.125rem', lineHeight: 1.8 }}>
-                 <img src="/assets/popup.jpeg" alt="Event Flyer pop-up gallery" style={{ width: '100%', maxWidth: '500px', display: 'block', marginBottom: '2rem', borderRadius: '4px' }} />
+                 <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
+                   <img src="/assets/invitation1.jpeg" alt="Event Flyer Front" style={{ width: '100%', maxWidth: '280px', display: 'block', borderRadius: '4px', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }} />
+                   <img src="/assets/invitation2.jpeg" alt="Event Flyer Back" style={{ width: '100%', maxWidth: '280px', display: 'block', borderRadius: '4px', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }} />
+                 </div>
                  <p style={{ fontWeight: 600, fontSize: '1.25rem', marginBottom: '1.5rem', color: 'var(--color-black)' }}>5–15 June | Zürich</p>
                  <div style={{ marginBottom: '2rem' }}>
                    <p style={{ marginBottom: '1rem', fontWeight: 500 }}>You are warmly invited to visit the Kunstraum 15 Gallery.</p>

@@ -23,7 +23,7 @@ const eventSchema = {
     name: 'sonjART',
     url: 'https://www.sonjart.ch',
   },
-  image: 'https://www.sonjart.ch/assets/popup.jpeg',
+  image: 'https://www.sonjart.ch/assets/invitation2.jpeg',
   description: 'Original paintings by international artists at special exhibition prices. Vernissage 5 June, 18–21h. Public viewing 6–15 June.',
   isAccessibleForFree: true,
   eventStatus: 'https://schema.org/EventScheduled',
@@ -76,8 +76,9 @@ export default function Events() {
             transition={{ duration: 0.8, delay: 0.2 }}
             style={{ position: 'relative' }}
           >
-            <div style={{ boxShadow: '0 40px 80px -20px rgba(0,0,0,0.15)', borderRadius: '4px', overflow: 'hidden' }}>
-              <img src="/assets/popup.jpeg" alt="Exhibition Poster" style={{ width: '100%', display: 'block' }} />
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', boxShadow: '0 40px 80px -20px rgba(0,0,0,0.15)', borderRadius: '4px', overflow: 'hidden', padding: '1rem', backgroundColor: '#fcfcfc', border: '1px solid #eee' }}>
+              <img src="/assets/invitation1.jpeg" alt="Exhibition Poster Page 1" style={{ width: '100%', display: 'block', borderRadius: '2px' }} />
+              <img src="/assets/invitation2.jpeg" alt="Exhibition Poster Page 2" style={{ width: '100%', display: 'block', borderRadius: '2px' }} />
             </div>
             {/* Decorative element */}
             <div style={{ position: 'absolute', top: '-40px', right: '-40px', width: '200px', height: '200px', borderTop: '1px solid #eee', borderRight: '1px solid #eee', zIndex: -1 }}></div>

@@ -2,19 +2,52 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+    dataLayer?: any[];
+  }
+}
+
 export default function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
+
+  const initGA = () => {
+    const gaId = process.env.NEXT_PUBLIC_GA_ID;
+    if (!gaId || typeof window === 'undefined' || window.gtag) return;
+
+    // Inject Script 1
+    const script = document.createElement('script');
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Inject Script 2 (inline config)
+    const inlineScript = document.createElement('script');
+    inlineScript.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${gaId}');
+    `;
+    document.head.appendChild(inlineScript);
+  };
 
   useEffect(() => {
     const hasConsented = localStorage.getItem('cookie-consent');
     if (!hasConsented) {
       setTimeout(() => setIsVisible(true), 1500);
+    } else if (hasConsented === 'accepted') {
+      initGA();
     }
   }, []);
 
   const handleConsent = (accepted: boolean) => {
     localStorage.setItem('cookie-consent', accepted ? 'accepted' : 'rejected');
     setIsVisible(false);
+    if (accepted) {
+      initGA();
+    }
   };
 
   return (
