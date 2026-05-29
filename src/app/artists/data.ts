@@ -12,7 +12,7 @@ His art is experienced as fresh and spontaneous, yet at the same time emotionall
   {
     id: 'beatrice-jud',
     name: 'Beatrice Jud',
-    img: '/assets/Beatrice Jud.jpeg',
+    img: '/assets/Beatrice_Jud.jpeg',
     bio: `Beatrice Jud is a singer, actress, and painter—an artist of remarkable versatility based in Zumikon. Raised in a family with deep artistic roots, creativity accompanied her from an early age, first through music and later finding its full expression in painting.
 
 Today, she devotes herself passionately to abstract art. Her works are defined by vibrant primary colours, dynamic compositions, and an expressive visual language that resonates instantly with the viewer. “I am hungry for colour,” she says, “because a world without colour is without soul.”
