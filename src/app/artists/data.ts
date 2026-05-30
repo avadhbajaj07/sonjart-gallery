@@ -211,7 +211,7 @@ Today, Martin Wollmer’s oeuvre stands as a compelling bridge between tradition
   {
     id: 'peter-meszaros',
     name: 'Peter Meszaros',
-    img: '/assets/Peter Meszaros.jpeg',
+    img: '/assets/Peter_meszaros.jpeg',
     bio: `Peter Meszaros, born in Hungary in 1942, studied art in Budapest before traveling extensively through Western Europe from 1962 into the 1970s. During these formative years, he was immersed in a world increasingly shaped by the seductive power of mass media, the cult of celebrity, and the unmistakable glamour of popular culture — the defining spirit of Pop Art.
 
 In Western Europe, the influence of the American way of life revealed itself with far greater intensity than in his homeland. Meszaros was deeply fascinated by this new visual language: the allure of media icons, the rhythm of contemporary music, and the elegance of modern progress. These impressions found their way into his striking large-scale works, where cultural observation is transformed into bold, sophisticated painterly expression.
