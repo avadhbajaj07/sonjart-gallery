@@ -233,5 +233,13 @@ The result is a body of work that is both visually compelling and timelessly ele
     bio: `Willem Boomkens (1911–1991)
 
 Willem G.J. Kouwer Boomkens was a painter of quiet elegance, whose works capture the poetry of everyday life with expressive brushwork and a sensitive feeling for colour and atmosphere. His paintings reveal a rare emotional depth, transforming simple moments into intimate scenes filled with warmth, sincerity, and timeless beauty. Rediscovered after years of silence, Boomkens is now admired as an artist whose work continues to speak with grace, authenticity, and a deeply human presence.`
+  },
+  {
+    id: 'pim-smit',
+    name: 'Pim Smit',
+    img: '/assets/Pim_Smit.jpeg',
+    bio: `Pim Smit is a contemporary artist based in Belgium whose expressive works are driven by emotion, intuition, and a powerful sense of color. Inspired early in his career by the legendary Dutch artist Herman Brood, Smit developed a distinctive artistic language that balances spontaneity with intensity. His large-scale paintings reflect personal experiences, human connection, and the energy of everyday life.
+
+Working from his Artstudio in Wommersom, Belgium, Smit has built an international following and is also known for his charitable Art Meets Sport and Art Meets Music projects, collaborating with renowned athletes and musicians to create artworks for philanthropic causes. His work is held in private collections throughout Europe and beyond.`
   }
 ];
