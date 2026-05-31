@@ -229,7 +229,7 @@ The result is a body of work that is both visually compelling and timelessly ele
   {
     id: 'w-boomkens',
     name: 'W.Boomkens',
-    img: '/assets/Willem Boomkens.jpeg',
+    img: '/assets/Boomkens.jpeg',
     bio: `Willem Boomkens (1911–1991)
 
 Willem G.J. Kouwer Boomkens was a painter of quiet elegance, whose works capture the poetry of everyday life with expressive brushwork and a sensitive feeling for colour and atmosphere. His paintings reveal a rare emotional depth, transforming simple moments into intimate scenes filled with warmth, sincerity, and timeless beauty. Rediscovered after years of silence, Boomkens is now admired as an artist whose work continues to speak with grace, authenticity, and a deeply human presence.`
